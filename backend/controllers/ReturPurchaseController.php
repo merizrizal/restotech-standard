@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\ReturPurchase;
-use backend\models\search\ReturPurchaseSearch;
-use backend\models\ReturPurchaseTrx;
-use backend\models\Item;
-use backend\models\ItemSku;
-use backend\models\Stock;
-use backend\models\StockMovement;
-use backend\models\Settings;
+use restotech\standard\backend\models\ReturPurchase;
+use restotech\standard\backend\models\search\ReturPurchaseSearch;
+use restotech\standard\backend\models\ReturPurchaseTrx;
+use restotech\standard\backend\models\Item;
+use restotech\standard\backend\models\ItemSku;
+use restotech\standard\backend\models\Stock;
+use restotech\standard\backend\models\StockMovement;
+use restotech\standard\backend\models\Settings;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 use backend\components\GridView;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use backend\models\Printer;
+use restotech\standard\backend\models\Printer;
 use backend\components\NotificationDialog;
 use backend\components\ModalDialog;
 

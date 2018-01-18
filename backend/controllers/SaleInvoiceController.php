@@ -1,13 +1,13 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SaleInvoice;
-use backend\models\search\SaleInvoiceSearch;
-use backend\models\SaleInvoiceRetur;
-use backend\models\Menu;
-use backend\models\SaldoKasir;
+use restotech\standard\backend\models\SaleInvoice;
+use restotech\standard\backend\models\search\SaleInvoiceSearch;
+use restotech\standard\backend\models\SaleInvoiceRetur;
+use restotech\standard\backend\models\Menu;
+use restotech\standard\backend\models\SaldoKasir;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

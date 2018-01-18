@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Storage;
-use backend\models\search\StorageSearch;
-use backend\models\Settings;
+use restotech\standard\backend\models\Storage;
+use restotech\standard\backend\models\search\StorageSearch;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

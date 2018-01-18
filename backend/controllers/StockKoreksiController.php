@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\StockKoreksi;
-use backend\models\search\StockKoreksiSearch;
-use backend\models\Stock;
-use backend\models\StockMovement;
+use restotech\standard\backend\models\StockKoreksi;
+use restotech\standard\backend\models\search\StockKoreksiSearch;
+use restotech\standard\backend\models\Stock;
+use restotech\standard\backend\models\StockMovement;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

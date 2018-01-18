@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Voucher;
-use backend\models\search\VoucherSearch;
-use backend\models\Settings;
+use restotech\standard\backend\models\Voucher;
+use restotech\standard\backend\models\search\VoucherSearch;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

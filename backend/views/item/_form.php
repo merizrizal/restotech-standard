@@ -3,8 +3,8 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\models\ItemCategory;
-use backend\models\Storage;
+use restotech\standard\backend\models\ItemCategory;
+use restotech\standard\backend\models\Storage;
 use backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */

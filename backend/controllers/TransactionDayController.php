@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\TransactionDay;
-use backend\models\MtableSession;
+use restotech\standard\backend\models\TransactionDay;
+use restotech\standard\backend\models\MtableSession;
 use sybase\SybaseController;
 use yii\filters\VerbFilter;
 use yii\web\Response;

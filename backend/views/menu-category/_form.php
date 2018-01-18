@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\models\MenuCategory;
+use restotech\standard\backend\models\MenuCategory;
 use backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */

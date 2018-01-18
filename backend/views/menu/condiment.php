@@ -6,7 +6,7 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use backend\components\NotificationDialog;
 use backend\components\DynamicFormField;
-use backend\models\Menu;
+use restotech\standard\backend\models\Menu;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Menu */

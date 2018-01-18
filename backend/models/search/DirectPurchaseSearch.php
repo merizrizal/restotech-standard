@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\models\search;
+namespace restotech\standard\backend\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\DirectPurchase;
+use restotech\standard\backend\models\DirectPurchase;
 
 /**
  * DirectPurchaseSearch represents the model behind the search form about `backend\models\DirectPurchase`.

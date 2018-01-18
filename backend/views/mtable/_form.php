@@ -5,7 +5,7 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use backend\components\NotificationDialog;
-use backend\models\MtableCategory;
+use restotech\standard\backend\models\MtableCategory;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Mtable */

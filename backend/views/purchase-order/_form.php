@@ -7,8 +7,8 @@ use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
 use backend\components\NotificationDialog;
 use backend\components\DynamicFormField;
-use backend\models\Supplier;
-use backend\models\Item;
+use restotech\standard\backend\models\Supplier;
+use restotech\standard\backend\models\Item;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\PurchaseOrder */

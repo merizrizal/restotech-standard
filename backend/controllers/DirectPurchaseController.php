@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\DirectPurchase;
-use backend\models\search\DirectPurchaseSearch;
-use backend\models\DirectPurchaseTrx;
-use backend\models\Stock;
-use backend\models\StockMovement;
-use backend\models\Settings;
+use restotech\standard\backend\models\DirectPurchase;
+use restotech\standard\backend\models\search\DirectPurchaseSearch;
+use restotech\standard\backend\models\DirectPurchaseTrx;
+use restotech\standard\backend\models\Stock;
+use restotech\standard\backend\models\StockMovement;
+use restotech\standard\backend\models\Settings;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

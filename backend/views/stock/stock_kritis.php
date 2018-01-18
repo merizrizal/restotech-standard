@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
-use backend\models\Supplier;
+use restotech\standard\backend\models\Supplier;
 
 
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Printer;
-use backend\models\search\PrinterSearch;
+use restotech\standard\backend\models\Printer;
+use restotech\standard\backend\models\search\PrinterSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

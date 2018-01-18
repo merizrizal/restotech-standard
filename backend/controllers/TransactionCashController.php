@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\TransactionCash;
-use backend\models\search\TransactionCashSearch;
+use restotech\standard\backend\models\TransactionCash;
+use restotech\standard\backend\models\search\TransactionCashSearch;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

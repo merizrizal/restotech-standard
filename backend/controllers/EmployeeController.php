@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Employee;
-use backend\models\search\EmployeeSearch;
-use backend\models\Settings;
+use restotech\standard\backend\models\Employee;
+use restotech\standard\backend\models\search\EmployeeSearch;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

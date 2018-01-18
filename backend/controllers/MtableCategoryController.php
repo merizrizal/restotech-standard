@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\MtableCategory;
-use backend\models\search\MtableCategorySearch;
+use restotech\standard\backend\models\MtableCategory;
+use restotech\standard\backend\models\search\MtableCategorySearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

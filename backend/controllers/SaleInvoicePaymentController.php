@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SaleInvoicePayment;
-use backend\models\search\SaleInvoicePaymentSearch;
-use backend\models\SaleInvoiceArPayment;
+use restotech\standard\backend\models\SaleInvoicePayment;
+use restotech\standard\backend\models\search\SaleInvoicePaymentSearch;
+use restotech\standard\backend\models\SaleInvoiceArPayment;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

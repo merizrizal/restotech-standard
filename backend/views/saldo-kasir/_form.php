@@ -6,8 +6,8 @@ use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
 use kartik\date\DatePicker;
 use backend\components\NotificationDialog;
-use backend\models\Shift;
-use backend\models\User;
+use restotech\standard\backend\models\Shift;
+use restotech\standard\backend\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\SaldoKasir */

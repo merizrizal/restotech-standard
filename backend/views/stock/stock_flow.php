@@ -4,8 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use kartik\date\DatePicker;
-use backend\models\Item;
-use backend\models\Storage;
+use restotech\standard\backend\models\Item;
+use restotech\standard\backend\models\Storage;
 use backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */

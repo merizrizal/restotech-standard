@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
 use backend\components\NotificationDialog;
-use backend\models\TransactionAccount;
+use restotech\standard\backend\models\TransactionAccount;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TransactionCash */

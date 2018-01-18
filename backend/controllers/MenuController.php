@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Menu;
-use backend\models\search\MenuSearch;
-use backend\models\MenuCondiment;
-use backend\models\MenuHpp;
-use backend\models\MenuRecipe;
-use backend\models\Settings;
+use restotech\standard\backend\models\Menu;
+use restotech\standard\backend\models\search\MenuSearch;
+use restotech\standard\backend\models\MenuCondiment;
+use restotech\standard\backend\models\MenuHpp;
+use restotech\standard\backend\models\MenuRecipe;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\StockMovement;
-use backend\models\search\StockMovementSearch;
+use restotech\standard\backend\models\StockMovement;
+use restotech\standard\backend\models\search\StockMovementSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

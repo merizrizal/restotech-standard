@@ -6,8 +6,8 @@ use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
 use backend\components\NotificationDialog;
-use backend\models\SupplierDelivery;
-use backend\models\PaymentMethod;
+use restotech\standard\backend\models\SupplierDelivery;
+use restotech\standard\backend\models\PaymentMethod;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\SupplierDeliveryInvoice */
