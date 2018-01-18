@@ -1,7 +1,7 @@
 {
     "name": "synctech/restotech-standard",
     "description": "Restotech, Property of synctech.id",
-    "type": "app",
+    "type": "yii2-extension",
     "require": {        
 	"synctech/yii2-sybase": "@dev"
     },
