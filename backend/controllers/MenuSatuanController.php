@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 /**
  * MenuSatuanController implements the CRUD actions for MenuSatuan model.
  */
-class MenuSatuanController extends \sybase\SybaseController
+class MenuSatuanController extends BackendController
 {
     public function behaviors()
     {

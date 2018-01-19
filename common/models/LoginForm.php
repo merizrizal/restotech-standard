@@ -1,5 +1,5 @@
 <?php
-namespace common\models;
+namespace restotech\standard\common\models;
 
 use Yii;
 use yii\base\Model;
@@ -130,7 +130,7 @@ class LoginForm extends Model
                     }
                 }
                 
-                $userAkses = \backend\models\UserAkses::find()
+                $userAkses = \restotech\standard\backend\models\UserAkses::find()
                         ->joinWith(['userLevel', 'userAppModule'])
                         ->andWhere(['user_akses.user_level_id' => $data['user_level']['id']])
                         ->andWhere(['user_akses.is_active' => true])
@@ -158,7 +158,7 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = \backend\models\User::findByUsername($this->username);
+            $this->_user = User::findByUsername($this->username);
         }
 
         return $this->_user;

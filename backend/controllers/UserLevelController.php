@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 /**
  * UserLevelController implements the CRUD actions for UserLevel model.
  */
-class UserLevelController extends \sybase\SybaseController
+class UserLevelController extends BackendController
 {
     private $params = [];
     

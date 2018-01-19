@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * SaldoKasirController implements the CRUD actions for SaldoKasir model.
  */
-class SaldoKasirController extends \sybase\SybaseController
+class SaldoKasirController extends BackendController
 {
     public function behaviors()
     {

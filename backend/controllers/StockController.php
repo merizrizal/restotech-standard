@@ -18,7 +18,7 @@ use kartik\mpdf\Pdf;
 /**
  * StockController implements the CRUD actions for Stock model.
  */
-class StockController extends \sybase\SybaseController
+class StockController extends BackendController
 {
     public function behaviors()
     {

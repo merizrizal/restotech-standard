@@ -1,9 +1,9 @@
 <?php
-namespace common\models;
+namespace restotech\standard\common\models;
 
 use Yii;
 
-class User extends \backend\models\User
+class User extends \restotech\standard\backend\models\User
 {
     
 }

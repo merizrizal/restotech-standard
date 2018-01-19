@@ -24,7 +24,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * SiswaController implements the CRUD actions for Siswa model.
  */
-class SiswaController extends \sybase\SybaseController
+class SiswaController extends BackendController
 {
     public function behaviors()
     {

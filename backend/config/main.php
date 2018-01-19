@@ -4,7 +4,7 @@ $params = array_merge(
     require(__DIR__ . '/params.php')
 );
 
-return [
+$config = [
     'id' => 'app-backend',
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
@@ -53,3 +53,9 @@ return [
     ],
     'params' => $params,
 ];
+
+return yii\helpers\ArrayHelper::merge(
+        $config, 
+        require(dirname(dirname(__DIR__)) . '/common/config/main.php')
+);
+

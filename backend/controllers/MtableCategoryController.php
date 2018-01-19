@@ -16,7 +16,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * MtableCategoryController implements the CRUD actions for MtableCategory model.
  */
-class MtableCategoryController extends \sybase\SybaseController
+class MtableCategoryController extends BackendController
 {
     public function behaviors()
     {

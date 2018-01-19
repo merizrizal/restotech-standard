@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 /**
  * SupplierController implements the CRUD actions for Supplier model.
  */
-class SupplierController extends \sybase\SybaseController
+class SupplierController extends BackendController
 {
     public function behaviors()
     {

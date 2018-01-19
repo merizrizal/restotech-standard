@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * UserAppModuleController implements the CRUD actions for UserAppModule model.
  */
-class UserAppModuleController extends \sybase\SybaseController
+class UserAppModuleController extends BackendController
 {
     public function behaviors()
     {

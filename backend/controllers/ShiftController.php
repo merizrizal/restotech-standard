@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * ShiftController implements the CRUD actions for Shift model.
  */
-class ShiftController extends \sybase\SybaseController
+class ShiftController extends BackendController
 {
     public function behaviors()
     {

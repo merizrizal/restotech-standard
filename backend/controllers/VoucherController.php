@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 /**
  * VoucherController implements the CRUD actions for Voucher model.
  */
-class VoucherController extends \sybase\SybaseController
+class VoucherController extends BackendController
 {
     public function behaviors()
     {

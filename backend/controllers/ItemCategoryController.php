@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 /**
  * ItemCategoryController implements the CRUD actions for ItemCategory model.
  */
-class ItemCategoryController extends \sybase\SybaseController
+class ItemCategoryController extends BackendController
 {
     public function behaviors()
     {

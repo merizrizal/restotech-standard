@@ -6,7 +6,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace common\assets;
+namespace restotech\standard\common\assets;
 
 use yii\web\AssetBundle;
 
@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle {
 
-    public $sourcePath = '@common/media';
+    public $sourcePath = '@restotech/standard/common/media';
     
     public $css = [
         'css/font-awesome.min.css',

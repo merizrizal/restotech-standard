@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 /**
  * PaymentMethodController implements the CRUD actions for PaymentMethod model.
  */
-class PaymentMethodController extends \sybase\SybaseController
+class PaymentMethodController extends BackendController
 {
     public function behaviors()
     {

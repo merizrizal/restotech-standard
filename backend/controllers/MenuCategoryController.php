@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 /**
  * MenuCategoryController implements the CRUD actions for MenuCategory model.
  */
-class MenuCategoryController extends \sybase\SybaseController
+class MenuCategoryController extends BackendController
 {
     public function behaviors()
     {

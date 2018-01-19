@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * PrinterController implements the CRUD actions for Printer model.
  */
-class PrinterController extends \sybase\SybaseController
+class PrinterController extends BackendController
 {
     public function behaviors()
     {

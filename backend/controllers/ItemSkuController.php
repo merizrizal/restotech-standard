@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * ItemSkuController implements the CRUD actions for ItemSku model.
  */
-class ItemSkuController extends \sybase\SybaseController
+class ItemSkuController extends BackendController
 {
     public function behaviors()
     {

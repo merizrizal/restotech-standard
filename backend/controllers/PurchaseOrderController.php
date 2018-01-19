@@ -19,7 +19,7 @@ use kartik\mpdf\Pdf;
 /**
  * PurchaseOrderController implements the CRUD actions for PurchaseOrder model.
  */
-class PurchaseOrderController extends \sybase\SybaseController
+class PurchaseOrderController extends BackendController
 {
     public function behaviors()
     {

@@ -6,8 +6,8 @@ use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use restotech\standard\backend\components\AppMenu;
 
-AppAsset::register($this);
-AdminlteAssets::register($this); ?>
+AdminlteAssets::register($this);
+AppAsset::register($this); ?>
 
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

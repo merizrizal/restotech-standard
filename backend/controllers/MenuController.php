@@ -21,7 +21,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * MenuController implements the CRUD actions for Menu model.
  */
-class MenuController extends \sybase\SybaseController
+class MenuController extends BackendController
 {
     public function behaviors()
     {

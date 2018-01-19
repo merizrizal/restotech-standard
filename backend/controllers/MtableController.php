@@ -18,7 +18,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * MtableController implements the CRUD actions for Mtable model.
  */
-class MtableController extends \sybase\SybaseController
+class MtableController extends BackendController
 {
     public function behaviors()
     {

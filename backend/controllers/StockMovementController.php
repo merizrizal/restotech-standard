@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * StockMovementController implements the CRUD actions for StockMovement model.
  */
-class StockMovementController extends \sybase\SybaseController
+class StockMovementController extends BackendController
 {
     public function behaviors()
     {

@@ -5,13 +5,13 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Response;
-use common\models\LoginForm;
+use restotech\standard\common\models\LoginForm;
 
 
 /**
  * Site controller
  */
-class SiteController extends \sybase\SybaseController {
+class SiteController extends BackendController {
 
     /**
      * @inheritdoc

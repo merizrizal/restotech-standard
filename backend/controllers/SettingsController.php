@@ -15,7 +15,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * SettingsController implements the CRUD actions for Settings model.
  */
-class SettingsController extends \sybase\SybaseController
+class SettingsController extends BackendController
 {
     public function behaviors()
     {

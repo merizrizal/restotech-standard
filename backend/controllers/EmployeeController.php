@@ -16,7 +16,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * EmployeeController implements the CRUD actions for Employee model.
  */
-class EmployeeController extends \sybase\SybaseController
+class EmployeeController extends BackendController
 {
     public function behaviors()
     {

@@ -13,7 +13,7 @@ use restotech\standard\backend\components\Tools;
 /**
  * Page controller
  */
-class PageController extends \sybase\SybaseController {
+class PageController extends BackendController {
 
     /**
      * @inheritdoc

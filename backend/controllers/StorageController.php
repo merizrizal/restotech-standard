@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * StorageController implements the CRUD actions for Storage model.
  */
-class StorageController extends \sybase\SybaseController
+class StorageController extends BackendController
 {
     public function behaviors()
     {
