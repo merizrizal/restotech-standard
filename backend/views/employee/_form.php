@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use kartik\money\MaskMoney;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Employee */
+/* @var $model restotech\standard\backend\models\Employee */
 /* @var $form yii\widgets\ActiveForm */
 
 $status = Yii::$app->session->getFlash('status');

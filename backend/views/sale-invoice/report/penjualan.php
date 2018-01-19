@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use kartik\date\DatePicker;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 yii\widgets\MaskedInputAsset::register($this);
 
@@ -98,9 +98,9 @@ $this->params['breadcrumbs'][] = $this->title; ?>
 <?= Html::endForm() ?>
 
 <?php
-$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'backend\assets\AppAsset']);
+$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
  
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'backend\assets\AppAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 
 $jscript = '

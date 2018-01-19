@@ -5,12 +5,12 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
 use kartik\date\DatePicker;
-use backend\components\NotificationDialog;
-use backend\models\Shift;
-use backend\models\User;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\models\Shift;
+use restotech\standard\backend\models\User;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaldoKasir */
+/* @var $model restotech\standard\backend\models\SaldoKasir */
 /* @var $form yii\widgets\ActiveForm */
 
 yii\widgets\MaskedInputAsset::register($this);

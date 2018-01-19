@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MtableCategory */
+/* @var $model restotech\standard\backend\models\MtableCategory */
 
 $this->title = 'Update Ruangan: ' . ' ' . $model->nama_category;
 $this->params['breadcrumbs'][] = ['label' => 'Ruangan', 'url' => ['index']];

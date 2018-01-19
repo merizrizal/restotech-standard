@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
+/* @var $model restotech\standard\backend\models\Menu */
 
 $this->title = 'Create Menu';
 $this->params['breadcrumbs'][] = ['label' => 'Menu', 'url' => ['index']];

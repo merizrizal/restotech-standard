@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Employee */
+/* @var $model restotech\standard\backend\models\Employee */
 
 $this->title = 'Update Karyawan: ' . ' (' . $model->kd_karyawan . ') ' . $model->nama;
 $this->params['breadcrumbs'][] = ['label' => 'Karyawan', 'url' => ['index']];

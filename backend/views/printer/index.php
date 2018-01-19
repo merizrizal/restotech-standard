@@ -1,12 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-use backend\components\GridView;
-use backend\components\ModalDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\GridView;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\search\PrinterSearch */
+/* @var $searchModel restotech\standard\backend\models\search\PrinterSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $status = Yii::$app->session->getFlash('status');
@@ -153,6 +153,6 @@ $this->params['breadcrumbs'][] = $this->title; ?>
 <?= $modalDialog->renderDialog() ?>
 
 <?php
-$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'backend\assets\AppAsset']);
+$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
    
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'backend\assets\AppAsset']); ?>
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']); ?>

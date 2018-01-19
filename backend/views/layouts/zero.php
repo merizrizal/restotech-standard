@@ -1,7 +1,7 @@
 <?php
 
-use backend\assets\AppAsset;
-use backend\assets\AdminlteAssets;
+use restotech\standard\backend\assets\AppAsset;
+use restotech\standard\backend\assets\AdminlteAssets;
 use yii\helpers\Html;
 
 $assetCommon = common\assets\AppAsset::register($this);

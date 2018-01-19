@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\models\search;
+namespace restotech\standard\backend\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\StockKoreksi;
+use restotech\standard\backend\models\StockKoreksi;
 
 /**
- * StockKoreksiSearch represents the model behind the search form about `backend\models\StockKoreksi`.
+ * StockKoreksiSearch represents the model behind the search form about `restotech\standard\backend\models\StockKoreksi`.
  */
 class StockKoreksiSearch extends StockKoreksi
 {

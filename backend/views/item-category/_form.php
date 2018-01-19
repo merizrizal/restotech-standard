@@ -3,11 +3,11 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\components\NotificationDialog;
-use backend\models\ItemCategory;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\models\ItemCategory;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ItemCategory */
+/* @var $model restotech\standard\backend\models\ItemCategory */
 /* @var $form yii\widgets\ActiveForm */
 
 kartik\select2\Select2Asset::register($this);

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\search\ItemCategorySearch */
+/* @var $model restotech\standard\backend\models\search\ItemCategorySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\components;
+namespace restotech\standard\backend\components;
 
 use Yii;
 use yii\base\Widget;
-use backend\models\Printer;
-use backend\models\Settings;
+use restotech\standard\backend\models\Printer;
+use restotech\standard\backend\models\Settings;
 
 class PrinterDialog extends Widget {
     

@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
 use kartik\date\DatePicker;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Voucher */
+/* @var $model restotech\standard\backend\models\Voucher */
 /* @var $form yii\widgets\ActiveForm */
 
 yii\widgets\MaskedInputAsset::register($this);

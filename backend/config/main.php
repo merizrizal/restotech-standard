@@ -12,7 +12,7 @@ return [
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'backend\controllers',
+    'controllerNamespace' => 'restotech\standard\backend\controllers',
     'defaultRoute' => 'site/default',    
     'modules' => [ 
         'gridview' => [
@@ -21,7 +21,7 @@ return [
     ],
     'components' => [
         'user' => [
-            'identityClass' => 'backend\models\User',
+            'identityClass' => 'restotech\standard\backend\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-restotech', 'httpOnly' => true],
         ],

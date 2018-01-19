@@ -1,5 +1,5 @@
 <?php
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 ?>
 
 <div class="row">

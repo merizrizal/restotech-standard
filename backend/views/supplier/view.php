@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Supplier */
+/* @var $model restotech\standard\backend\models\Supplier */
 
 $this->title = $model->kd_supplier;
 $this->params['breadcrumbs'][] = ['label' => 'Suppliers', 'url' => ['index']];

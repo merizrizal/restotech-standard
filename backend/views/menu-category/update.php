@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MenuCategory */
+/* @var $model restotech\standard\backend\models\MenuCategory */
 
 $this->title = 'Update Kategori Menu: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Kategori Menu', 'url' => ['index']];

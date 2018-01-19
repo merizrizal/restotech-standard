@@ -1,12 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-use backend\components\GridView;
-use backend\components\ModalDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\GridView;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\search\SaldoKasirSearch */
+/* @var $searchModel restotech\standard\backend\models\search\SaldoKasirSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 yii\widgets\MaskedInputAsset::register($this);

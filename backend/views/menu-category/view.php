@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MenuCategory */
+/* @var $model restotech\standard\backend\models\MenuCategory */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Kategori Menu', 'url' => ['index']];

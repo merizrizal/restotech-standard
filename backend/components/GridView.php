@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\components;
+namespace restotech\standard\backend\components;
 
 use yii\helpers\ArrayHelper;
 use yii\widgets\Pjax;

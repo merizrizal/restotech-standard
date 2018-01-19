@@ -1,10 +1,10 @@
 <?php
 
-use backend\assets\AppAsset;
-use backend\assets\AdminlteAssets;
+use restotech\standard\backend\assets\AppAsset;
+use restotech\standard\backend\assets\AdminlteAssets;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
-use backend\components\AppMenu;
+use restotech\standard\backend\components\AppMenu;
 
 AppAsset::register($this);
 AdminlteAssets::register($this); ?>

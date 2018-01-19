@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Inflector;
-use backend\components\GridView; 
+use restotech\standard\backend\components\GridView; 
 
 $assetCommon = $this->assetBundles['common\assets\AppAsset'];
 

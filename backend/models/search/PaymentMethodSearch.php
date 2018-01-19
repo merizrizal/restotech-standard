@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\models\search;
+namespace restotech\standard\backend\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\PaymentMethod;
+use restotech\standard\backend\models\PaymentMethod;
 
 /**
- * PaymentMethodSearch represents the model behind the search form about `backend\models\PaymentMethod`.
+ * PaymentMethodSearch represents the model behind the search form about `restotech\standard\backend\models\PaymentMethod`.
  */
 class PaymentMethodSearch extends PaymentMethod
 {

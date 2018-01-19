@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');

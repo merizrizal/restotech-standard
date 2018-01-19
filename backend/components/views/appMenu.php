@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 $settings_company_profile = Yii::$app->session->get('company_settings_profile'); ?>
 
@@ -27,7 +27,7 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
         <ul class="sidebar-menu">  
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="<?= Yii::$app->urlManager->createUrl(['page/dashboard']); ?>">
+                <a href="<?= Yii::$app->urlManager->createUrl(['standard/backend/page/dashboard']); ?>">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
@@ -114,7 +114,7 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-movement/index', 'type' => 'Inflow']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl(['standard/backend/stock-movement/index', 'type' => 'Inflow']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok Masuk
                         </a>
                     </li>

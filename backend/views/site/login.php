@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use backend\components\VirtualKeyboard;
+use restotech\standard\backend\components\VirtualKeyboard;
 
 $assetCommon = common\assets\AppAsset::register($this);
 

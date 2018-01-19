@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaleInvoice */
+/* @var $model restotech\standard\backend\models\SaleInvoice */
 
 kartik\money\MaskMoneyAsset::register($this);
 

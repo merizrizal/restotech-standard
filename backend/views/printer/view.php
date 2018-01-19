@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Printer */
+/* @var $model restotech\standard\backend\models\Printer */
 
 $this->title = 'Printer: ' . $model->printer;
 $this->params['breadcrumbs'][] = ['label' => 'Printer', 'url' => ['index']];
@@ -83,9 +83,9 @@ $modalDialog->theScript();
 
 echo $modalDialog->renderDialog();
 
-$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'backend\assets\AppAsset']);
+$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
    
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'backend\assets\AppAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
     
 $jscript = Yii::$app->params['checkbox-radio-script']()
         . '$(".iCheck-helper").parent().removeClass("disabled");';

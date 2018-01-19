@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ItemCategory */
+/* @var $model restotech\standard\backend\models\ItemCategory */
 
 $this->title = 'Create Kategori Item';
 $this->params['breadcrumbs'][] = ['label' => 'Kategori Item', 'url' => ['index']];

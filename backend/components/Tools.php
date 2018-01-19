@@ -1,9 +1,9 @@
 <?php
 
-namespace backend\components;
+namespace restotech\standard\backend\components;
 
 use Yii;
-use backend\models\Settings;
+use restotech\standard\backend\models\Settings;
 use yii\imagine\Image;
 use yii\web\UploadedFile;
 

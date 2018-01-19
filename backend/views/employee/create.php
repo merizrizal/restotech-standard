@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Employee */
+/* @var $model restotech\standard\backend\models\Employee */
 
 $this->title = 'Create Karyawan';
 $this->params['breadcrumbs'][] = ['label' => 'Karyawan', 'url' => ['index']];

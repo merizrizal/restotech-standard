@@ -1,24 +1,24 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Siswa;
-use backend\models\search\SiswaSearch;
+use restotech\standard\backend\models\Siswa;
+use restotech\standard\backend\models\search\SiswaSearch;
 use common\models\User;
-use backend\models\SaldoDeposit;
-use backend\models\SaldoDepositHistori;
-use backend\models\Pendaftaran;
-use backend\models\PendaftaranWorkInfo;
-use backend\models\LogPendaftaranAction;
-use backend\models\KelaskbmMurid;
-use backend\models\Settings;
+use restotech\standard\backend\models\SaldoDeposit;
+use restotech\standard\backend\models\SaldoDepositHistori;
+use restotech\standard\backend\models\Pendaftaran;
+use restotech\standard\backend\models\PendaftaranWorkInfo;
+use restotech\standard\backend\models\LogPendaftaranAction;
+use restotech\standard\backend\models\KelaskbmMurid;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 
 /**

@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MtableCategory */
+/* @var $model restotech\standard\backend\models\MtableCategory */
 
 $this->title = $model->nama_category;
 $this->params['breadcrumbs'][] = ['label' => 'Ruangan', 'url' => ['index']];

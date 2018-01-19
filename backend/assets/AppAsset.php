@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace backend\assets;
+namespace restotech\standard\backend\assets;
 
 use yii\web\AssetBundle;
 
@@ -15,8 +15,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot/media';
-    public $baseUrl = '@web/media';
+    public $sourcePath = '@restotech/standard/backend/media';
     
     public $css = [
         'css/site.css',

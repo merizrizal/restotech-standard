@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace backend\assets;
+namespace restotech\standard\backend\assets;
 
 use yii\web\AssetBundle;
 
@@ -15,8 +15,7 @@ use yii\web\AssetBundle;
  */
 class AdminlteAssets extends AssetBundle
 {
-    public $basePath = '@rootUrl/admin/media';
-    public $baseUrl = '@rootUrl/admin/media';
+    public $sourcePath = '@restotech/standard/backend/media';
     
     public $css = [
         'css/AdminLTE.css',
@@ -27,6 +26,6 @@ class AdminlteAssets extends AssetBundle
         'js/AdminLTE/custom.js',
     ];
     public $depends = [
-        'backend\assets\AppAsset',
+        'common\assets\AppAsset'
     ];
 }

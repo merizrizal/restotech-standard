@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\DynamicTable;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\DynamicTable;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PurchaseOrder */
+/* @var $model restotech\standard\backend\models\PurchaseOrder */
 
 $dynamicTablePOTrx = new DynamicTable([
     'model' => $modelPOTrx,

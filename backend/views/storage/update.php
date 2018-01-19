@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Storage */
+/* @var $model restotech\standard\backend\models\Storage */
 
 $this->title = 'Update Gudang: ' . ' (' . $model->id . ') ' . $model->nama_storage;
 $this->params['breadcrumbs'][] = ['label' => 'Gudang', 'url' => ['index']];

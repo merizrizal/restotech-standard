@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Storage */
+/* @var $model restotech\standard\backend\models\Storage */
 
 $this->title = 'Create Gudang';
 $this->params['breadcrumbs'][] = ['label' => 'Gudang', 'url' => ['index']];

@@ -1,13 +1,13 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\MenuCategory;
-use backend\models\search\MenuCategorySearch;
-use backend\models\MenuCategoryPrinter;
-use backend\models\search\MenuCategoryPrinterSearch;
-use backend\models\Settings;
+use restotech\standard\backend\models\MenuCategory;
+use restotech\standard\backend\models\search\MenuCategorySearch;
+use restotech\standard\backend\models\MenuCategoryPrinter;
+use restotech\standard\backend\models\search\MenuCategoryPrinterSearch;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

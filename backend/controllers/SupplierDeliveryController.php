@@ -1,17 +1,17 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SupplierDelivery;
-use backend\models\search\SupplierDeliverySearch;
-use backend\models\SupplierDeliveryTrx;
-use backend\models\PurchaseOrderTrx;
-use backend\models\Item;
-use backend\models\ItemSku;
-use backend\models\Stock;
-use backend\models\StockMovement;
-use backend\models\Settings;
+use restotech\standard\backend\models\SupplierDelivery;
+use restotech\standard\backend\models\search\SupplierDeliverySearch;
+use restotech\standard\backend\models\SupplierDeliveryTrx;
+use restotech\standard\backend\models\PurchaseOrderTrx;
+use restotech\standard\backend\models\Item;
+use restotech\standard\backend\models\ItemSku;
+use restotech\standard\backend\models\Stock;
+use restotech\standard\backend\models\StockMovement;
+use restotech\standard\backend\models\Settings;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

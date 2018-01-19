@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MenuSatuan */
+/* @var $model restotech\standard\backend\models\MenuSatuan */
 
 $this->title = 'Update Satuan Menu: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Satuan Menu', 'url' => ['index']];

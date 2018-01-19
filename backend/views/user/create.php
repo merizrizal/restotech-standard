@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\User */
+/* @var $model restotech\standard\backend\models\User */
 
 $this->title = 'Create User';
 $this->params['breadcrumbs'][] = ['label' => 'User', 'url' => ['index']];

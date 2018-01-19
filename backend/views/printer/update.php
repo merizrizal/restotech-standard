@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Printer */
+/* @var $model restotech\standard\backend\models\Printer */
 
 $this->title = 'Update Printer: ' . ' ' . $model->printer;
 $this->params['breadcrumbs'][] = ['label' => 'Printer', 'url' => ['index']];

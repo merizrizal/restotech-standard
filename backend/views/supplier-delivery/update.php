@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SupplierDelivery */
+/* @var $model restotech\standard\backend\models\SupplierDelivery */
 
 $this->title = 'Update Penerimaan Item PO: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Penerimaan Item PO', 'url' => ['index']];

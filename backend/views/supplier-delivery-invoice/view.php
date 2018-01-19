@@ -2,12 +2,12 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\DynamicTable;
-use backend\components\ModalDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\DynamicTable;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SupplierDeliveryInvoice */
+/* @var $model restotech\standard\backend\models\SupplierDeliveryInvoice */
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');

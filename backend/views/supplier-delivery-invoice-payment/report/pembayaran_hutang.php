@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use kartik\date\DatePicker;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 yii\widgets\MaskedInputAsset::register($this);
 

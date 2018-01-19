@@ -1,6 +1,6 @@
 <?php
 
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 Tools::loadIsIncludeScp();
 

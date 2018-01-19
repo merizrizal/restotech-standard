@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\UserLevel */
+/* @var $model restotech\standard\backend\models\UserLevel */
 
 $this->title = 'Update User Level: ' . ' ' . $model->nama_level;
 $this->params['breadcrumbs'][] = ['label' => 'User Level', 'url' => ['index']];

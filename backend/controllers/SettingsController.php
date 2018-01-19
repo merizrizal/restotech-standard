@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Settings;
-use backend\models\search\SettingsSearch;
+use restotech\standard\backend\models\Settings;
+use restotech\standard\backend\models\search\SettingsSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 /**
  * SettingsController implements the CRUD actions for Settings model.

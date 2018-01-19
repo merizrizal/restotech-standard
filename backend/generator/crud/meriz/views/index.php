@@ -14,8 +14,8 @@ echo "<?php\n";
 
 use yii\helpers\Html;
 use <?= $generator->indexWidgetType === 'grid' ? "backend\\components\\GridView" : "yii\\widgets\\ListView" ?>;
-use backend\components\ModalDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
 <?= !empty($generator->searchModelClass) ? "/* @var \$searchModel " . ltrim($generator->searchModelClass, '\\') . " */\n" : '' ?>

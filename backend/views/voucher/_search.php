@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\search\VoucherSearch */
+/* @var $model restotech\standard\backend\models\search\VoucherSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
-use backend\components\NotificationDialog;
-use backend\models\MtableCategory;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\models\MtableCategory;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Mtable */
+/* @var $model restotech\standard\backend\models\Mtable */
 /* @var $form yii\widgets\ActiveForm */
 
 $status = Yii::$app->session->getFlash('status');

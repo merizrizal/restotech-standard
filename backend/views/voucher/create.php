@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Voucher */
+/* @var $model restotech\standard\backend\models\Voucher */
 
 $this->title = 'Create Voucher';
 $this->params['breadcrumbs'][] = ['label' => 'Voucher', 'url' => ['index']];

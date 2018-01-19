@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace restotech\standard\backend\models;
 
 use Yii;
 
@@ -41,7 +41,7 @@ class Settings extends \sybase\SybaseModel
             [['type'], 'string', 'max' => 16],
             [['user_created', 'user_updated'], 'string', 'max' => 32],
             [['setting_name'], 'unique'],
-            [['setting_name'], 'backend\components\String2Validator'],
+            [['setting_name'], 'restotech\standard\backend\components\String2Validator'],
             [['user_created'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_created' => 'id']],
             [['user_updated'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_updated' => 'id']]
         ];

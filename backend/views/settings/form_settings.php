@@ -5,11 +5,11 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Inflector;
 use kartik\file\FileInput;
 use kartik\time\TimePicker;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Settings */
+/* @var $model restotech\standard\backend\models\Settings */
 
 $this->title = 'Setting ' . $judul;
 $this->params['breadcrumbs'][] = $this->title;

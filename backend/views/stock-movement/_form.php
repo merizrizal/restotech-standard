@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use kartik\date\DatePicker;
 use yii\widgets\ActiveForm;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\StockMovement */
+/* @var $model restotech\standard\backend\models\StockMovement */
 /* @var $form yii\widgets\ActiveForm */
 
 $status = Yii::$app->session->getFlash('status');

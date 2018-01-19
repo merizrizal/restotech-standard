@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Supplier;
-use backend\models\search\SupplierSearch;
-use backend\models\Settings;
+use restotech\standard\backend\models\Supplier;
+use restotech\standard\backend\models\search\SupplierSearch;
+use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -2,15 +2,15 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\GridView;
+use restotech\standard\backend\components\GridView;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use backend\models\Printer;
-use backend\components\NotificationDialog;
-use backend\components\ModalDialog;
+use restotech\standard\backend\models\Printer;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Customer */
+/* @var $model restotech\standard\backend\models\Customer */
 
 kartik\select2\Select2Asset::register($this);
 kartik\select2\ThemeKrajeeAsset::register($this);

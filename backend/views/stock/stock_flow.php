@@ -4,12 +4,12 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use kartik\date\DatePicker;
-use backend\models\Item;
-use backend\models\Storage;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\models\Item;
+use restotech\standard\backend\models\Storage;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Stock */
+/* @var $model restotech\standard\backend\models\Stock */
 
 yii\widgets\MaskedInputAsset::register($this);
 kartik\select2\Select2Asset::register($this);

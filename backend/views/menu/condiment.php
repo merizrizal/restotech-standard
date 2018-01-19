@@ -4,12 +4,12 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\components\NotificationDialog;
-use backend\components\DynamicFormField;
-use backend\models\Menu;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\components\DynamicFormField;
+use restotech\standard\backend\models\Menu;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
+/* @var $model restotech\standard\backend\models\Menu */
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');

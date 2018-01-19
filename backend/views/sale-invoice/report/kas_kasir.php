@@ -2,12 +2,12 @@
 
 use yii\helpers\Html;
 use kartik\date\DatePicker;
-use backend\components\Tools;
-use backend\components\PrinterDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\Tools;
+use restotech\standard\backend\components\PrinterDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaleInvoice */
+/* @var $model restotech\standard\backend\models\SaleInvoice */
 
 yii\widgets\MaskedInputAsset::register($this);
 
@@ -312,10 +312,10 @@ if (!empty($modelSaleInvoice)):
 endif; ?>    
 
 <?php
-$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'backend\assets\AppAsset']);
+$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
 
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/jquery-currency/jquery.currency.js', ['depends' => 'backend\assets\AppAsset']); 
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'backend\assets\AppAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/jquery-currency/jquery.currency.js', ['depends' => 'yii\web\YiiAsset']); 
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     $("#tanggal").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});

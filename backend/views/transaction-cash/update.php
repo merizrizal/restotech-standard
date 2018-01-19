@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\TransactionCash */
+/* @var $model restotech\standard\backend\models\TransactionCash */
 
 $this->title = 'Update ' . $title[$model->account->account_type] . ': ' . ' ' . $model->account->nama_account;
 $this->params['breadcrumbs'][] = ['label' => $title[$model->account->account_type], 'url' => ['index', 'type' => $model->account->account_type]];

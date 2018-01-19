@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\time\TimePicker;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Shift */
+/* @var $model restotech\standard\backend\models\Shift */
 /* @var $form yii\widgets\ActiveForm */
 
 $status = Yii::$app->session->getFlash('status');

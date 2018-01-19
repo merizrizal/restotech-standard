@@ -1,9 +1,9 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SaleInvoiceArPayment;
+use restotech\standard\backend\models\SaleInvoiceArPayment;
 use sybase\SybaseController;
 use yii\filters\VerbFilter;
 use kartik\mpdf\Pdf;

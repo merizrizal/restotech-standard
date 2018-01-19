@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\TransactionCash */
+/* @var $model restotech\standard\backend\models\TransactionCash */
 
 $this->title = $model->account->nama_account;
 $this->params['breadcrumbs'][] = ['label' => $title[$model->account->account_type], 'url' => ['index', 'type' => $model->account->account_type]];

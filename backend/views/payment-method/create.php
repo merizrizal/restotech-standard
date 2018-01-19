@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PaymentMethod */
+/* @var $model restotech\standard\backend\models\PaymentMethod */
 
 $this->title = 'Create Metode Pembayaran';
 $this->params['breadcrumbs'][] = ['label' => 'Metode Pembayaran', 'url' => ['index']];

@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SupplierDeliveryInvoicePayment;
-use backend\models\SupplierDeliveryInvoice;
+use restotech\standard\backend\models\SupplierDeliveryInvoicePayment;
+use restotech\standard\backend\models\SupplierDeliveryInvoice;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

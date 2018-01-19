@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SaldoKasir;
-use backend\models\search\SaldoKasirSearch;
+use restotech\standard\backend\models\SaldoKasir;
+use restotech\standard\backend\models\search\SaldoKasirSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

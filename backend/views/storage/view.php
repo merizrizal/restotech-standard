@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Storage */
+/* @var $model restotech\standard\backend\models\Storage */
 
 $this->title = ' (' . $model->id . ') ' . $model->nama_storage;
 $this->params['breadcrumbs'][] = ['label' => 'Gudang', 'url' => ['index']];

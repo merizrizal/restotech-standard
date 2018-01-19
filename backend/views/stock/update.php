@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Stock */
+/* @var $model restotech\standard\backend\models\Stock */
 
 $this->title = 'Update Stock: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Stocks', 'url' => ['index']];

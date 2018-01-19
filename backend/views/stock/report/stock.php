@@ -5,7 +5,7 @@ use kartik\date\DatePicker;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaleInvoice */
+/* @var $model restotech\standard\backend\models\SaleInvoice */
 
 $this->title = 'Laporan Stok';
 $this->params['breadcrumbs'][] = $this->title; ?>

@@ -1,6 +1,6 @@
 <?php
 
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 $this->title = 'Dashboard';
 $this->params['breadcrumbs'][] = $this->title;
@@ -96,9 +96,9 @@ foreach ($topMenu as $key => $value) {
 } ?>
 
 <?php
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/highcharts.js', ['depends' => 'backend\assets\AppAsset']);
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/themes/dark-unica.js', ['depends' => 'backend\assets\AppAsset']);
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/plugins/grouped-categories.js', ['depends' => 'backend\assets\AppAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/highcharts.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/themes/dark-unica.js', ['depends' => 'yii\web\YiiAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/highchart/plugins/grouped-categories.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     var chart_penjualan = new Highcharts.chart("chart-penjualan", {

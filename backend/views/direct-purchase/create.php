@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\DirectPurchase */
+/* @var $model restotech\standard\backend\models\DirectPurchase */
 
 $this->title = 'Create Pembelian Langsung';
 $this->params['breadcrumbs'][] = ['label' => 'Pembelian Langsung', 'url' => ['index']];

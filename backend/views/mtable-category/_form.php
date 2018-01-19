@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\MtableCategory */
+/* @var $model restotech\standard\backend\models\MtableCategory */
 /* @var $form yii\widgets\ActiveForm */
 
 $status = Yii::$app->session->getFlash('status');

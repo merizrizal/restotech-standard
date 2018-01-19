@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\StorageRack */
+/* @var $model restotech\standard\backend\models\StorageRack */
 
 $this->title = 'Rak - ' . $model->nama_rak;
 $this->params['breadcrumbs'][] = ['label' => 'Rak  - ' . $model->storage->nama_storage, 'url' => ['index', 'sid' => $model->storage_id]];

@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
-use backend\components\DynamicTable;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\DynamicTable;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
+/* @var $model restotech\standard\backend\models\Menu */
 
 $dynamicTableMenuRecipe = new DynamicTable([
     'model' => $modelMenuRecipe,

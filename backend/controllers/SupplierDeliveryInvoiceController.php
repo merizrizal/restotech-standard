@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\SupplierDeliveryInvoice;
-use backend\models\search\SupplierDeliveryInvoiceSearch;
-use backend\models\SupplierDeliveryInvoiceTrx;
-use backend\models\SupplierDeliveryTrx;
-use backend\models\ReturPurchaseTrx;
-use backend\models\Settings;
+use restotech\standard\backend\models\SupplierDeliveryInvoice;
+use restotech\standard\backend\models\search\SupplierDeliveryInvoiceSearch;
+use restotech\standard\backend\models\SupplierDeliveryInvoiceTrx;
+use restotech\standard\backend\models\SupplierDeliveryTrx;
+use restotech\standard\backend\models\ReturPurchaseTrx;
+use restotech\standard\backend\models\Settings;
 use sybase\SybaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

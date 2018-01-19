@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\StockKoreksi */
+/* @var $model restotech\standard\backend\models\StockKoreksi */
 
 $this->title = 'Input Stock Koreksi';
 $this->params['breadcrumbs'][] = ['label' => 'Stock', 'url' => ['stock/index']];

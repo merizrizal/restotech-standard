@@ -1,12 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-use backend\components\GridView;
-use backend\components\ModalDialog;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\GridView;
+use restotech\standard\backend\components\ModalDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\search\SaleInvoiceSearch */
+/* @var $searchModel restotech\standard\backend\models\search\SaleInvoiceSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 Yii::$app->formatter->timeZone = 'Asia/Jakarta';

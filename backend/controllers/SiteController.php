@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
 use yii\filters\VerbFilter;

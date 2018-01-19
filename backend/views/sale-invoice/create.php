@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaleInvoice */
+/* @var $model restotech\standard\backend\models\SaleInvoice */
 
 $this->title = 'Create Sale Invoice';
 $this->params['breadcrumbs'][] = ['label' => 'Sale Invoice', 'url' => ['index']];

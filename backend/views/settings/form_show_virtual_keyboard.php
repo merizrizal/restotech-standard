@@ -3,11 +3,11 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Inflector;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\NotificationDialog;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Settings */
+/* @var $model restotech\standard\backend\models\Settings */
 
 $this->title = 'Setting Virtual Keyboard';
 $this->params['breadcrumbs'][] = $this->title;

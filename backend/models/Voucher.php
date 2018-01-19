@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace restotech\standard\backend\models;
 
 use Yii;
 

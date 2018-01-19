@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\models\search;
+namespace restotech\standard\backend\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\UserLevel;
+use restotech\standard\backend\models\UserLevel;
 
 /**
- * UserLevelSearch represents the model behind the search form about `backend\models\UserLevel`.
+ * UserLevelSearch represents the model behind the search form about `restotech\standard\backend\models\UserLevel`.
  */
 class UserLevelSearch extends UserLevel
 {

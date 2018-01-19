@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\User;
-use backend\models\search\UserSearch;
+use restotech\standard\backend\models\User;
+use restotech\standard\backend\models\search\UserSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

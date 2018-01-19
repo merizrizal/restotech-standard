@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\models\search;
+namespace restotech\standard\backend\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\SaleInvoice;
+use restotech\standard\backend\models\SaleInvoice;
 
 /**
- * SaleInvoiceSearch represents the model behind the search form about `backend\models\SaleInvoice`.
+ * SaleInvoiceSearch represents the model behind the search form about `restotech\standard\backend\models\SaleInvoice`.
  */
 class SaleInvoiceSearch extends SaleInvoice
 {

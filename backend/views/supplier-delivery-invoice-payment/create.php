@@ -5,12 +5,12 @@ use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
-use backend\components\DynamicTable;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\components\DynamicTable;
+use restotech\standard\backend\components\NotificationDialog;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SupplierDeliveryInvoicePayment */
+/* @var $model restotech\standard\backend\models\SupplierDeliveryInvoicePayment */
 
 yii\widgets\MaskedInputAsset::register($this);
 

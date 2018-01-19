@@ -1,5 +1,5 @@
 <?php
-use backend\components\GridView; 
+use restotech\standard\backend\components\GridView; 
 
 $tableName = $model->tableName(); ?>
 

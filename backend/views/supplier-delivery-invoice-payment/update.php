@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SupplierDeliveryInvoicePayment */
+/* @var $model restotech\standard\backend\models\SupplierDeliveryInvoicePayment */
 
 $this->title = 'Update Supplier Delivery Invoice Payment: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Supplier Delivery Invoice Payment', 'url' => ['index']];

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SupplierDelivery */
+/* @var $model restotech\standard\backend\models\SupplierDelivery */
 
 $this->title = 'Create Penerimaan Item PO';
 $this->params['breadcrumbs'][] = ['label' => 'Penerimaan Item PO', 'url' => ['index']];

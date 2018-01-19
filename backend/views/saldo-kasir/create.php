@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\SaldoKasir */
+/* @var $model restotech\standard\backend\models\SaldoKasir */
 
 $this->title = 'Create Saldo Kasir';
 $this->params['breadcrumbs'][] = ['label' => 'Saldo Kasir', 'url' => ['index']];

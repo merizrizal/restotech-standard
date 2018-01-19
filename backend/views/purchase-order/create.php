@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PurchaseOrder */
+/* @var $model restotech\standard\backend\models\PurchaseOrder */
 
 $this->title = 'Create Purchase Order';
 $this->params['breadcrumbs'][] = ['label' => 'Purchase Orders', 'url' => ['index']];

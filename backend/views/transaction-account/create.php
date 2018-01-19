@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\TransactionAccount */
+/* @var $model restotech\standard\backend\models\TransactionAccount */
 
 $this->title = 'Create Account Transaksi';
 $this->params['breadcrumbs'][] = ['label' => 'Account Transaksi', 'url' => ['index']];

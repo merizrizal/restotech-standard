@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\components\ModalDialog;
+use restotech\standard\backend\components\ModalDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Item */
+/* @var $model restotech\standard\backend\models\Item */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Item', 'url' => ['index']];

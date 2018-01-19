@@ -5,13 +5,13 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
-use backend\components\NotificationDialog;
-use backend\components\DynamicFormField;
-use backend\models\Supplier;
-use backend\models\Item;
+use restotech\standard\backend\components\NotificationDialog;
+use restotech\standard\backend\components\DynamicFormField;
+use restotech\standard\backend\models\Supplier;
+use restotech\standard\backend\models\Item;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PurchaseOrder */
+/* @var $model restotech\standard\backend\models\PurchaseOrder */
 /* @var $form yii\widgets\ActiveForm */
 
 yii\widgets\MaskedInputAsset::register($this);

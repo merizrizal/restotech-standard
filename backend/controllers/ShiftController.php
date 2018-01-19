@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace restotech\standard\backend\controllers;
 
 use Yii;
-use backend\models\Shift;
-use backend\models\search\ShiftSearch;
+use restotech\standard\backend\models\Shift;
+use restotech\standard\backend\models\search\ShiftSearch;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ReturPurchase */
+/* @var $model restotech\standard\backend\models\ReturPurchase */
 
 $this->title = 'Update Retur PO: ' . ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Retur PO', 'url' => ['index']];

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Shift */
+/* @var $model restotech\standard\backend\models\Shift */
 
 $this->title = 'Create Shift';
 $this->params['breadcrumbs'][] = ['label' => 'Shift', 'url' => ['index']];

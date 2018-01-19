@@ -3,12 +3,12 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use backend\models\Employee;
-use backend\models\UserLevel;
-use backend\components\NotificationDialog;
+use restotech\standard\backend\models\Employee;
+use restotech\standard\backend\models\UserLevel;
+use restotech\standard\backend\components\NotificationDialog;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\User */
+/* @var $model restotech\standard\backend\models\User */
 /* @var $form yii\widgets\ActiveForm */
 
 kartik\select2\Select2Asset::register($this);
@@ -143,9 +143,9 @@ $this->params['breadcrumbs'][] = 'Update User Password'; ?>
 </div>
 
 <?php
-$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'backend\assets\AppAsset']);
+$this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
  
-$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'backend\assets\AppAsset']);
+$this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     $("#user-kd_karyawan").select2({
