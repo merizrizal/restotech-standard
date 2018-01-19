@@ -26,6 +26,6 @@ class AdminlteAssets extends AssetBundle
         'js/AdminLTE/custom.js',
     ];
     public $depends = [
-        'common\assets\AppAsset'
+        'restotech\standard\common\assets\AppAsset'
     ];
 }

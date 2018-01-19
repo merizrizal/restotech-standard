@@ -4,7 +4,7 @@ use yii\helpers\Inflector;
 use kartik\money\MaskMoney;
 use yii\widgets\ActiveForm;
 
-$assetCommon = $this->assetBundles['common\assets\AppAsset'];
+$assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset'];
 
 $tableName = $model[0]->tableName(); ?>
 

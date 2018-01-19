@@ -4,7 +4,7 @@ use restotech\standard\backend\assets\AppAsset;
 use restotech\standard\backend\assets\AdminlteAssets;
 use yii\helpers\Html;
 
-$assetCommon = common\assets\AppAsset::register($this);
+$assetCommon = restotech\standard\common\assets\AppAsset::register($this);
 
 AppAsset::register($this);
 AdminlteAssets::register($this); ?>
@@ -24,8 +24,8 @@ AdminlteAssets::register($this); ?>
         <title><?= Html::encode(Yii::$app->name) . ' - ' . Html::encode($this->title) ?></title>
         <?php 
         $this->head();
-        $this->registerCssFile($this->params['assetCommon']->baseUrl . '/css/font-awesome.min.css', ['depends' => 'common\assets\AppAsset']);
-        $this->registerCssFile($this->params['assetCommon']->baseUrl . '/css/ionicons.min.css', ['depends' => 'common\assets\AppAsset']); ?>
+        $this->registerCssFile($this->params['assetCommon']->baseUrl . '/css/font-awesome.min.css', ['depends' => 'yii\web\YiiAsset']);
+        $this->registerCssFile($this->params['assetCommon']->baseUrl . '/css/ionicons.min.css', ['depends' => 'yii\web\YiiAsset']); ?>
     </head>
     <body>
         <?php $this->beginBody() ?>

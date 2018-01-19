@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Inflector;
 use restotech\standard\backend\components\GridView; 
 
-$assetCommon = $this->assetBundles['common\assets\AppAsset'];
+$assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset'];
 
 $this->params['indexRow'] = 0;
 $this->params['inputFields'] = $inputFields; 

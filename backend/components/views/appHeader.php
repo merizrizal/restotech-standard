@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use restotech\standard\backend\components\Tools;
 
-$assetCommon = $this->assetBundles['common\assets\AppAsset']; ?>
+$assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset']; ?>
 
 
 <header class="main-header">

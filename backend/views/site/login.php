@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use restotech\standard\backend\components\VirtualKeyboard;
 
-$assetCommon = common\assets\AppAsset::register($this);
+$assetCommon = restotech\standard\common\assets\AppAsset::register($this);
 
 $this->title = 'Login';
 
