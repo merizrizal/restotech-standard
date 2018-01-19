@@ -1,24 +1,23 @@
 <?php
 
-namespace frontend\controllers;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
-use backend\models\Mtable;
-use backend\models\MtableCategory;
-use backend\models\MtableSession;
-use backend\models\MtableOrderQueue;
-use backend\models\MtableBooking;
-use backend\models\SaleInvoice;
-use backend\models\PaymentMethod;
-use backend\models\Settings;
-use frontend\controllers\base\PosBaseController;
+use restotech\standard\backend\models\Mtable;
+use restotech\standard\backend\models\MtableCategory;
+use restotech\standard\backend\models\MtableSession;
+use restotech\standard\backend\models\MtableOrderQueue;
+use restotech\standard\backend\models\MtableBooking;
+use restotech\standard\backend\models\SaleInvoice;
+use restotech\standard\backend\models\PaymentMethod;
+use restotech\standard\backend\models\Settings;
 use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 
 /**
  * Home controller
  */
-class HomeController extends PosBaseController {
+class HomeController extends \restotech\standard\backend\controllers\BackendController {
 
     /**
      * @inheritdoc

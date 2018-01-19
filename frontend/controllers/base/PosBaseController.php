@@ -1,13 +1,13 @@
 <?php
 
-namespace frontend\controllers\base;
+namespace restotech\standard\frontend\controllers\base;
 
 use Yii;
 
-use backend\models\Settings;
-use backend\models\TransactionDay;
+use restotech\standard\backend\models\Settings;
+use restotech\standard\backend\models\TransactionDay;
 
-class PosBaseController extends \sybase\SybaseController {
+class PosBaseController extends \restotech\standard\backend\controllers\BackendController {
 
     /**
      * @inheritdoc

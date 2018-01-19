@@ -1,6 +1,6 @@
 <?php
 
-unset($this->assetBundles['common\assets\AppAsset']);
+unset($this->assetBundles['restotech\standard\common\assets\AppAsset']);
 unset($this->assetBundles['yii\web\YiiAsset']);
 unset($this->assetBundles['yii\web\JqueryAsset']);
 unset($this->assetBundles['yii\bootstrap\BootstrapAsset']);

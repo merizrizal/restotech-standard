@@ -5,7 +5,7 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\time\TimePicker;
-use backend\models\MtableCategory;
+use restotech\standard\backend\models\MtableCategory;
 
 yii\widgets\MaskedInputAsset::register($this);
 kartik\select2\Select2Asset::register($this);

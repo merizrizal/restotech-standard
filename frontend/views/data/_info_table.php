@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use backend\components\Tools; ?>
+use restotech\standard\backend\components\Tools; ?>
 
 <div class="row" style="padding: 0 15px">
 

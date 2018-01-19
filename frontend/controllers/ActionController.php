@@ -1,33 +1,33 @@
 <?php
 
-namespace frontend\controllers;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
-use backend\models\MtableSession;
-use backend\models\MtableJoin;
-use backend\models\MtableSessionJoin;
-use backend\models\MtableOrder;
-use backend\models\MtableOrderQueue;
-use backend\models\MtableBooking;
-use backend\models\SaleInvoice;
-use backend\models\SaleInvoiceTrx;
-use backend\models\SaleInvoicePayment;
-use backend\models\SaleInvoiceCorrection;
-use backend\models\SaleInvoiceTrxCorrection;
-use backend\models\SaleInvoicePaymentCorrection;
-use backend\models\MenuRecipe;
-use backend\models\Stock;
-use backend\models\StockMovement;
-use backend\models\Employee;
-use backend\models\Voucher;
-use backend\models\Settings;
+use restotech\standard\backend\models\MtableSession;
+use restotech\standard\backend\models\MtableJoin;
+use restotech\standard\backend\models\MtableSessionJoin;
+use restotech\standard\backend\models\MtableOrder;
+use restotech\standard\backend\models\MtableOrderQueue;
+use restotech\standard\backend\models\MtableBooking;
+use restotech\standard\backend\models\SaleInvoice;
+use restotech\standard\backend\models\SaleInvoiceTrx;
+use restotech\standard\backend\models\SaleInvoicePayment;
+use restotech\standard\backend\models\SaleInvoiceCorrection;
+use restotech\standard\backend\models\SaleInvoiceTrxCorrection;
+use restotech\standard\backend\models\SaleInvoicePaymentCorrection;
+use restotech\standard\backend\models\MenuRecipe;
+use restotech\standard\backend\models\Stock;
+use restotech\standard\backend\models\StockMovement;
+use restotech\standard\backend\models\Employee;
+use restotech\standard\backend\models\Voucher;
+use restotech\standard\backend\models\Settings;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 
 /**
  * Action controller
  */
-class ActionController extends \sybase\SybaseController {
+class ActionController extends \restotech\standard\backend\controllers\BackendController {
     
     /**
      * @inheritdoc

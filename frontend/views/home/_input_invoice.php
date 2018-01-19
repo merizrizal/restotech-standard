@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html; 
-use backend\components\VirtualKeyboard; ?>
+use restotech\standard\backend\components\VirtualKeyboard; ?>
 
 
 <div class="col-lg-12">

@@ -1,5 +1,5 @@
 <?php
-use backend\components\VirtualKeyboard; 
+use restotech\standard\backend\components\VirtualKeyboard; 
 
 $virtualKeyboard = new VirtualKeyboard();
 $virtualKeyboard->registerCssFile();

@@ -2,9 +2,9 @@
 use yii\helpers\Html; 
 use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
-use backend\components\Tools;
-use backend\components\PrinterDialog;
-use backend\components\VirtualKeyboard;
+use restotech\standard\backend\components\Tools;
+use restotech\standard\backend\components\PrinterDialog;
+use restotech\standard\backend\components\VirtualKeyboard;
 
 Yii::$app->formatter->timeZone = 'Asia/Jakarta';
 
@@ -125,7 +125,7 @@ echo Html::hiddenInput('after_split', Yii::$app->urlManager->createUrl(['home/vi
     </div>
     
     <?php
-    $modelMtableOrder = new backend\models\MtableOrder(); ?>
+    $modelMtableOrder = new restotech\standard\backend\models\MtableOrder(); ?>
     
     <div id="temp-catatan">    
         <form>            

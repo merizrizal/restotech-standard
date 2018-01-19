@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\controllers;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
-use backend\models\TransactionDay;
-use backend\models\MtableSession;
+use restotech\standard\backend\models\TransactionDay;
+use restotech\standard\backend\models\MtableSession;
 use frontend\controllers\base\PosBaseController;
 use yii\filters\VerbFilter;
 

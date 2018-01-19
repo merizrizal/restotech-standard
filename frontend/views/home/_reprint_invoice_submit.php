@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html; 
 use yii\widgets\ActiveForm;
-use backend\components\Tools;
-use backend\components\PrinterDialog;
-use backend\components\VirtualKeyboard;
+use restotech\standard\backend\components\Tools;
+use restotech\standard\backend\components\PrinterDialog;
+use restotech\standard\backend\components\VirtualKeyboard;
 
 Yii::$app->formatter->timeZone = 'Asia/Jakarta';
 

@@ -4,13 +4,13 @@ $params = array_merge(
     require(__DIR__ . '/params.php')
 );
 
-return [
+$config = [
     'id' => 'app-frontend',
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
+    'controllerNamespace' => 'restotech\standard\frontend\controllers',
     'defaultRoute' => 'home/index',    
     'modules' => [ 
         'gridview' => [
@@ -19,7 +19,7 @@ return [
     ],
     'components' => [
         'user' => [
-            'identityClass' => 'backend\models\User',
+            'identityClass' => 'restotech\standard\backend\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-restotech', 'httpOnly' => true],
         ],
@@ -54,3 +54,7 @@ return [
     'params' => $params,
 ];
 
+return yii\helpers\ArrayHelper::merge(
+        $config, 
+        require(dirname(dirname(__DIR__)) . '/common/config/main.php')
+);

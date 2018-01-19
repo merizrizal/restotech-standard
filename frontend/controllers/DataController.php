@@ -1,22 +1,22 @@
 <?php
 
-namespace frontend\controllers;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
-use backend\models\MenuCategory;
-use backend\models\Menu;
-use backend\models\MenuCondiment;
-use backend\models\MtableCategory;
-use backend\models\Mtable;
-use backend\models\Employee;
-use backend\models\Voucher;
+use restotech\standard\backend\models\MenuCategory;
+use restotech\standard\backend\models\Menu;
+use restotech\standard\backend\models\MenuCondiment;
+use restotech\standard\backend\models\MtableCategory;
+use restotech\standard\backend\models\Mtable;
+use restotech\standard\backend\models\Employee;
+use restotech\standard\backend\models\Voucher;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 
 /**
  * Data controller
  */
-class DataController extends \sybase\SybaseController {    
+class DataController extends \restotech\standard\backend\controllers\BackendController {    
     
     /**
      * @inheritdoc

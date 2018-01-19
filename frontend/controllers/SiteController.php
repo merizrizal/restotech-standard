@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
 
@@ -10,7 +10,7 @@ use backend\components\Tools;
 /**
  * Site controller
  */
-class SiteController extends \sybase\SybaseController 
+class SiteController extends \restotech\standard\backend\controllers\BackendController 
 {
     /**
      * @inheritdoc

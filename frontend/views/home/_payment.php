@@ -2,9 +2,9 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\money\MaskMoney;
-use backend\components\Tools;
-use backend\components\PrinterDialog;
-use backend\components\VirtualKeyboard;
+use restotech\standard\backend\components\Tools;
+use restotech\standard\backend\components\PrinterDialog;
+use restotech\standard\backend\components\VirtualKeyboard;
 
 Yii::$app->formatter->timeZone = 'Asia/Jakarta';
 
@@ -69,7 +69,7 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
     <div id="temp-keterangan">
         <form>
 
-            <?= $form->field(new \backend\models\SaleInvoicePayment(), 'keterangan')->textInput(['class' => 'form-control keterangan temp']) ?>
+            <?= $form->field(new \restotech\standard\backend\models\SaleInvoicePayment(), 'keterangan')->textInput(['class' => 'form-control keterangan temp']) ?>
 
         </form>
     </div>

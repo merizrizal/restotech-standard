@@ -1,8 +1,8 @@
 <?php
 use yii\helpers\Html;
-use frontend\assets\AppAsset;
-use frontend\components\AppHeader;
-use frontend\components\NotificationDialog;
+use restotech\standard\frontend\assets\AppAsset;
+use restotech\standard\frontend\components\AppHeader;
+use restotech\standard\frontend\components\NotificationDialog;
 
 /* @var $this \yii\web\View */
 /* @var $content string */

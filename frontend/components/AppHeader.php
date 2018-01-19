@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\components;
+namespace restotech\standard\frontend\components;
 
 use yii\base\Widget;
 

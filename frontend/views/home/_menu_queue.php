@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use backend\components\GridView; 
+use restotech\standard\backend\components\GridView; 
 
 $this->title = 'Antrian Menu'; ?>
 

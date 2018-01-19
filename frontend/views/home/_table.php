@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use backend\components\Tools; ?>
+use restotech\standard\backend\components\Tools; ?>
 
 <div class="col-lg-12 col-md-12 mb">
     <div class="grey-panel pn" style="height: auto">

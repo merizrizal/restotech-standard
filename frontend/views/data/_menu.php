@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 if (count($modelMenu) > 0):
 

@@ -24,6 +24,6 @@ class AppAsset extends AssetBundle
         
     ];
     public $depends = [
-        'common\assets\AppAsset',
+        'restotech\standard\common\assets\AppAsset',
     ];
 }

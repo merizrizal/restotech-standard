@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace frontend\assets;
+namespace restotech\standard\frontend\assets;
 
 use yii\web\AssetBundle;
 
@@ -15,8 +15,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot/media';
-    public $baseUrl = '@web/media';
+    public $sourcePath = '@restotech/standard/frontend/media';
     
     public $css = [
         'lineicons/style.css',
@@ -33,6 +32,6 @@ class AppAsset extends AssetBundle
         'js/common-scripts.js',
     ];
     public $depends = [
-        'common\assets\AppAsset',
+        'restotech\standard\common\assets\AppAsset',
     ];
 }
