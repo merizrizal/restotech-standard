@@ -11,7 +11,7 @@ class BackendController extends \sybase\SybaseController
         
         if (parent::beforeAction($action)) {
             
-            $this->getView()->params['assetCommon'] = \common\assets\AppAsset::register($this->getView());
+            $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
             
             if (Yii::$app->session->get('company_settings_profile') === null) {
                 
