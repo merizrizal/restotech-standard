@@ -5,7 +5,7 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 use restotech\standard\backend\models\TransactionAccount;
 use restotech\standard\backend\models\search\TransactionAccountSearch;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * TransactionAccountController implements the CRUD actions for TransactionAccount model.
  */
-class TransactionAccountController extends SybaseController
+class TransactionAccountController extends BackendController
 {
     public function behaviors()
     {

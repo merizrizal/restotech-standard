@@ -69,7 +69,7 @@ $jscript = '
         $.when(
             $.ajax({
                 type: "GET",
-                url: "' . Yii::$app->urlManager->createUrl(['site/get-datetime']) . '",            
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'site/get-datetime']) . '",            
                 success: function(data) {
                     date = data.date;
                     time = data.time

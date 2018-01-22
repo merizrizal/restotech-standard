@@ -7,7 +7,7 @@ use restotech\standard\backend\models\StockKoreksi;
 use restotech\standard\backend\models\search\StockKoreksiSearch;
 use restotech\standard\backend\models\Stock;
 use restotech\standard\backend\models\StockMovement;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 /**
  * StockKoreksiController implements the CRUD actions for StockKoreksi model.
  */
-class StockKoreksiController extends SybaseController
+class StockKoreksiController extends BackendController
 {
     public function behaviors()
     {

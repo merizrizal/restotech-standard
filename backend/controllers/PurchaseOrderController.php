@@ -344,7 +344,7 @@ class PurchaseOrderController extends BackendController
             'destination' => Pdf::DEST_DOWNLOAD,
             'content' => $content,
             'cssFile' => '@vendor/yii2-krajee-mpdf/assets/kv-mpdf-bootstrap.min.css',
-            'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')),
+            'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')),
             'options' => ['title' => Yii::$app->name],
             'methods' => [
                 'SetHeader'=>[Yii::$app->name . ' - Purchase Order'],

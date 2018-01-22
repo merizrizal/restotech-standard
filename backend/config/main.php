@@ -9,8 +9,8 @@ $config = [
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'standard/backend/site/default',    
-    'modules' => [ 
+    'defaultRoute' => 'standard/backend/site/default',
+    'modules' => [
         'gridview' => [
             'class' => 'kartik\grid\Module',
         ]
@@ -36,24 +36,24 @@ $config = [
         ],
         'errorHandler' => [
             'errorAction' => 'standard/backend/site/error',
-        ],        
+        ],
         'request' => [
-            
+
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
-            'enablePrettyUrl' => true,  
+            'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [                
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',                
+            'rules' => [
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
-        ],        
+        ],
     ],
     'params' => $params,
 ];
 
 return yii\helpers\ArrayHelper::merge(
-        $config, 
+        $config,
         require(dirname(dirname(__DIR__)) . '/common/config/main.php')
 );
 

@@ -5,7 +5,7 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 use restotech\standard\backend\models\TransactionDay;
 use restotech\standard\backend\models\MtableSession;
-use sybase\SybaseController;
+
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 /**
  * TransactionDayController implements the CRUD actions for TransactionDay model.
  */
-class TransactionDayController extends SybaseController
+class TransactionDayController extends BackendController
 {
     public function behaviors()
     {

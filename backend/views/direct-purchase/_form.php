@@ -74,7 +74,7 @@ $form = ActiveForm::begin([
                 ),
                 'affect' => [
                     'field' => 'item_sku_id',
-                    'url' => Yii::$app->urlManager->createUrl('item-sku/get-sku-item'),
+                    'url' => Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-sku/get-sku-item']),
                 ],
                 'colOption' => 'style="width: 25%"',
                 'existIsDisabled' => true,
@@ -106,7 +106,7 @@ $form = ActiveForm::begin([
                 ),
                 'affect' => [
                     'field' => 'storage_rack_id',
-                    'url' => Yii::$app->urlManager->createUrl('storage-rack/get-storage-rack'),
+                    'url' => Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'storage-rack/get-storage-rack']),
                 ],
                 'colOption' => 'style="width: 23%"',
                 'existIsDisabled' => true,

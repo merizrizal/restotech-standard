@@ -5,7 +5,7 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 use restotech\standard\backend\models\TransactionCash;
 use restotech\standard\backend\models\search\TransactionCashSearch;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 /**
  * TransactionCashController implements the CRUD actions for TransactionCash model.
  */
-class TransactionCashController extends SybaseController
+class TransactionCashController extends BackendController
 {
     private $title = [];  
     

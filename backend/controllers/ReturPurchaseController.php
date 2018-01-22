@@ -11,7 +11,7 @@ use restotech\standard\backend\models\ItemSku;
 use restotech\standard\backend\models\Stock;
 use restotech\standard\backend\models\StockMovement;
 use restotech\standard\backend\models\Settings;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -22,7 +22,7 @@ use yii\data\ActiveDataProvider;
 /**
  * ReturPurchaseController implements the CRUD actions for ReturPurchase model.
  */
-class ReturPurchaseController extends SybaseController
+class ReturPurchaseController extends BackendController
 {
     public function behaviors()
     {

@@ -8,7 +8,7 @@ use restotech\standard\backend\models\search\SaleInvoiceSearch;
 use restotech\standard\backend\models\SaleInvoiceRetur;
 use restotech\standard\backend\models\Menu;
 use restotech\standard\backend\models\SaldoKasir;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use kartik\mpdf\Pdf;
@@ -16,7 +16,7 @@ use kartik\mpdf\Pdf;
 /**
  * SaleInvoiceController implements the CRUD actions for SaleInvoice model.
  */
-class SaleInvoiceController extends SybaseController
+class SaleInvoiceController extends BackendController
 {
     public function behaviors()
     {
@@ -181,7 +181,7 @@ class SaleInvoiceController extends SybaseController
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . $title], 
@@ -259,7 +259,7 @@ class SaleInvoiceController extends SybaseController
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . $title], 
@@ -356,7 +356,7 @@ class SaleInvoiceController extends SybaseController
                         'destination' => Pdf::DEST_DOWNLOAD, 
                         'content' => $content,  
                         'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                        'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+                        'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                         'options' => ['title' => Yii::$app->name],
                         'methods' => [ 
                             'SetHeader'=>[Yii::$app->name . $title], 
@@ -439,7 +439,7 @@ class SaleInvoiceController extends SybaseController
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . $title], 

@@ -9,7 +9,7 @@ use restotech\standard\backend\models\DirectPurchaseTrx;
 use restotech\standard\backend\models\Stock;
 use restotech\standard\backend\models\StockMovement;
 use restotech\standard\backend\models\Settings;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -21,7 +21,7 @@ use kartik\mpdf\Pdf;
 /**
  * DirectPurchaseController implements the CRUD actions for DirectPurchase model.
  */
-class DirectPurchaseController extends SybaseController
+class DirectPurchaseController extends BackendController
 {
     public function behaviors()
     {
@@ -390,7 +390,7 @@ class DirectPurchaseController extends SybaseController
             'destination' => Pdf::DEST_DOWNLOAD, 
             'content' => $content,  
             'cssFile' => '@vendor/yii2-krajee-mpdf/assets/kv-mpdf-bootstrap.min.css',
-            'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+            'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
             'options' => ['title' => Yii::$app->name],
             'methods' => [ 
                 'SetHeader'=>[Yii::$app->name . ' - Pembelian Langsungs'], 

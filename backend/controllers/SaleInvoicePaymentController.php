@@ -6,7 +6,7 @@ use Yii;
 use restotech\standard\backend\models\SaleInvoicePayment;
 use restotech\standard\backend\models\search\SaleInvoicePaymentSearch;
 use restotech\standard\backend\models\SaleInvoiceArPayment;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -17,7 +17,7 @@ use kartik\mpdf\Pdf;
 /**
  * SaleInvoicePaymentController implements the CRUD actions for SaleInvoicePayment model.
  */
-class SaleInvoicePaymentController extends SybaseController
+class SaleInvoicePaymentController extends BackendController
 {
     public function behaviors()
     {
@@ -160,7 +160,7 @@ class SaleInvoicePaymentController extends SybaseController
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')),
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')),
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . $title], 

@@ -27,7 +27,7 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
         <ul class="sidebar-menu">  
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="<?= Yii::$app->urlManager->createUrl(['page/dashboard']); ?>">
+                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'page/dashboard']); ?>">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
@@ -40,57 +40,57 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">                                        
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['employee']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'employee']); ?>">
                             <i class="fa fa-angle-double-right"></i>Karyawan
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('shift'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'shift']); ?>">
                             <i class="fa fa-angle-double-right"></i> Shift
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('saldo-kasir'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'saldo-kasir']); ?>">
                             <i class="fa fa-angle-double-right"></i> Saldo Kasir
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier']); ?>">
                             <i class="fa fa-angle-double-right"></i> Supplier
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('storage'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'storage']); ?>">
                             <i class="fa fa-angle-double-right"></i> Gudang
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('menu-satuan'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'menu-satuan']); ?>">
                             <i class="fa fa-angle-double-right"></i> Satuan Menu
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('menu-category'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'menu-category']); ?>">
                             <i class="fa fa-angle-double-right"></i> Kategori Menu
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('menu'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'menu']); ?>">
                             <i class="fa fa-angle-double-right"></i> Menu
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('payment-method'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'payment-method']); ?>">
                             <i class="fa fa-angle-double-right"></i> Metode Pembayaran
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('voucher'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'voucher']); ?>">
                             <i class="fa fa-angle-double-right"></i> Voucher
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('mtable-category'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'mtable-category']); ?>">
                             <i class="fa fa-angle-double-right"></i> Ruangan / Meja
                         </a>
                     </li>
@@ -104,42 +104,42 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('item-category'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-category']); ?>">
                             <i class="fa fa-angle-double-right"></i> Kategori Item
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('item'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item']); ?>">
                             <i class="fa fa-angle-double-right"></i> Item
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-movement/index', 'type' => 'Inflow']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock-movement/index', 'type' => 'Inflow']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok Masuk
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-movement/index', 'type' => 'Outflow']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock-movement/index', 'type' => 'Outflow']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok Keluar
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-movement/index', 'type' => 'Transfer']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock-movement/index', 'type' => 'Transfer']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok Transfer
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-movement/convert']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock-movement/convert']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok Konversi
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock/index']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock/index']); ?>">
                             <i class="fa fa-angle-double-right"></i> Koreksi Stok
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['stock-koreksi/index']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock-koreksi/index']); ?>">
                             <i class="fa fa-angle-double-right"></i> Verifikasi Koreksi Stok
                         </a>
                     </li>
@@ -153,27 +153,27 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('purchase-order'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'purchase-order']); ?>">
                             <i class="fa fa-angle-double-right"></i> Purchase Order
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier-delivery'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery']); ?>">
                             <i class="fa fa-angle-double-right"></i> Penerimaan Item PO
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier-delivery-invoice'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery-invoice']); ?>">
                             <i class="fa fa-angle-double-right"></i> Invoice Penerimaan PO
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('retur-purchase'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'retur-purchase']); ?>">
                             <i class="fa fa-angle-double-right"></i> Retur PO
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('direct-purchase'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'direct-purchase']); ?>">
                             <i class="fa fa-angle-double-right"></i> Pembelian Langsung
                         </a>
                     </li>
@@ -187,12 +187,12 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('transaction-day/start-day'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'transaction-day/start-day']); ?>">
                             <i class="fa fa-angle-double-right"></i> Start Day
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('transaction-day/end-day'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'transaction-day/end-day']); ?>">
                             <i class="fa fa-angle-double-right"></i> End Day
                         </a>
                     </li>
@@ -202,12 +202,12 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice/refund'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice/refund']); ?>">
                             <i class="fa fa-angle-double-right"></i> Refund
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice-payment/ar'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice-payment/ar']); ?>">
                             <i class="fa fa-angle-double-right"></i> Piutang
                         </a>
                     </li>
@@ -221,17 +221,17 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('transaction-account'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'transaction-account']); ?>">
                             <i class="fa fa-angle-double-right"></i> Account Transaksi
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['transaction-cash', 'type' => 'Cash-In']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'transaction-cash', 'type' => 'Cash-In']); ?>">
                             <i class="fa fa-angle-double-right"></i> Kas Masuk
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['transaction-cash', 'type' => 'Cash-Out']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'transaction-cash', 'type' => 'Cash-Out']); ?>">
                             <i class="fa fa-angle-double-right"></i> Kas Keluar
                         </a>
                     </li>
@@ -245,57 +245,57 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice/report-penjualan'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice/report-penjualan']); ?>">
                             <i class="fa fa-angle-double-right"></i> Penjualan
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice/report-penjualan-hpp'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice/report-penjualan-hpp']); ?>">
                             <i class="fa fa-angle-double-right"></i> Penjualan &amp; HPP
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice/report-kas-kasir'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice/report-kas-kasir']); ?>">
                             <i class="fa fa-angle-double-right"></i> Kas Kasir
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice/report-rekap-penjualan'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice/report-rekap-penjualan']); ?>">
                             <i class="fa fa-angle-double-right"></i> Rekap Penjualan
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier-delivery/report-penerimaan'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery/report-penerimaan']); ?>">
                             <i class="fa fa-angle-double-right"></i> Penerimaan Item PO
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('stock/report-stock'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'stock/report-stock']); ?>">
                             <i class="fa fa-angle-double-right"></i> Stok
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier-delivery-invoice/report-hutang'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery-invoice/report-hutang']); ?>">
                             <i class="fa fa-angle-double-right"></i> Hutang
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('supplier-delivery-invoice-payment/report-pembayaran-hutang'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery-invoice-payment/report-pembayaran-hutang']); ?>">
                             <i class="fa fa-angle-double-right"></i> Pembayaran Hutang
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice-payment/report-piutang'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice-payment/report-piutang']); ?>">
                             <i class="fa fa-angle-double-right"></i> Piutang
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('sale-invoice-ar-payment/report-pembayaran-piutang'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'sale-invoice-ar-payment/report-pembayaran-piutang']); ?>">
                             <i class="fa fa-angle-double-right"></i> Pembayaran Piutang
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl('page/report-aktifitas-keuangan'); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'page/report-aktifitas-keuangan']); ?>">
                             <i class="fa fa-angle-double-right"></i> Aktifitas Keuangan
                         </a>
                     </li>
@@ -309,17 +309,17 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['user']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'user']); ?>">
                             <i class="fa fa-angle-double-right"></i>Data User
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['user-level']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'user-level']); ?>">
                             <i class="fa fa-angle-double-right"></i>Data User Level
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['user-app-module']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'user-app-module']); ?>">
                             <i class="fa fa-angle-double-right"></i>Application Module
                         </a>
                     </li>
@@ -333,47 +333,47 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting', 'id' => 'company']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting', 'id' => 'company']); ?>">
                             <i class="fa fa-angle-double-right"></i> Profile Perusahaan
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting', 'id' => 'tax-sc']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting', 'id' => 'tax-sc']); ?>">
                             <i class="fa fa-angle-double-right"></i> Nilai Pajak &AMP; Service Charge
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting', 'id' => 'include-tax-sc']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting', 'id' => 'include-tax-sc']); ?>">
                             <i class="fa fa-angle-double-right"></i> Pajak Include Service Charge
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting' , 'id' => 'transaction-day']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting' , 'id' => 'transaction-day']); ?>">
                             <i class="fa fa-angle-double-right"></i> Transaction Day
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['printer']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'printer']); ?>">
                             <i class="fa fa-angle-double-right"></i> Printer
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting', 'id' => 'printserver']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting', 'id' => 'printserver']); ?>">
                             <i class="fa fa-angle-double-right"></i> Print Server
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/update-setting', 'id' => 'struk']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/update-setting', 'id' => 'struk']); ?>">
                             <i class="fa fa-angle-double-right"></i> Setting Struk
                         </a>
                     </li>
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/show-virtual-keyboard']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/show-virtual-keyboard']); ?>">
                             <i class="fa fa-angle-double-right"></i> Virtual Keyboard
                         </a>
                     </li>    
                     <li>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['settings/license']); ?>">
+                        <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'settings/license']); ?>">
                             <i class="fa fa-angle-double-right"></i> Lisensi
                         </a>
                     </li>

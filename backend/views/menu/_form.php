@@ -72,7 +72,7 @@ $form = ActiveForm::begin([
                 ),
                 'affect' => [
                     'field' => 'item_sku_id',
-                    'url' => Yii::$app->urlManager->createUrl('item-sku/get-sku-item'),
+                    'url' => Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-sku/get-sku-item']),
                 ],
                 'colOption' => 'style="width: 50%"',
             ],

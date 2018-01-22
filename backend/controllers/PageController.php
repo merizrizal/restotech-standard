@@ -193,7 +193,7 @@ class PageController extends BackendController {
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')), 
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . ' - Report Aktivitas Keuangan / Tanggal ' .  Yii::$app->formatter->asDate($post['tanggal_from']) . ' - ' . Yii::$app->formatter->asDate($post['tanggal_to'])], 

@@ -5,7 +5,7 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 use restotech\standard\backend\models\SupplierDeliveryInvoicePayment;
 use restotech\standard\backend\models\SupplierDeliveryInvoice;
-use sybase\SybaseController;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
@@ -16,7 +16,7 @@ use kartik\mpdf\Pdf;
 /**
  * SupplierDeliveryInvoicePaymentController implements the CRUD actions for SupplierDeliveryInvoicePayment model.
  */
-class SupplierDeliveryInvoicePaymentController extends SybaseController
+class SupplierDeliveryInvoicePaymentController extends BackendController
 {
     public function behaviors()
     {
@@ -226,7 +226,7 @@ class SupplierDeliveryInvoicePaymentController extends SybaseController
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
                     'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-                    'cssInline' => file_get_contents(Yii::getAlias('@root/admin/media/css/report.css')),
+                    'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')),
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
                         'SetHeader'=>[Yii::$app->name . $title], 

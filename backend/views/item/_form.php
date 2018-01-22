@@ -231,7 +231,7 @@ $jscript = '
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl('item-category/sub-item-category') . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
             success: function(response) {
                 itemCategory(response);
             }
@@ -268,7 +268,7 @@ $jscript = '
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl('storage-rack/get-storage-rack') . '?id=" + $(this).select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'storage-rack/get-storage-rack']) . '?id=" + $(this).select2("data")[0].id,
             success: function(response) {
                 storageRack(response, component);
             }
@@ -302,7 +302,7 @@ if (!$model->isNewRecord || $status == 'danger') {
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: "' . Yii::$app->urlManager->createUrl('storage-rack/get-storage-rack') . '?id=' . $value['storageId'] . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'storage-rack/get-storage-rack']) . '?id=' . $value['storageId'] . '",
                 success: function(response) {
                     storageRack(response, ' . $value['component'] . ');' .
                     $value['component'] . '.val("' . $value['id'] . '").trigger("change");
