@@ -51,7 +51,7 @@ $assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset'];
                                 
                             </div>
                             <div class="pull-right">
-                                <a href="<?= Yii::$app->urlManager->createUrl('site/logout'); ?>" data-method="post" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'site/logout']); ?>" data-method="post" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
