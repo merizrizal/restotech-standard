@@ -10,7 +10,7 @@ use backend\components\Tools;
 /**
  * Site controller
  */
-class SiteController extends \restotech\standard\backend\controllers\BackendController 
+class SiteController extends \sybase\SybaseController
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class SiteController extends \restotech\standard\backend\controllers\BackendCont
     {
         return array_merge(
             $this->getAccess(),
-            [            
+            [
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
@@ -36,7 +36,7 @@ class SiteController extends \restotech\standard\backend\controllers\BackendCont
     public function actions()
     {
         $this->layout = 'zero';
-        
+
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -48,13 +48,13 @@ class SiteController extends \restotech\standard\backend\controllers\BackendCont
             ],
         ];
     }
-    
-    public function actionLogin() {        
-        
+
+    public function actionLogin() {
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-        
+
         return $this->redirect(Yii::getAlias('@rootUrl/admin'));
     }
 
@@ -64,27 +64,27 @@ class SiteController extends \restotech\standard\backend\controllers\BackendCont
 
         return $this->goHome();
     }
-    
+
     public function actionPrint() {
         $data = !empty(Yii::$app->request->post()) ? Yii::$app->request->post() : Yii::$app->request->queryParams;
-        
-        $return = [];        
-        
+
+        $return = [];
+
         $return['flag'] = Tools::printToServer(\yii\helpers\Json::encode($data));
-        
+
         Yii::$app->response->format = Response::FORMAT_JSON;
-        
+
         return $return;
     }
 
-    
+
     public function actionGetDatetime() {
-        
+
         Yii::$app->formatter->timeZone = 'Asia/Jakarta';
         $datetime = [];
         $datetime['date'] = Yii::$app->formatter->asDatetime(time(), 'EEEE, d LLLL yyyy');
         $datetime['time'] = Yii::$app->formatter->asDatetime(time(), 'HH:mm');
-                
+
         Yii::$app->response->format = Response::FORMAT_JSON;
 
         return $datetime;

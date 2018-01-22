@@ -8,9 +8,7 @@ $config = [
     'id' => 'app-frontend',
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
-    'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'restotech\standard\frontend\controllers',
     'defaultRoute' => 'home/index',    
     'modules' => [ 
         'gridview' => [
@@ -37,7 +35,7 @@ $config = [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'standard/frontend/site/error',
         ],        
         'request' => [
             

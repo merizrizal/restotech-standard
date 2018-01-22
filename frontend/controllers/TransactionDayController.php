@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 /**
  * Transaction Day controller
  */
-class TransactionDayController extends \restotech\standard\frontend\controllers\base\PosBaseController {
+class TransactionDayController extends \sybase\SybaseController {
     
     /**
      * @inheritdoc

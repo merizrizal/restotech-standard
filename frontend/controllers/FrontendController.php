@@ -1,13 +1,15 @@
 <?php
 
-namespace restotech\standard\frontend\controllers\base;
+namespace restotech\standard\frontend\controllers;
 
 use Yii;
 
 use restotech\standard\backend\models\Settings;
 use restotech\standard\backend\models\TransactionDay;
 
-class PosBaseController extends \restotech\standard\backend\controllers\BackendController {
+class FrontendController extends \sybase\SybaseController {
+
+    public $layout = '@restotech/standard/frontend/views/layouts/main';
 
     /**
      * @inheritdoc
@@ -15,6 +17,8 @@ class PosBaseController extends \restotech\standard\backend\controllers\BackendC
     public function beforeAction($action) {
 
         if (parent::beforeAction($action)) {
+
+            $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
 
             $modelTransactionDay = TransactionDay::find()
                     ->andWhere(['IS', 'end', null])

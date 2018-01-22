@@ -7,6 +7,8 @@ use Yii;
 class BackendController extends \sybase\SybaseController
 {
     
+    public $layout = '@restotech/standard/backend/views/layouts/main';
+    
     public function beforeAction($action) {
         
         if (parent::beforeAction($action)) {

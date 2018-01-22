@@ -8,10 +8,8 @@ $config = [
     'id' => 'app-backend',
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
-    'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'restotech\standard\backend\controllers',
-    'defaultRoute' => 'site/default',    
+    'defaultRoute' => 'standard/backend/site/default',    
     'modules' => [ 
         'gridview' => [
             'class' => 'kartik\grid\Module',
@@ -37,7 +35,7 @@ $config = [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'standard/backend/site/error',
         ],        
         'request' => [
             

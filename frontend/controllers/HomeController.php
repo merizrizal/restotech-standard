@@ -17,7 +17,7 @@ use yii\data\ActiveDataProvider;
 /**
  * Home controller
  */
-class HomeController extends \restotech\standard\frontend\controllers\base\PosBaseController {
+class HomeController extends FrontendController {
 
     /**
      * @inheritdoc
@@ -92,7 +92,7 @@ class HomeController extends \restotech\standard\frontend\controllers\base\PosBa
                         'mtables' => function($query) {
                             $query->andWhere(['mtable.not_active' => '0'])
                                     ->andWhere(['mtable.is_deleted' => 0]);
-                            
+
                         },
                         'mtables.mtableSessions' => function($query) {
                             $query->onCondition('mtable_session.is_closed = 0');
