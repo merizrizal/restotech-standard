@@ -5,13 +5,12 @@ namespace restotech\standard\frontend\controllers;
 use Yii;
 use restotech\standard\backend\models\TransactionDay;
 use restotech\standard\backend\models\MtableSession;
-use frontend\controllers\base\PosBaseController;
 use yii\filters\VerbFilter;
 
 /**
  * Transaction Day controller
  */
-class TransactionDayController extends PosBaseController {
+class TransactionDayController extends \restotech\standard\frontend\controllers\base\PosBaseController {
     
     /**
      * @inheritdoc

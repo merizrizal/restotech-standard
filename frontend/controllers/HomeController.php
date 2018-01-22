@@ -17,7 +17,7 @@ use yii\data\ActiveDataProvider;
 /**
  * Home controller
  */
-class HomeController extends \restotech\standard\backend\controllers\BackendController {
+class HomeController extends \restotech\standard\frontend\controllers\base\PosBaseController {
 
     /**
      * @inheritdoc
