@@ -288,7 +288,7 @@ if (!$model->isNewRecord || $status == 'danger') {
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl(['item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
             success: function(response) {                
                 itemCategory(response);
                 $("input#item-item_category_id").val("' . $model->item_category_id . '").trigger("change");
