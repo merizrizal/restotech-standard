@@ -55,7 +55,7 @@ class SiteController extends FrontendController
             return $this->goHome();
         }
 
-        return $this->redirect(Yii::getAlias('@rootUrl/admin'));
+        return $this->redirect(Yii::getAlias('@rootUrl/') . Yii::$app->params['subprogram']['administrator']);
     }
 
     public function actionLogout()

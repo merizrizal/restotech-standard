@@ -9,8 +9,8 @@ $config = [
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'frontend/home/index',    
-    'modules' => [ 
+    'defaultRoute' => 'frontend/home/index',
+    'modules' => [
         'gridview' => [
             'class' => 'kartik\grid\Module',
         ]
@@ -18,7 +18,7 @@ $config = [
     'components' => [
         'user' => [
             'identityClass' => 'restotech\standard\backend\models\User',
-            'loginUrl' => ['backend/site/login'],
+            'loginUrl' => ['frontend/site/login'],
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-restotech', 'httpOnly' => true],
         ],
@@ -37,23 +37,23 @@ $config = [
         ],
         'errorHandler' => [
             'errorAction' => 'frontend/site/error',
-        ],        
+        ],
         'request' => [
-            
+
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
-            'enablePrettyUrl' => true,  
+            'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [                
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',                
+            'rules' => [
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
-        ],        
+        ],
     ],
     'params' => $params,
 ];
 
 return yii\helpers\ArrayHelper::merge(
-        $config, 
+        $config,
         require(dirname(dirname(__DIR__)) . '/common/config/main.php')
 );
