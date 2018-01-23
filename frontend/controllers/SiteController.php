@@ -10,7 +10,7 @@ use backend\components\Tools;
 /**
  * Site controller
  */
-class SiteController extends \sybase\SybaseController
+class SiteController extends FrontendController
 {
     /**
      * @inheritdoc

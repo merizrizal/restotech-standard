@@ -116,10 +116,10 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
                             <div class="white-header" style="padding: 10px">
                                 <div class="row">
                                     <div class="col-md-6 goleft">
-                                        <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? ['action/payment'] : ['action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
+                                        <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? [Yii::$app->params['module'] . 'action/payment'] : [Yii::$app->params['module'] . 'action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
                                     </div>
                                     <div class="col-md-6 goright">
-                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl(['home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
+                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -307,10 +307,10 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
                             <div class="white-header" style="padding: 10px">
                                 <div class="row">
                                     <div class="col-md-6 goleft">
-                                        <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? ['action/payment'] : ['action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
+                                        <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? [Yii::$app->params['module'] . 'action/payment'] : [Yii::$app->params['module'] . 'action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
                                     </div>
                                     <div class="col-md-6 goright">
-                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl(['home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
+                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@ $jscript = '
             $.ajax({
                 async: false,
                 type: "GET",
-                url: "' . Yii::$app->urlManager->createUrl(['data/datetime']) . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/datetime']) . '",
                 success: function(data) {
                     datetime = data.datetime;
                 }
@@ -1027,7 +1027,7 @@ $jscriptExe = '
                             cache: false,
                             dataType: "json",
                             type: "POST",
-                            url: "' . Yii::$app->urlManager->createUrl(['data/limit-karyawan']) . '",
+                            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/limit-karyawan']) . '",
                             data: {
                                 "kode_karyawan": kodeKaryawan,
                                 "jml_limit" : (valueBayar + jmlLimit)
@@ -1098,7 +1098,7 @@ $jscriptExe = '
                                 cache: false,
                                 dataType: "json",
                                 type: "POST",
-                                url: "' . Yii::$app->urlManager->createUrl(['data/voucher']) . '",
+                                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/voucher']) . '",
                                 data: {
                                     "kode_voucher": kodeVoucher,
                                     "tagihan": parseFloat($(".grand-harga.session").val())

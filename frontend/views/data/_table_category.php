@@ -8,7 +8,7 @@ use yii\helpers\Html; ?>
     
         <div class="col-sm-4 mb">
             
-            <?= Html::a($dataMtableCategory['nama_category'], ['data/table', 'id' => $dataMtableCategory['id'], 'isOpened' => $isOpened], ['id' => 'table', 'class' => 'btn btn-success btn-block']) ?>
+            <?= Html::a($dataMtableCategory['nama_category'], [Yii::$app->params['module'] . 'data/table', 'id' => $dataMtableCategory['id'], 'isOpened' => $isOpened], ['id' => 'table', 'class' => 'btn btn-success btn-block']) ?>
             
         </div>
     

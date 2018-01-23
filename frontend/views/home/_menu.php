@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/room']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/room']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-coffee fa-5x"></i>
@@ -9,7 +9,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/room-layout']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/room-layout']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-coffee fa-5x"></i>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/opened-table']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/opened-table']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-cutlery fa-5x"></i>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/menu-queue']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/menu-queue']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-tasks fa-5x"></i>
@@ -39,7 +39,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/menu-queue-finished']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/menu-queue-finished']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-thumbs-up fa-5x"></i>
@@ -49,7 +49,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/reprint-invoice']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/reprint-invoice']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-print fa-5x"></i>
@@ -59,7 +59,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/correction-invoice']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/correction-invoice']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-edit fa-5x"></i>
@@ -69,7 +69,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-3 mb">
-    <a href="<?= Yii::$app->urlManager->createUrl(['home/booking']) ?>" id="menu">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/booking']) ?>" id="menu">
         <div class="home-menu pn centered">
             <br><br>
             <i class="fa fa-address-book fa-5x"></i>

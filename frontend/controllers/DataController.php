@@ -16,7 +16,7 @@ use yii\web\Response;
 /**
  * Data controller
  */
-class DataController extends \sybase\SybaseController {
+class DataController extends FrontendController {
 
     /**
      * @inheritdoc

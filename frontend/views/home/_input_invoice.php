@@ -45,7 +45,7 @@ use restotech\standard\backend\components\VirtualKeyboard; ?>
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
                                     <?php
-                                    echo Html::a('<i class="fa fa-floppy-o"></i> Submit', ['home/' . $type.  '-invoice-submit'], ['id' => 'submit', 'class' => 'btn btn-success']); ?>
+                                    echo Html::a('<i class="fa fa-floppy-o"></i> Submit', [Yii::$app->params['module'] . 'home/' . $type.  '-invoice-submit'], ['id' => 'submit', 'class' => 'btn btn-success']); ?>
                                 </div>
                             </div>
                         </div>

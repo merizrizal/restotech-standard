@@ -27,7 +27,7 @@ use yii\web\Response;
 /**
  * Action controller
  */
-class ActionController extends \sybase\SybaseController {
+class ActionController extends FrontendController {
 
     /**
      * @inheritdoc
@@ -670,7 +670,7 @@ class ActionController extends \sybase\SybaseController {
 
         if ($flag) {
 
-            $return['open_table'] = Yii::$app->urlManager->createUrl(['home/view-session', 'id' => $modelMtableSession->mtable_id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
+            $return['open_table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/view-session', 'id' => $modelMtableSession->mtable_id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
             $return['success'] = true;
         } else {
 
@@ -740,7 +740,7 @@ class ActionController extends \sybase\SybaseController {
 
             $transaction->commit();
 
-            $return['open_table'] = Yii::$app->urlManager->createUrl(['home/view-session', 'id' => $modelMtableSession->mtable_id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
+            $return['open_table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/view-session', 'id' => $modelMtableSession->mtable_id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
             $return['success'] = true;
         } else {
 
@@ -752,112 +752,6 @@ class ActionController extends \sybase\SybaseController {
         Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
-
-//    public function actionJoinTable() {
-//
-//        $post = Yii::$app->request->post();
-//
-//        $transaction = Yii::$app->db->beginTransaction();
-//        $flag = true;
-//
-//        $message = '';
-//
-//        if (($flag = !empty(($modelMtableSessionFrom = MtableSession::findOne($post['sess_id']))))) {
-//
-//            if (!$modelMtableSessionFrom->is_join_mtable) {
-//
-//                $modelMtableSessionTo = MtableSession::find()
-//                        ->andWhere(['mtable_session.mtable_id' => $post['mtable_id']])
-//                        ->andWhere(['mtable_session.is_closed' => 0])
-//                        ->one();
-//
-//                if (($flag = !empty($modelMtableSessionTo))) {
-//
-//                    if (($flag = !$modelMtableSessionTo->is_join_mtable)) {
-//
-//                        $modelMtableJoin = new MtableJoin();
-//                        $modelMtableJoin->active_mtable_session_id = $modelMtableSessionTo->id;
-//
-//                        $jumlahHarga = 0;
-//
-//                        if (!empty($post['order_id'])) {
-//
-//                            foreach ($post['order_id'] as $orderId) {
-//
-//                                $modelMtableOrder = MtableOrder::findOne($orderId);
-//                                $modelMtableOrder->mtable_session_id = $modelMtableJoin->active_mtable_session_id;
-//
-//                                $subtotal = $modelMtableOrder->harga_satuan * $modelMtableOrder->jumlah;
-//                                $disc = 0;
-//
-//                                if ($modelMtableOrder->discount_type == 'Percent') {
-//
-//                                    $disc = $modelMtableOrder->discount * 0.01 * $subtotal;
-//                                } else if ($modelMtableOrder->discount_type == 'Value') {
-//
-//                                    $disc = $modelMtableOrder->jumlah * $modelMtableOrder->discount;
-//                                }
-//
-//                                $jumlahHarga += $subtotal - $disc;
-//
-//                                if (!($flag = $modelMtableOrder->save())) {
-//                                    break;
-//                                }
-//                            }
-//                        }
-//
-//                        if ($flag) {
-//
-//                            $modelMtableSessionTo->is_join_mtable = 1;
-//                            $modelMtableSessionTo->jumlah_harga = $modelMtableSessionTo->jumlah_harga + $jumlahHarga;
-//
-//                            $modelMtableSessionFrom->is_join_mtable = 1;
-//                            $modelMtableSessionFrom->jumlah_harga = 0;
-//                            $modelMtableSessionFrom->discount = 0;
-//                            $modelMtableSessionFrom->pajak = 0;
-//                            $modelMtableSessionFrom->service_charge = 0;
-//
-//                            if (($flag = ($modelMtableJoin->save() && $modelMtableSessionTo->save() && $modelMtableSessionFrom->save()))) {
-//
-//                                $modelMtableSessionJoinTo = new MtableSessionJoin();
-//                                $modelMtableSessionJoinTo->mtable_session_id = $modelMtableSessionTo->id;
-//                                $modelMtableSessionJoinTo->mtable_join_id = $modelMtableJoin->id;
-//
-//                                $modelMtableSessionJoinFrom = new MtableSessionJoin();
-//                                $modelMtableSessionJoinFrom->mtable_session_id = $modelMtableSessionFrom->id;
-//                                $modelMtableSessionJoinFrom->mtable_join_id = $modelMtableJoin->id;
-//
-//                                $flag = ($modelMtableSessionJoinTo->save() && $modelMtableSessionJoinFrom->save());
-//                            }
-//                        }
-//                    }
-//                }
-//            } else {
-//
-//                $flag = false;
-//                $message .= ' Meja ini sudah dalam keadaan gabung dengan meja lain.';
-//            }
-//        }
-//
-//        $return = [];
-//
-//        if ($flag) {
-//
-//            $transaction->commit();
-//
-//            $return['open_table'] = Yii::$app->urlManager->createUrl(['home/view-session', 'id' => $modelMtableJoin->activeMtableSession->mtable_id, 'cid' => $modelMtableJoin->activeMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableJoin->activeMtableSession->id]);
-//            $return['success'] = true;
-//        } else {
-//
-//            $transaction->rollBack();
-//
-//            $return['message'] = $message;
-//            $return['success'] = false;
-//        }
-//
-//        Yii::$app->response->format = Response::FORMAT_JSON;
-//        return $return;
-//    }
 
     public function actionJoinTable() {
 
@@ -972,7 +866,7 @@ class ActionController extends \sybase\SybaseController {
 
             $transaction->commit();
 
-            $return['open_table'] = Yii::$app->urlManager->createUrl(['home/view-session', 'id' => $modelMtableJoin->activeMtableSession->mtable_id, 'cid' => $modelMtableJoin->activeMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableJoin->activeMtableSession->id]);
+            $return['open_table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/view-session', 'id' => $modelMtableJoin->activeMtableSession->mtable_id, 'cid' => $modelMtableJoin->activeMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableJoin->activeMtableSession->id]);
             $return['success'] = true;
         } else {
 
@@ -1154,7 +1048,7 @@ class ActionController extends \sybase\SybaseController {
             $transaction->commit();
 
             $return['id'] = $modelSaleInvoice->id;
-            $return['table'] = Yii::$app->urlManager->createUrl(['home/table', 'id' => $modelMtableSession->mtable->mtable_category_id]);
+            $return['table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/table', 'id' => $modelMtableSession->mtable->mtable_category_id]);
             $return['success'] = true;
         } else {
 
@@ -1410,7 +1304,7 @@ class ActionController extends \sybase\SybaseController {
             $transaction->commit();
 
             $return['id'] = $modelSaleInvoice->id;
-            $return['table'] = Yii::$app->urlManager->createUrl(['home/correction-invoice']);
+            $return['table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/correction-invoice']);
             $return['is_correction'] = true;
             $return['success'] = true;
         } else {
@@ -1549,7 +1443,7 @@ class ActionController extends \sybase\SybaseController {
 
             $transaction->commit();
 
-            $return['open_table'] = Yii::$app->urlManager->createUrl(['home/view-session', 'id' => $modelMtableBooking->mtable_id, 'cid' => $modelMtableBooking->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
+            $return['open_table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/view-session', 'id' => $modelMtableBooking->mtable_id, 'cid' => $modelMtableBooking->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id]);
             $return['success'] = true;
         } else {
 

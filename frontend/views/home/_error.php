@@ -7,7 +7,7 @@ use yii\helpers\Html; ?>
     <div class="row mt">
             <div class="col-lg-12">
                 <p><?= $message ?></p>
-                <p><?= Html::a('Back', ['home/table', 'id' => $tableCategoryId], ['id' => 'back']) ?></p>
+                <p><?= Html::a('Back', [Yii::$app->params['module'] . 'home/table', 'id' => $tableCategoryId], ['id' => 'back']) ?></p>
             </div>
     </div>
 </div>

@@ -48,7 +48,7 @@ $jscript = '
                 cache: false,
                 type: "POST",
                 data: {"id": thisObj.find("input#category-id").val()},
-                url: "' . Yii::$app->urlManager->createUrl(['data/menu-category']) . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/menu-category']) . '",
                 beforeSend: function(xhr) {
                     $(".overlay").show();
                     $(".loading-img").show();
@@ -74,7 +74,7 @@ $jscript = '
                 cache: false,
                 type: "POST",
                 data: {"id": thisObj.find("input#category-id").val()},
-                url: "' . Yii::$app->urlManager->createUrl(['data/menu']) . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/menu']) . '",
                 beforeSend: function(xhr) {
                     $(".overlay").show();
                     $(".loading-img").show();
@@ -115,7 +115,7 @@ if (!empty($pid)) {
             $.ajax({
                 cache: false,
                 type: "POST",
-                url: "' . Yii::$app->urlManager->createUrl(['data/menu-category']) . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/menu-category']) . '",
                 beforeSend: function(xhr) {
                     $(".overlay").show();
                     $(".loading-img").show();
