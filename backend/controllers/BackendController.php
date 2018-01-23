@@ -15,9 +15,9 @@ class BackendController extends \sybase\SybaseController
             
             Yii::$app->params['module'] = '';
             
-            if (!empty($action->controller->module->id) && !empty($action->controller->module->module->id)){
+            if (!empty($action->controller->module->id)){
                                     
-                Yii::$app->params['module'] = $action->controller->module->module->id . '/' . $action->controller->module->id . '/';
+                Yii::$app->params['module'] = $action->controller->module->id . '/';
             }
                         
             $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
