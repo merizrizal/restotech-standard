@@ -10,9 +10,16 @@ class BackendController extends \sybase\SybaseController
     public $layout = '@restotech/standard/backend/views/layouts/main';
     
     public function beforeAction($action) {
-        
+
         if (parent::beforeAction($action)) {
             
+            Yii::$app->params['module'] = '';
+            
+            if (!empty($action->controller->module->id) && !empty($action->controller->module->module->id)){
+                                    
+                Yii::$app->params['module'] = $action->controller->module->module->id . '/' . $action->controller->module->id . '/';
+            }
+                        
             $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
             
             if (Yii::$app->session->get('company_settings_profile') === null) {
