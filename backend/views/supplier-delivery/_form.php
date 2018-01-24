@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
@@ -408,7 +409,7 @@ $jscript = '
         
         $.ajax({
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'purchase-order/get-po']) . '?id=" + $(this).select2("data")[0].id,
+            url: "' . Url::toRoute(['purchase-order/get-po']) . '?id=" + $(this).select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-purchase-order tbody").html(response);
@@ -426,7 +427,7 @@ if (!$model->isNewRecord) {
         
         $.ajax({
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'purchase-order/get-po']) . '?id=" + $("#supplierdelivery-kd_supplier").select2("data")[0].id,
+            url: "' . Url::toRoute(['purchase-order/get-po']) . '?id=" + $("#supplierdelivery-kd_supplier").select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-purchase-order tbody").html(response);

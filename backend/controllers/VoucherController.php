@@ -4,13 +4,9 @@ namespace restotech\standard\backend\controllers;
 
 use Yii;
 use restotech\standard\backend\models\Voucher;
-use restotech\standard\backend\models\search\VoucherSearch;
-use restotech\standard\backend\models\Settings;
 
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\Response;
-use yii\widgets\ActiveForm;
 
 
 /**

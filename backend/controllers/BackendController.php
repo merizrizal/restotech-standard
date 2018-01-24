@@ -5,21 +5,15 @@ namespace restotech\standard\backend\controllers;
 use Yii;
 
 class BackendController extends \sybase\SybaseController
-{
-    
+{    
     public $layout = '@restotech/standard/backend/views/layouts/main';
     
     public function beforeAction($action) {
 
         if (parent::beforeAction($action)) {
+
+            $this->setViewPath('@restotech/standard/backend/views/' . $action->controller->id);
             
-            Yii::$app->params['module'] = '';
-            
-            if (!empty($action->controller->module->id)){
-                                    
-                Yii::$app->params['module'] = $action->controller->module->id . '/';
-            }
-                        
             $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
             
             if (Yii::$app->session->get('company_settings_profile') === null) {

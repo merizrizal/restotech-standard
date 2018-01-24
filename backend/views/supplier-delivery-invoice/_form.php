@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
@@ -272,7 +273,7 @@ $jscript = '
         
         $.ajax({
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery/get-sd-by-id']) . '?id=" + thisObj.select2("data")[0].id,
+            url: "' . Url::toRoute(['supplier-delivery/get-sd-by-id']) . '?id=" + thisObj.select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-supplier-delivery tbody").html(response);
@@ -281,7 +282,7 @@ $jscript = '
                 
                 $.ajax({
                     cache: false,
-                    url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'retur-purchase/get-rp-by-id']) . '?id=" + thisObj.select2("data")[0].id,
+                    url: "' . Url::toRoute(['retur-purchase/get-rp-by-id']) . '?id=" + thisObj.select2("data")[0].id,
                     success: function(response) {
 
                         $("table#table-retur-purchase tbody").html(response);
@@ -304,14 +305,14 @@ if (!$model->isNewRecord) {
         
         $.ajax({
             cache: false,
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'supplier-delivery/get-sd-by-id']) . '?id=" + $("#supplierdeliveryinvoice-supplier_delivery_id").select2("data")[0].id,
+            url: "' . Url::toRoute(['supplier-delivery/get-sd-by-id']) . '?id=" + $("#supplierdeliveryinvoice-supplier_delivery_id").select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-supplier-delivery tbody").html(response);
                 
                 $.ajax({
                     cache: false,
-                    url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'retur-purchase/get-rp-by-id']) . '?id=" + $("#supplierdeliveryinvoice-supplier_delivery_id").select2("data")[0].id,
+                    url: "' . Url::toRoute(['retur-purchase/get-rp-by-id']) . '?id=" + $("#supplierdeliveryinvoice-supplier_delivery_id").select2("data")[0].id,
                     success: function(response) {
 
                         $("table#table-retur-purchase tbody").html(response);

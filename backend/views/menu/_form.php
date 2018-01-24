@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use kartik\money\MaskMoney;
@@ -72,7 +73,7 @@ $form = ActiveForm::begin([
                 ),
                 'affect' => [
                     'field' => 'item_sku_id',
-                    'url' => Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'item-sku/get-sku-item']),
+                    'url' => Url::toRoute(['item-sku/get-sku-item']),
                 ],
                 'colOption' => 'style="width: 50%"',
             ],
