@@ -1,6 +1,5 @@
 <?php
 use yii\helpers\Html;
-use yii\helpers\Url;
 use restotech\standard\backend\components\Tools;
 
 $assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset']; ?>
@@ -52,7 +51,7 @@ $assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset'];
                                 
                             </div>
                             <div class="pull-right">
-                                <a href="<?= Url::toRoute(['site/logout']) ?>" data-method="post" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'site/logout']) ?>" data-method="post" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
@@ -70,7 +69,7 @@ $jscript = '
         $.when(
             $.ajax({
                 type: "GET",
-                url: "' . Url::toRoute(['site/get-datetime']) . '",            
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'site/get-datetime']) . '",            
                 success: function(data) {
                     date = data.date;
                     time = data.time

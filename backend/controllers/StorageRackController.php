@@ -6,6 +6,7 @@ use Yii;
 use restotech\standard\backend\models\StorageRack;
 
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 use yii\filters\VerbFilter;
 
 /**
@@ -25,6 +26,21 @@ class StorageRackController extends BackendController
                     ],
                 ],
             ]);
+    }
+    
+    public function actionGetStorageRack($id)
+    {
+        $data = StorageRack::find()->where(['storage_id' => $id])->orderBy('nama_rak')->asArray()->all();
+
+        $row = [];
+
+        foreach ($data as $key => $value) {
+            $row[$key]['id'] = $value['id'];
+            $row[$key]['text'] = $value['nama_rak'];
+        }
+
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return $row;
     }
     
     /**

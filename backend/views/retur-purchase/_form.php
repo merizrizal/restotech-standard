@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
@@ -372,7 +371,7 @@ $jscript = '
         
         $.ajax({
             cache: false,
-            url: "' . Url::toRoute(['supplier-delivery/get-sd']) . '?id=" + $(this).select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['full'] . 'supplier-delivery/get-sd']) . '?id=" + $(this).select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-supplier-delivery tbody").html(response);
@@ -390,7 +389,7 @@ if (!$model->isNewRecord) {
         
         $.ajax({
             cache: false,
-            url: "' . Url::toRoute(['supplier-delivery/get-sd']) . '?id=" + $("#returpurchase-kd_supplier").select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['full'] . 'supplier-delivery/get-sd']) . '?id=" + $("#returpurchase-kd_supplier").select2("data")[0].id,
             success: function(response) {
                 
                 $("table#table-supplier-delivery tbody").html(response);

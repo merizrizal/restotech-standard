@@ -1,6 +1,5 @@
 <?php
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 foreach ($data as $dataSDTrx): ?>    
 
@@ -160,7 +159,7 @@ $jscript = '
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: "' . Url::toRoute(['storage-rack/get-storage-rack']) . '?id=" + $(this).select2("data")[0].id,
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'storage-rack/get-storage-rack']) . '?id=" + $(this).select2("data")[0].id,
                 success: function(response) {
                     storageRack(response);
                 }

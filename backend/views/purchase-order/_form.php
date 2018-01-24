@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\money\MaskMoney;
@@ -73,7 +72,7 @@ $form = ActiveForm::begin([
                 ),
                 'affect' => [
                     'field' => 'item_sku_id',
-                    'url' => Url::toRoute(['item-sku/get-sku-item']),
+                    'url' => Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'item-sku/get-sku-item']),
                 ],
                 'colOption' => 'style="width: 35%"',
             ],

@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use restotech\standard\backend\models\ItemCategory;
 use restotech\standard\backend\models\Storage;
@@ -232,7 +231,7 @@ $jscript = '
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Url::toRoute(['item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
             success: function(response) {
                 itemCategory(response);
             }
@@ -269,7 +268,7 @@ $jscript = '
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Url::toRoute(['storage-rack/get-storage-rack']) . '?id=" + $(this).select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'storage-rack/get-storage-rack']) . '?id=" + $(this).select2("data")[0].id,
             success: function(response) {
                 storageRack(response, component);
             }
@@ -289,7 +288,7 @@ if (!$model->isNewRecord || $status == 'danger') {
         $.ajax({
             dataType: "json",
             cache: false,
-            url: "' . Url::toRoute(['item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
             success: function(response) {                
                 itemCategory(response);
                 $("input#item-item_category_id").val("' . $model->item_category_id . '").trigger("change");
@@ -303,7 +302,7 @@ if (!$model->isNewRecord || $status == 'danger') {
             $.ajax({
                 dataType: "json",
                 cache: false,
-                url: "' . Url::toRoute(['storage-rack/get-storage-rack']) . '?id=' . $value['storageId'] . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'storage-rack/get-storage-rack']) . '?id=' . $value['storageId'] . '",
                 success: function(response) {
                     storageRack(response, ' . $value['component'] . ');' .
                     $value['component'] . '.val("' . $value['id'] . '").trigger("change");
