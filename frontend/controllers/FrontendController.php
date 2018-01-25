@@ -18,14 +18,7 @@ class FrontendController extends \sybase\SybaseController {
 
         if (parent::beforeAction($action)) {
 
-            $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());
-
-            Yii::$app->params['module'] = '';
-
-            if (!empty($action->controller->module->id)){
-
-                Yii::$app->params['module'] = $action->controller->module->id . '/';
-            }
+            $this->getView()->params['assetCommon'] = \restotech\standard\common\assets\AppAsset::register($this->getView());            
 
             $modelTransactionDay = TransactionDay::find()
                     ->andWhere(['IS', 'end', null])

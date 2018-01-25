@@ -8,6 +8,9 @@ class BackendController extends \sybase\SybaseController
 {    
     public $layout = '@restotech/standard/backend/views/layouts/main';
     
+    /**
+     * @inheritdoc
+     */
     public function beforeAction($action) {
 
         if (parent::beforeAction($action)) {

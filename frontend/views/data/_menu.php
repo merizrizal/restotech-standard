@@ -128,7 +128,7 @@ $jscript = '
                 "menu_id": menuId,
                 "harga_satuan": harga,
             },
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'action/save-order']) . '",
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'action/save-order']) . '",
             beforeSend: function(xhr) {
                 $(".overlay").show();
                 $(".loading-img").show();
@@ -222,7 +222,7 @@ if (!$search) {
                 cache: false,
                 type: "POST",
                 data: {"id": "' . $cid . '"},
-                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'data/menu-category']) . '",
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'data/menu-category']) . '",
                 beforeSend: function(xhr) {
                     $(".overlay").show();
                     $(".loading-img").show();

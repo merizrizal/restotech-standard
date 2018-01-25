@@ -24,7 +24,7 @@ TOP BAR CONTENT & NOTIFICATIONS
                 <a href="<?= Yii::getAlias('@rootUrl') . '/' . Yii::$app->params['subprogram']['administrator']; ?>" data-toggle="tooltip" data-placement="bottom" title="Back Office"><i class="fa fa-database"></i></a>
             </li>
             <li>
-                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'site/logout']); ?>" data-method="post" data-toggle="tooltip" data-placement="bottom" title="Logout"><i class="fa fa-sign-out"></i></a>
+                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'site/logout']); ?>" data-method="post" data-toggle="tooltip" data-placement="bottom" title="Logout"><i class="fa fa-sign-out"></i></a>
             </li>
         </ul>
     </div>
@@ -59,7 +59,7 @@ $jscript = '
         $.when(
             $.ajax({
                 type: "GET",
-                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'site/get-datetime']) . '",            
+                url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'site/get-datetime']) . '",            
                 success: function(data) {
                     date = data.date;
                     time = data.time
@@ -83,7 +83,7 @@ $jscript = '
         $.ajax({
             cache: false,
             type: "POST",
-            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['module'] . 'home/load-menu'])  . '",
+            url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'home/load-menu'])  . '",
             beforeSend: function(xhr) {
                 $(".overlay").show();
                 $(".loading-img").show();
