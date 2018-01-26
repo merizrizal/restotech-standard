@@ -91,7 +91,7 @@ if ($status !== null && !$failEndDay) {
                     $contentAlertTransactionDay = 'Transaction day untuk hari ini belum ada. Silakan lakukan start day terlebih dahulu';
 
                     $btnDayText = 'Start Day';
-                    $btnDayHref = ['transaction-day/start-day'];
+                    $btnDayHref = [Yii::$app->params['posModule']['standard'] . 'transaction-day/start-day'];
 
                     $modalAlwaysOnTop = true;
                 } else if ($this->params['statusTransactionDay'] == 'over') {
@@ -99,7 +99,7 @@ if ($status !== null && !$failEndDay) {
                     $contentAlertTransactionDay = 'Transaction day yang sedang berlangsung sudah melebihi waktu end day. Silakan lakukan end day terlebih dahulu';
 
                     $btnDayText = 'End Day';
-                    $btnDayHref = ['transaction-day/end-day'];
+                    $btnDayHref = [Yii::$app->params['posModule']['standard'] . 'transaction-day/end-day'];
 
                     $modalAlwaysOnTop = $this->params['isOverTransactionDay'] ? false : true;
                 }
@@ -120,7 +120,7 @@ if ($status !== null && !$failEndDay) {
                                 <?= $contentAlertTransactionDay ?>
                             </div><!-- /.box-body -->
                             <div class="modal-footer">
-                                <?= Html::a($btnDayText, $btnDayHref, ['class' => 'btn btn-danger', 'data-method' => 'post']) ?>
+                                <?= Html::a($btnDayText, Yii::$app->urlManager->createUrl($btnDayHref), ['class' => 'btn btn-danger', 'data-method' => 'post']) ?>
                             </div>
                         </div><!-- /.box -->
                     </div>

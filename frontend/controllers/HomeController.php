@@ -92,6 +92,7 @@ class HomeController extends FrontendController {
 
         return $this->render('_input_invoice', [
             'type' => 'reprint',
+            'version' => 'standard',
         ]);
     }
 
@@ -119,7 +120,7 @@ class HomeController extends FrontendController {
         return $this->render('_reprint_invoice_submit', [
             'modelSaleInvoice' => $modelSaleInvoice,
             'modelMtableSession' => $modelSaleInvoice->mtableSession,
-            'settingsArray' => Settings::getSettingsByName('struk_invoice_', true),
+            'settingsArray' => Settings::getSettingsByName('struk_invoice_', true),            
         ]);
     }
 }
