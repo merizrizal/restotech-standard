@@ -223,7 +223,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                 'buttons' => [
                                     'update' =>  function($url, $model, $key) {
                                         return Html::a('<i class="fa fa-pencil"></i>', 
-                                            Yii::$app->urlManager->createUrl(['menu-category/printer', 'id' => $model->menuCategory->id, 'pid' => $model->id]), 
+                                            ['menu-category/printer', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
                                             [
                                                 'id' => 'update',
                                                 'class' => 'btn btn-success',
@@ -235,7 +235,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                     },
                                     'delete' =>  function($url, $model, $key) {
                                         return Html::a('<i class="fa fa-trash"></i>', 
-                                            Yii::$app->urlManager->createUrl(['menu-category/printer-delete', 'id' => $model->menuCategory->id, 'pid' => $model->id]), 
+                                            ['menu-category/printer-delete', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
                                             [
                                                 'id' => 'delete',
                                                 'class' => 'btn btn-danger',                            
