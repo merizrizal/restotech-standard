@@ -34,13 +34,13 @@ class MtableCategoryController extends BackendController
         if (Yii::$app->request->isPost) {
 
             $modelMtableCategory = new MtableCategory();
-            $modelMtableCategory->id = '9999';
+            $modelMtableCategory->id = 9999;
             $modelMtableCategory->nama_category = 'Ruang Utama';
             $modelMtableCategory->keterangan = 'Generate dari inisialisasi';
             
             $modelMtable = new Mtable();
             $modelMtable->id = '9999';
-            $modelMtable->mtable_category_id = '9999';
+            $modelMtable->mtable_category_id = 9999;
             $modelMtable->nama_meja = 'Meja Utama';
             $modelMtable->keterangan = 'Generate dari inisialisasi';
 
@@ -68,7 +68,7 @@ class MtableCategoryController extends BackendController
         $model = Mtable::find()
                 ->joinWith(['mtableCategory'])
                 ->andWhere(['mtable.id' => '9999'])
-                ->andWhere(['mtable_category.id' => '9999'])
+                ->andWhere(['mtable_category.id' => 9999])
                 ->asArray()->all();
 
         return $this->render('init', [

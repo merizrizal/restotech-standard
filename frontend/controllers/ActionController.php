@@ -669,8 +669,17 @@ class ActionController extends FrontendController {
 
             $transaction->commit();
 
+            $url = '';
+
+            if (Yii::$app->params['version'] == 'full') {
+
+                $url = [Yii::$app->params['posModule']['full'] . 'home/table', 'id' => $modelMtableSession->mtable->mtable_category_id];
+            } else {
+                $url = [Yii::$app->params['posModule']['standard'] . 'home/index'];
+            }
+
             $return['id'] = $modelSaleInvoice->id;
-            $return['table'] = Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['full'] . 'home/table', 'id' => $modelMtableSession->mtable->mtable_category_id]);
+            $return['table'] = Yii::$app->urlManager->createUrl($url);
             $return['success'] = true;
         } else {
 

@@ -26,6 +26,8 @@ class HomeController extends FrontendController {
                     'class' => VerbFilter::className(),
                     'actions' => [
                         'load-menu' => ['post'],
+                        'transaction' =>  ['post'],
+                        'open-table' =>  ['post'],
                         'payment' =>  ['post'],
                         'reprint-invoice' =>  ['post'],
                         'reprint-invoice-submit' =>  ['post'],
@@ -47,6 +49,86 @@ class HomeController extends FrontendController {
 
         return $this->render('_menu', [
 
+        ]);
+    }
+    
+    public function actionTransaction() {
+        
+        return $this->runAction('open-table', ['id' => '9999', 'cid' => 9999, 'sessId' => null]);
+    }
+    
+    public function actionOpenTable($id, $cid, $sessId = null, $isCorrection = false) {
+
+        $this->layout = 'ajax';
+
+        $modelSettings = Settings::getSettingsByName(['tax_amount', 'service_charge_amount']);
+
+        $modelMtableSession = null;
+
+        if (empty($sessId)) {
+
+            $transaction = Yii::$app->db->beginTransaction();
+
+            $modelMtableSession = MtableSession::find()
+                    ->andWhere([
+                        'mtable_id' => $id,
+                        'is_closed' => 0
+                    ])->asArray()->one();
+
+            if (empty($modelMtableSession)) {
+
+                $modelMtableSession = new MtableSession();
+                $modelMtableSession->mtable_id = $id;
+                $modelMtableSession->nama_tamu = '';
+                $modelMtableSession->catatan = '';
+                $modelMtableSession->pajak = $modelMtableSession->mtable->not_ppn ? 0 :$modelSettings['tax_amount'] ;
+                $modelMtableSession->service_charge = $modelMtableSession->mtable->not_service_charge ? 0 : $modelSettings['service_charge_amount'];
+                $modelMtableSession->opened_at = Yii::$app->formatter->asDatetime(time());
+                $modelMtableSession->user_opened = Yii::$app->user->identity->id;
+
+                if ($modelMtableSession->save()) {
+
+                    $transaction->commit();
+                } else {                    
+
+                    return $this->render('_error', [
+                        'tableCategoryId' => $cid,
+                        'title' => 'Error open table',
+                        'message' => 'Telah terjadi kesalahan saat proses open table.'
+                    ]);
+
+                    $transaction->rollBack();
+                }
+            } else {
+                $sessId = $modelMtableSession['id'];
+
+                $transaction->rollBack();
+            }
+        }
+
+        $modelMtableSession = MtableSession::find()
+                ->joinWith([
+                    'mtable',
+                    'mtableOrders' => function($query) {
+                        $query->andOnCondition(['mtable_order.parent_id' => null]);
+                    },
+                    'mtableOrders.menu',
+                    'mtableOrders.menu.menuCategory',
+                    'mtableOrders.menu.menuCategory.menuCategoryPrinters',
+                    'mtableOrders.menu.menuCategory.menuCategoryPrinters.printer0',
+                    'mtableOrders.mtableOrders' => function($query) {
+                        $query->from('mtable_order a');
+                    },
+                    'mtableOrders.mtableOrderQueue',
+                ])
+                ->andWhere(['mtable_session.id' => !empty($sessId) ? $sessId : $modelMtableSession->id])
+                ->orderBy('mtable_order.id ASC')
+                ->one();
+
+        return $this->render('_open_table', [
+            'modelMtableSession' => $modelMtableSession,
+            'settingsArray' => Settings::getSettingsByName('struk_', true),
+            'isCorrection' => $isCorrection,
         ]);
     }
 

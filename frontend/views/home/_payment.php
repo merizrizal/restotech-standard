@@ -111,6 +111,10 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
 
                 <div class="row data mt">
 
+                    <?php
+                    $urlBack = [Yii::$app->params['posModule'][Yii::$app->params['version']] . 'home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection];
+                    ?>
+
                     <div class="col-lg-4">
                         <div class="white-panel pn" style="height: auto; color: #000">
                             <div class="white-header" style="padding: 10px">
@@ -119,7 +123,7 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
                                         <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? [Yii::$app->params['posModule']['standard'] . 'action/payment'] : [Yii::$app->params['posModule']['full'] . 'action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
                                     </div>
                                     <div class="col-md-6 goright">
-                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['full'] . 'home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
+                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl($urlBack) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -310,7 +314,7 @@ echo Html::hiddenInput('mtable_nama', $modelMtableSession->mtable->nama_meja, ['
                                         <a id="bayar" class="btn btn-success" href="<?= Yii::$app->urlManager->createUrl(!$isCorrection ? [Yii::$app->params['posModule']['standard'] . 'action/payment'] : [Yii::$app->params['posModule']['full'] . 'action/payment-correction']) ?>"><i class="fa fa-check" style="font-size: 12px; color: white"></i> Bayar</a>
                                     </div>
                                     <div class="col-md-6 goright">
-                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['full'] . 'home/open-table', 'id' => $modelMtableSession->mtable->id, 'cid' => $modelMtableSession->mtable->mtable_category_id, 'sessId' => $modelMtableSession->id, 'isCorrection' => $isCorrection]) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
+                                        <a id="back" class="btn btn-danger" href="<?= Yii::$app->urlManager->createUrl($urlBack) ?>"><i class="fa fa-undo" style="font-size: 12px; color: white"></i> Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -774,7 +778,7 @@ $jscriptAction = '
                         var totalFreeMenu = parseFloat($("input#total-free-menu").val());
                         var totalFreeMenuSpan = $("<span>").html(totalFreeMenu);
                         totalFreeMenuSpan.currency({' . Yii::$app->params['currencyOptionsPrint'] . '});
-                        text += "Free Menu" + separatorPrint(paperWidth - ("Free Menu" + "(" + totalFreeMenuSpan.html() + ")").length) + "(" + totalFreeMenuSpan.html() + ")" + "\n";                        
+                        text += "Free Menu" + separatorPrint(paperWidth - ("Free Menu" + "(" + totalFreeMenuSpan.html() + ")").length) + "(" + totalFreeMenuSpan.html() + ")" + "\n";
 
                         totalSubtotal -= totalFreeMenu;
 
