@@ -19,7 +19,7 @@ if ($status !== null) :
 
 endif;
 
-$this->title = 'Inisialisasi Gudang';
+$this->title = 'Inisialisasi Ruangan / Meja';
 $this->params['breadcrumbs'][] = $this->title; ?>
 
 <div class="payment-method-init">
