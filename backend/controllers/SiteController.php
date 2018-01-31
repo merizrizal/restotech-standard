@@ -82,7 +82,7 @@ class SiteController extends BackendController {
     public function actionDefault() {
         
         if (Yii::$app->user->isGuest) {
-            return $this->redirect(['login']);
+            return $this->redirect(Yii::$app->user->loginUrl);
         }
         
         return $this->redirect(Yii::$app->session->get('user_data')['user_level']['default_action']);
