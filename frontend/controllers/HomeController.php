@@ -59,7 +59,7 @@ class HomeController extends FrontendController {
     
     public function actionOpenTable($id, $cid, $sessId = null, $isCorrection = false) {
 
-        $this->layout = 'ajax';
+        $this->layout = '@restotech/standard/frontend/views/layouts/ajax';
 
         $modelSettings = Settings::getSettingsByName(['tax_amount', 'service_charge_amount']);
 
@@ -91,7 +91,7 @@ class HomeController extends FrontendController {
                     $transaction->commit();
                 } else {                    
 
-                    return $this->render('_error', [
+                    return $this->render('@restotech/standard/frontend/views/home/_error', [
                         'tableCategoryId' => $cid,
                         'title' => 'Error open table',
                         'message' => 'Telah terjadi kesalahan saat proses open table.'
@@ -125,7 +125,7 @@ class HomeController extends FrontendController {
                 ->orderBy('mtable_order.id ASC')
                 ->one();
 
-        return $this->render('_open_table', [
+        return $this->render('@restotech/standard/frontend/views/home/_open_table', [
             'modelMtableSession' => $modelMtableSession,
             'settingsArray' => Settings::getSettingsByName('struk_', true),
             'isCorrection' => $isCorrection,
