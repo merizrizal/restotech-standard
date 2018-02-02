@@ -237,7 +237,7 @@ echo Html::hiddenInput('after_split', Yii::$app->urlManager->createUrl([Yii::$ap
                                         $url = [Yii::$app->params['posModule']['full'] . 'home/correction-invoice'];
                                     }
                                 } else {
-                                    $url = [Yii::$app->params['posModule']['standard'] . 'home/index'];
+                                    $url = [Yii::$app->params['posModule']['standard'] . 'home/load-menu'];
                                 } ?>
 
                                 <?= Html::a('<i class="fa fa-undo" style="color: white"></i> Back', Yii::$app->urlManager->createUrl($url), ['id' => 'back', 'class' => 'btn btn-danger btn-lg']) ?>
