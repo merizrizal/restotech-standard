@@ -9,7 +9,7 @@ TOP BAR CONTENT & NOTIFICATIONS
 <!--header start-->
 <header class="header black-bg">
     <!--logo start-->
-    <a href="<?= Yii::$app->urlManager->createUrl('home/index'); ?>" class="logo">
+    <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'home/index']); ?>" class="logo">
         <b><?= Html::encode(Yii::$app->name) ?></b>        
     </a>
     <!--logo end-->       
@@ -18,7 +18,7 @@ TOP BAR CONTENT & NOTIFICATIONS
     <div id="top_menu" class="nav notify-row">
         <ul class="nav top-menu">
             <li>
-                <a href="<?= Yii::$app->urlManager->createUrl('home/index'); ?>" id="home" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fa fa-home"></i></a>
+                <a href="<?= Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'home/index']); ?>" id="home" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fa fa-home"></i></a>
             </li>
             <li>
                 <a href="<?= Yii::getAlias('@rootUrl') . '/' . Yii::$app->params['subprogram']['administrator']; ?>" data-toggle="tooltip" data-placement="bottom" title="Back Office"><i class="fa fa-database"></i></a>
