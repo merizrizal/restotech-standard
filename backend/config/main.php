@@ -9,7 +9,7 @@ $config = [
     'language' => 'id',
     'name' => 'PoGAPfWbaiS2knCv69F+J5NP3CDsmEPL/fa0bH8PyK8=',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'backend/site/default',
+    'defaultRoute' => $mainModule . '/site/default',
     'modules' => [
         'gridview' => [
             'class' => 'kartik\grid\Module',
@@ -18,7 +18,7 @@ $config = [
     'components' => [
         'user' => [
             'identityClass' => 'restotech\standard\backend\models\User',
-            'loginUrl' => ['backend/site/login'],
+            'loginUrl' => ['/' . $mainModule . '/site/login'],
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-restotech', 'httpOnly' => true],
         ],
@@ -36,7 +36,7 @@ $config = [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'backend/site/error',
+            'errorAction' => $mainModule . '/site/error',
         ],
         'request' => [
 
