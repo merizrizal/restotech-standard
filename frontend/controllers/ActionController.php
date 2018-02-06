@@ -675,7 +675,7 @@ class ActionController extends FrontendController {
 
                 $url = [Yii::$app->params['posModule']['full'] . 'home/table', 'id' => $modelMtableSession->mtable->mtable_category_id];
             } else {
-                $url = [Yii::$app->params['posModule']['standard'] . 'home/index'];
+                $url = [Yii::$app->params['posModule']['standard'] . 'home/load-menu'];
             }
 
             $return['id'] = $modelSaleInvoice->id;
