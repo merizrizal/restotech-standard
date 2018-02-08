@@ -3,6 +3,7 @@
 namespace restotech\standard\frontend\controllers;
 
 use Yii;
+use restotech\standard\backend\models\Mtable;
 use restotech\standard\backend\models\MtableSession;
 use restotech\standard\backend\models\SaleInvoice;
 use restotech\standard\backend\models\PaymentMethod;
@@ -54,7 +55,19 @@ class HomeController extends FrontendController {
     
     public function actionTransaction() {
         
-        return $this->runAction('open-table', ['id' => '9999', 'cid' => 9999, 'sessId' => null]);
+        $model = Mtable::find()
+                ->joinWith(['mtableCategory'])
+                ->andWhere(['mtable.id' => '9999'])
+                ->andWhere(['mtable_category.id' => 9999])
+                ->asArray()->all();
+        
+        if (!empty($model)) {
+        
+            return $this->runAction('open-table', ['id' => '9999', 'cid' => 9999, 'sessId' => null]);
+        } else {
+            
+            throw new \yii\web\ForbiddenHttpException('Silakan lakukan inisialisasi data dahulu');            
+        }
     }
     
     public function actionOpenTable($id, $cid, $sessId = null, $isCorrection = false) {
