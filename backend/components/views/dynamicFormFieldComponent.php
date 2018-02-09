@@ -207,16 +207,19 @@ $index = 0;
 
                         echo $form->field($model, '[index]' . $field, [
                             'template' => '{input}{error}',
+                            'enableClientValidation' => false,
                         ])->textInput(['maxlength' => true, 'style' => 'width: 100%']);
                     } else if ($option['type'] == 'dropdown') {                                        
 
                         echo $form->field($model, '[index]' . $field, [
                             'template' => '{input}{error}',
+                            'enableClientValidation' => false,
                         ])->dropDownList($option['data'], ['style' => 'width: 100%']);
                     } else if ($option['type'] == 'money') {
                                             
                         echo $form->field($model, '[index]' . $field, [
-                            'template' => '{input}{error}'
+                            'template' => '{input}{error}',
+                            'enableClientValidation' => false,
                         ])->widget(MaskMoney::className());
                     }
                     ?>
