@@ -5,7 +5,7 @@ use Yii;
 
 use yii\filters\VerbFilter;
 use yii\web\Response;
-use backend\components\Tools;
+use restotech\standard\backend\components\Tools;
 
 /**
  * Site controller
