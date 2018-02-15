@@ -12,6 +12,7 @@ class Module extends \yii\base\Module
 	$modules = [];
         $modules['backend']['class'] = 'restotech\standard\backend\BackendModule';
         $modules['frontend']['class'] = 'restotech\standard\frontend\FrontendModule';
+        $modules['api']['class'] = 'restotech\standard\api\ApiModule';
         $this->setModules($modules);
     }
 }
