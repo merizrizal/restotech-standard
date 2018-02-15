@@ -22,7 +22,9 @@ class SiteController extends \yii\rest\Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'logout' => ['post'],
+                        'login' => ['post'],
+                        'logout' => ['post'],                        
+                        'get-datetime' => ['post'],
                     ],
                 ],
             ]

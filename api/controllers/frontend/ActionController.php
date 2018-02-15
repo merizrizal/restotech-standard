@@ -1,6 +1,6 @@
 <?php
 
-namespace restotech\standard\frontend\controllers;
+namespace restotech\standard\api\controllers\frontend;
 
 use Yii;
 use restotech\standard\backend\models\MtableSession;
@@ -20,7 +20,7 @@ use yii\web\Response;
 /**
  * Action controller
  */
-class ActionController extends FrontendController {
+class ActionController extends \yii\rest\Controller {
 
     /**
      * @inheritdoc
@@ -28,7 +28,7 @@ class ActionController extends FrontendController {
     public function behaviors() {
 
         return array_merge(
-            $this->getAccess(),
+            [],
             [
                 'verbs' => [
                     'class' => VerbFilter::className(),
@@ -89,7 +89,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -121,7 +120,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -149,7 +147,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -170,7 +167,7 @@ class ActionController extends FrontendController {
                         [
                             'is_free_menu' => 1,
                             'free_menu_at' => Yii::$app->formatter->asDatetime(time()),
-                            'user_free_menu' => Yii::$app->user->identity->id,
+                            'user_free_menu' => null, //Get token dari android, lalu di get identity by token,
                             'discount_type' => 'Percent',
                             'discount' => 0
                         ],
@@ -194,7 +191,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -215,7 +211,7 @@ class ActionController extends FrontendController {
                         [
                             'is_void' => 1,
                             'void_at' => Yii::$app->formatter->asDatetime(time()),
-                            'user_void' => Yii::$app->user->identity->id,
+                            'user_void' => null, //Get token dari android, lalu di get identity by token,
                             'discount_type' => 'Percent',
                             'discount' => 0
                         ],
@@ -239,7 +235,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -269,7 +264,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -307,7 +301,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -324,7 +317,7 @@ class ActionController extends FrontendController {
 
                 $modelMtableSession->is_closed = 1;
                 $modelMtableSession->closed_at = Yii::$app->formatter->asDatetime(time());
-                $modelMtableSession->user_closed = Yii::$app->user->identity->id;
+                $modelMtableSession->user_closed = null; //Get token dari android, lalu di get identity by token
                 $modelMtableSession->catatan = $post['catatan'];
 
                 $flag = $modelMtableSession->save();
@@ -338,7 +331,7 @@ class ActionController extends FrontendController {
 
                     $modelMtableSession->is_closed = 1;
                     $modelMtableSession->closed_at = Yii::$app->formatter->asDatetime(time());
-                    $modelMtableSession->user_closed = Yii::$app->user->identity->id;
+                    $modelMtableSession->user_closed = null; //Get token dari android, lalu di get identity by token
                     $modelMtableSession->catatan = $post['catatan'];
 
                     if (!($flag = $modelMtableSession->save())) {
@@ -362,7 +355,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -389,7 +381,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -498,7 +489,6 @@ class ActionController extends FrontendController {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -521,7 +511,7 @@ class ActionController extends FrontendController {
 
                     $mtableSession->is_closed = 1;
                     $mtableSession->closed_at = Yii::$app->formatter->asDatetime(time());
-                    $mtableSession->user_closed = Yii::$app->user->identity->id;
+                    $mtableSession->user_closed = null; //Get token dari android, lalu di get identity by token
                     $mtableSession->bill_printed = 1;
                     $mtableSession->is_paid = 1;
 
@@ -532,7 +522,7 @@ class ActionController extends FrontendController {
             } else {
                 $modelMtableSession->is_closed = 1;
                 $modelMtableSession->closed_at = Yii::$app->formatter->asDatetime(time());
-                $modelMtableSession->user_closed = Yii::$app->user->identity->id;
+                $modelMtableSession->user_closed = null; //Get token dari android, lalu di get identity by token
                 $modelMtableSession->bill_printed = 1;
                 $modelMtableSession->is_paid = 1;
 
@@ -547,7 +537,7 @@ class ActionController extends FrontendController {
 
                     $modelSaleInvoice->date = Yii::$app->formatter->asDatetime(time());
                     $modelSaleInvoice->mtable_session_id = $modelMtableSession->id;
-                    $modelSaleInvoice->user_operator = Yii::$app->user->identity->id;
+                    $modelSaleInvoice->user_operator = null; //Get token dari android, lalu di get identity by token
                     $modelSaleInvoice->jumlah_harga = $post['jumlah_harga'];
                     $modelSaleInvoice->discount_type = $post['discount_type'];
                     $modelSaleInvoice->discount = $post['discount'];
@@ -674,13 +664,13 @@ class ActionController extends FrontendController {
 
             if (Yii::$app->params['version'] == 'full') {
 
-                $url = [Yii::$app->params['posModule']['full'] . 'home/table', 'id' => $modelMtableSession->mtable->mtable_category_id];
+                $url = [Yii::$app->params['posModule']['full'] . 'frontend/home/table', 'id' => $modelMtableSession->mtable->mtable_category_id];
             } else {
-                $url = [Yii::$app->params['posModule']['standard'] . 'home/load-menu'];
+                $url = [Yii::$app->params['posModule']['standard'] . 'frontend/home/load-menu'];
             }
 
             $return['id'] = $modelSaleInvoice->id;
-            $return['table'] = Yii::$app->urlManager->createUrl($url);
+            $return['table'] = $url;
             $return['success'] = true;
         } else {
 

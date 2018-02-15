@@ -52,29 +52,27 @@ class HomeController extends FrontendController {
 
         ]);
     }
-    
+
     public function actionTransaction() {
-        
+
         $model = Mtable::find()
                 ->joinWith(['mtableCategory'])
                 ->andWhere(['mtable.id' => '9999'])
                 ->andWhere(['mtable_category.id' => 9999])
                 ->asArray()->all();
-        
+
         if (!empty($model)) {
-        
+
             return $this->runAction('open-table', ['id' => '9999', 'cid' => 9999, 'sessId' => null]);
         } else {
-            
-            throw new \yii\web\ForbiddenHttpException('Silakan lakukan inisialisasi data dahulu');            
+
+            throw new \yii\web\ForbiddenHttpException('Silakan lakukan inisialisasi data dahulu');
         }
     }
-    
+
     public function actionOpenTable($id, $cid, $sessId = null, $isCorrection = false) {
 
-        $this->layout = '@restotech/standard/frontend/views/layouts/ajax';
-
-        $modelSettings = Settings::getSettingsByName(['tax_amount', 'service_charge_amount']);
+        $this->layout = '@restotech/standard/frontend/views/layouts/ajax';        
 
         $modelMtableSession = null;
 
@@ -89,6 +87,8 @@ class HomeController extends FrontendController {
                     ])->asArray()->one();
 
             if (empty($modelMtableSession)) {
+                
+                $modelSettings = Settings::getSettingsByName(['tax_amount', 'service_charge_amount']);
 
                 $modelMtableSession = new MtableSession();
                 $modelMtableSession->mtable_id = $id;
@@ -102,7 +102,7 @@ class HomeController extends FrontendController {
                 if ($modelMtableSession->save()) {
 
                     $transaction->commit();
-                } else {                    
+                } else {
 
                     return $this->render('@restotech/standard/frontend/views/home/_error', [
                         'tableCategoryId' => $cid,
@@ -170,7 +170,7 @@ class HomeController extends FrontendController {
 
          $modelPaymentMethod = PaymentMethod::find()
                 ->andWhere(['type' => 'sale'])
-                 ->andWhere(['not_active' => 0])
+                ->andWhere(['not_active' => 0])
                 ->asArray()->all();
 
         return $this->render('_payment', [
@@ -215,7 +215,7 @@ class HomeController extends FrontendController {
         return $this->render('_reprint_invoice_submit', [
             'modelSaleInvoice' => $modelSaleInvoice,
             'modelMtableSession' => $modelSaleInvoice->mtableSession,
-            'settingsArray' => Settings::getSettingsByName('struk_invoice_', true),            
+            'settingsArray' => Settings::getSettingsByName('struk_invoice_', true),
         ]);
     }
 }
