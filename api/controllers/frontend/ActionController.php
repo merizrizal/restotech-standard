@@ -15,7 +15,6 @@ use restotech\standard\backend\models\Employee;
 use restotech\standard\backend\models\Voucher;
 use restotech\standard\backend\models\Settings;
 use yii\filters\VerbFilter;
-use yii\web\Response;
 
 /**
  * Action controller
@@ -407,7 +406,6 @@ class ActionController extends \yii\rest\Controller {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 
@@ -679,7 +677,6 @@ class ActionController extends \yii\rest\Controller {
             $return['success'] = false;
         }
 
-        Yii::$app->response->format = Response::FORMAT_JSON;
         return $return;
     }
 }
