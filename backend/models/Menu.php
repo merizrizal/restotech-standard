@@ -45,7 +45,7 @@ class Menu extends \sybase\SybaseModel
     {
         return 'menu';
     }
-        
+
 
     /**
      * @inheritdoc
@@ -58,7 +58,7 @@ class Menu extends \sybase\SybaseModel
             [['not_active', 'is_deleted'], 'integer'],
             [['harga_pokok', 'harga_jual'], 'number'],
             [['created_at', 'updated_at'], 'safe'],
-            [['id', 'menu_category_id', 'user_created', 'user_updated'], 'string', 'max' => 32],            
+            [['id', 'menu_category_id', 'user_created', 'user_updated'], 'string', 'max' => 32],
             [['nama_menu'], 'string', 'max' => 128],
             [['menu_satuan_id'], 'string', 'max' => 7],
             [['id'], 'unique'],
@@ -123,7 +123,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasOne(MenuSatuan::className(), ['id' => 'menu_satuan_id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -139,7 +139,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(MenuCondiment::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -147,7 +147,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(MenuHpp::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -155,7 +155,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(MenuRecipe::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -163,7 +163,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(MtableOrder::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -171,7 +171,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(MtableOrderQueue::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -179,7 +179,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(SaleInvoiceRetur::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -187,7 +187,7 @@ class Menu extends \sybase\SybaseModel
     {
         return $this->hasMany(SaleInvoiceTrx::className(), ['menu_id' => 'id']);
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */

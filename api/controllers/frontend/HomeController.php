@@ -163,7 +163,7 @@ class HomeController extends \yii\rest\Controller {
     public function actionReprintInvoice() {
 
         return [
-            
+
         ];
     }
 

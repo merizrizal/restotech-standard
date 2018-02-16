@@ -50,7 +50,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     {
         return Yii::$app->get('<?= $generator->db ?>');
     }
-<?php endif; ?>        
+<?php endif; ?>
 
     /**
      * @inheritdoc

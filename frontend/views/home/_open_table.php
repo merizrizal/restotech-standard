@@ -1913,7 +1913,7 @@ $jscriptAction = '
                         $("#container-table-list").children(".loading-img").hide();
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
-                        
+
                         swal("Error", xhr.responseText, "error");
                     }
                 });
