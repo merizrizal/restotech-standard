@@ -16,8 +16,8 @@ $config = [
     'components' => [
         'user' => [
             'identityClass' => 'restotech\standard\backend\models\User',
-            'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-restotech', 'httpOnly' => true],
+            'enableSession' => false,
+            'loginUrl' => null,
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend

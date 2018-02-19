@@ -156,7 +156,7 @@ class User extends \sybase\SybaseModel implements IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
+        return $token;
     }
 
     /**
@@ -226,7 +226,7 @@ class User extends \sybase\SybaseModel implements IdentityInterface
      */
     public function validateAuthKey($authKey)
     {
-        //return $this->getAuthKey() === $authKey;
+        return $this->getAuthKey() === $authKey;
     }
 
     /**
