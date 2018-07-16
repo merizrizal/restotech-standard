@@ -35,7 +35,7 @@ use Yii;
  * @property SupplierDeliveryInvoiceTrx[] $supplierDeliveryInvoiceTrxes
  * @property SupplierDeliveryTrx[] $supplierDeliveryTrxes
  */
-class ItemSku extends \synctech\RtechBaseModel
+class ItemSku extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

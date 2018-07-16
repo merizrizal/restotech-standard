@@ -33,7 +33,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class StockMovement extends \synctech\RtechBaseModel
+class StockMovement extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

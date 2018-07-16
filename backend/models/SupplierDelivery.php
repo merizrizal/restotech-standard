@@ -24,7 +24,7 @@ use Yii;
  * @property SupplierDeliveryInvoice[] $supplierDeliveryInvoices
  * @property SupplierDeliveryTrx[] $supplierDeliveryTrxes
  */
-class SupplierDelivery extends \synctech\RtechBaseModel
+class SupplierDelivery extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

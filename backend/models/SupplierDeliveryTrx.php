@@ -36,7 +36,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class SupplierDeliveryTrx extends \synctech\RtechBaseModel
+class SupplierDeliveryTrx extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

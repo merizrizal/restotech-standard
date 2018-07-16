@@ -22,7 +22,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class Voucher extends \synctech\RtechBaseModel
+class Voucher extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

@@ -7,7 +7,7 @@ use Yii;
 use restotech\standard\backend\models\Settings;
 use restotech\standard\backend\models\TransactionDay;
 
-class FrontendController extends \synctech\RtechBaseController {
+class FrontendController extends \synctech\SynctBaseController {
 
     public $layout = '@restotech/standard/frontend/views/layouts/main';
 

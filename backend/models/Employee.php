@@ -28,7 +28,7 @@ use Yii;
  * @property User $userUpdated
  * @property User $user
  */
-class Employee extends \synctech\RtechBaseModel
+class Employee extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

@@ -37,7 +37,7 @@ use Yii;
  * @property User $userUpdated
  * @property MtableOrderQueue $mtableOrderQueue
  */
-class MtableOrder extends \synctech\RtechBaseModel
+class MtableOrder extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

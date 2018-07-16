@@ -4,7 +4,7 @@ namespace restotech\standard\backend\controllers;
 
 use Yii;
 
-class BackendController extends \synctech\RtechBaseController
+class BackendController extends \synctech\SynctBaseController
 {    
     public $layout = '@restotech/standard/backend/views/layouts/main';
     

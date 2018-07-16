@@ -34,7 +34,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class ReturPurchaseTrx extends \synctech\RtechBaseModel
+class ReturPurchaseTrx extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

@@ -28,7 +28,7 @@ use Yii;
  * @property User $userUpdated
  * @property SupplierDeliveryTrx[] $supplierDeliveryTrxes
  */
-class StorageRack extends \synctech\RtechBaseModel
+class StorageRack extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

@@ -20,7 +20,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class MtableSessionJoin extends \synctech\RtechBaseModel
+class MtableSessionJoin extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

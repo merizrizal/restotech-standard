@@ -18,7 +18,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class TransactionDay extends \synctech\RtechBaseModel
+class TransactionDay extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

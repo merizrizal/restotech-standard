@@ -22,7 +22,7 @@ use Yii;
  * @property User $userUpdated
  * @property ReturPurchaseTrx[] $returPurchaseTrxes
  */
-class ReturPurchase extends \synctech\RtechBaseModel
+class ReturPurchase extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

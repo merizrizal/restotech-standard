@@ -31,7 +31,7 @@ use Yii;
  * @property SaleInvoicePayment[] $saleInvoicePayments
  * @property SaleInvoiceTrx[] $saleInvoiceTrxes
  */
-class SaleInvoice extends \synctech\RtechBaseModel
+class SaleInvoice extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

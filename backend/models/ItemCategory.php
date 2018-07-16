@@ -23,7 +23,7 @@ use Yii;
  * @property ItemCategory $parentCategory
  * @property ItemCategory[] $itemCategories
  */
-class ItemCategory extends \synctech\RtechBaseModel
+class ItemCategory extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

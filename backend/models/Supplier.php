@@ -33,7 +33,7 @@ use Yii;
  * @property User $userUpdated
  * @property SupplierDelivery[] $supplierDeliveries
  */
-class Supplier extends \synctech\RtechBaseModel
+class Supplier extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

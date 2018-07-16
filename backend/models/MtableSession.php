@@ -41,7 +41,7 @@ use Yii;
  * @property SaleInvoice[] $saleInvoices
  * @property SaleInvoiceCorrection[] $saleInvoiceCorrections
  */
-class MtableSession extends \synctech\RtechBaseModel
+class MtableSession extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

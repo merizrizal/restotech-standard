@@ -20,7 +20,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class Printer extends \synctech\RtechBaseModel
+class Printer extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

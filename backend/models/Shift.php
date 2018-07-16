@@ -20,7 +20,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class Shift extends \synctech\RtechBaseModel
+class Shift extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

@@ -21,7 +21,7 @@ use Yii;
  * @property User $userUpdated
  * @property DirectPurchaseTrx[] $directPurchaseTrxes
  */
-class DirectPurchase extends \synctech\RtechBaseModel
+class DirectPurchase extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

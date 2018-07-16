@@ -20,7 +20,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class MenuHpp extends \synctech\RtechBaseModel
+class MenuHpp extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

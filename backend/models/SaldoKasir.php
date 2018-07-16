@@ -23,7 +23,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class SaldoKasir extends \synctech\RtechBaseModel
+class SaldoKasir extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

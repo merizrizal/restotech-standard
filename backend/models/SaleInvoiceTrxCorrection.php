@@ -26,7 +26,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class SaleInvoiceTrxCorrection extends \synctech\RtechBaseModel
+class SaleInvoiceTrxCorrection extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc

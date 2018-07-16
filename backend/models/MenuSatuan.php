@@ -18,7 +18,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class MenuSatuan extends \synctech\RtechBaseModel
+class MenuSatuan extends \synctech\SynctBaseModel
 {
     /**
      * @inheritdoc
