@@ -2,8 +2,8 @@
     "name": "synctech/restotech-standard",
     "description": "Restotech, Property of synctech.id",
     "type": "yii2-extension",
-    "require": {        
-	"synctech/yii2-rtechbase": "dev-master"
+    "require": {
+	"synctech/yii2-synctbase": "dev-master"
     },
     "autoload": {
         "psr-4": {
