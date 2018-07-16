@@ -3,7 +3,7 @@
     "description": "Restotech, Property of synctech.id",
     "type": "yii2-extension",
     "require": {        
-	"synctech/yii2-sybase": "dev-master"
+	"synctech/yii2-rtechbase": "dev-master"
     },
     "autoload": {
         "psr-4": {
