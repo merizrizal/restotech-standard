@@ -23,7 +23,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class SaldoKasir extends \sybase\SybaseModel
+class SaldoKasir extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

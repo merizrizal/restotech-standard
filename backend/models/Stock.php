@@ -25,7 +25,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class Stock extends \sybase\SybaseModel
+class Stock extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

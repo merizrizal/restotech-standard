@@ -29,7 +29,7 @@ use Yii;
  * @property User $userUpdated
  * @property SupplierDeliveryTrx[] $supplierDeliveryTrxes
  */
-class PurchaseOrderTrx extends \sybase\SybaseModel
+class PurchaseOrderTrx extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

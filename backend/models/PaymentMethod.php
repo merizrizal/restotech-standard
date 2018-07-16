@@ -24,7 +24,7 @@ use Yii;
  * @property SaleInvoicePaymentCorrection[] $saleInvoicePaymentCorrections
  * @property SupplierDeliveryInvoice[] $supplierDeliveryInvoices
  */
-class PaymentMethod extends \sybase\SybaseModel
+class PaymentMethod extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

@@ -19,7 +19,7 @@ use Yii;
  * @property User $userUpdated
  * @property TransactionCash[] $transactionCashes
  */
-class TransactionAccount extends \sybase\SybaseModel
+class TransactionAccount extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

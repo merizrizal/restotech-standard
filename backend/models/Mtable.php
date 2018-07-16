@@ -31,7 +31,7 @@ use Yii;
  * @property MtableBooking[] $mtableBookings
  * @property MtableSession[] $mtableSessions
  */
-class Mtable extends \sybase\SybaseModel
+class Mtable extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

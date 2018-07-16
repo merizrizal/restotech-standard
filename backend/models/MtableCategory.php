@@ -23,7 +23,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class MtableCategory extends \sybase\SybaseModel
+class MtableCategory extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

@@ -23,7 +23,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class MtableBooking extends \sybase\SybaseModel
+class MtableBooking extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

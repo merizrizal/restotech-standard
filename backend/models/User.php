@@ -27,7 +27,7 @@ use yii\db\ActiveRecord;
  * @property MtableOrder[] $mtableOrdersFreeMenu
  * @property MtableOrder[] $mtableOrdersVoid
  */
-class User extends \sybase\SybaseModel implements IdentityInterface
+class User extends \synctech\RtechBaseModel implements IdentityInterface
 {
     /**
      * @inheritdoc

@@ -23,7 +23,7 @@ use Yii;
  * @property ItemSku $itemSku
  * @property Menu $menu
  */
-class MenuRecipe extends \sybase\SybaseModel
+class MenuRecipe extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

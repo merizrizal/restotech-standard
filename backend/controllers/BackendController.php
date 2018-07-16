@@ -4,7 +4,7 @@ namespace restotech\standard\backend\controllers;
 
 use Yii;
 
-class BackendController extends \sybase\SybaseController
+class BackendController extends \synctech\RtechBaseController
 {    
     public $layout = '@restotech/standard/backend/views/layouts/main';
     

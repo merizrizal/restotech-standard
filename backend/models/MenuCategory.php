@@ -27,7 +27,7 @@ use Yii;
  * @property User $userUpdated
  * @property MenuCategoryPrinter[] $menuCategoryPrinters
  */
-class MenuCategory extends \sybase\SybaseModel
+class MenuCategory extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

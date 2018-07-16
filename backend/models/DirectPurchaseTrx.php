@@ -30,7 +30,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class DirectPurchaseTrx extends \sybase\SybaseModel
+class DirectPurchaseTrx extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

@@ -22,7 +22,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class SaleInvoicePaymentCorrection extends \sybase\SybaseModel
+class SaleInvoicePaymentCorrection extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

@@ -33,7 +33,7 @@ use Yii;
  * @property SupplierDeliveryInvoiceTrx[] $supplierDeliveryInvoiceTrxes
  * @property SupplierDeliveryTrx[] $supplierDeliveryTrxes
  */
-class Item extends \sybase\SybaseModel
+class Item extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

@@ -24,7 +24,7 @@ use Yii;
  * @property User $userUpdated
  * @property MtableOrder $mtableOrder
  */
-class MtableOrderQueue extends \sybase\SybaseModel
+class MtableOrderQueue extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

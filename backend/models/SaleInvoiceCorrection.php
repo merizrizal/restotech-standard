@@ -32,7 +32,7 @@ use Yii;
  * @property SaleInvoicePaymentCorrection[] $saleInvoicePaymentCorrections
  * @property SaleInvoiceTrxCorrection[] $saleInvoiceTrxCorrections
  */
-class SaleInvoiceCorrection extends \sybase\SybaseModel
+class SaleInvoiceCorrection extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

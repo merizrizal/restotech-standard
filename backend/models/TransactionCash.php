@@ -22,7 +22,7 @@ use Yii;
  * @property User $userCreated
  * @property User $userUpdated
  */
-class TransactionCash extends \sybase\SybaseModel
+class TransactionCash extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

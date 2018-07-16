@@ -33,7 +33,7 @@ use Yii;
  * @property User $userUpdated
  * @property SupplierDelivery[] $supplierDeliveries
  */
-class Supplier extends \sybase\SybaseModel
+class Supplier extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc

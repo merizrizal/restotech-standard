@@ -36,7 +36,7 @@ use Yii;
  * @property SaleInvoiceTrx[] $saleInvoiceTrxes
  * @property SaleInvoiceTrxCorrection[] $saleInvoiceTrxCorrections
  */
-class Menu extends \sybase\SybaseModel
+class Menu extends \synctech\RtechBaseModel
 {
     /**
      * @inheritdoc
