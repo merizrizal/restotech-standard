@@ -111,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                     . '{payment}'
                             . '</div>',
                 'buttons' => [
-                    'payment' =>  function($url, $model, $key) {
+                    'payment' => function($url, $model, $key) {
                         return Html::a('<i class="fa fa-dollar"></i>', $url, [
                             'id' => 'payment',
                             'class' => 'btn btn-success',

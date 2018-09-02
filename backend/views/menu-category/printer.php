@@ -221,7 +221,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                                     . '{update}{delete}'
                                             . '</div>',
                                 'buttons' => [
-                                    'update' =>  function($url, $model, $key) {
+                                    'update' => function($url, $model, $key) {
                                         return Html::a('<i class="fa fa-pencil"></i>', 
                                             ['menu-category/printer', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
                                             [
@@ -233,7 +233,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                                 'title' => 'Edit',
                                             ]);
                                     },
-                                    'delete' =>  function($url, $model, $key) {
+                                    'delete' => function($url, $model, $key) {
                                         return Html::a('<i class="fa fa-trash"></i>', 
                                             ['menu-category/printer-delete', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
                                             [
