@@ -171,7 +171,7 @@ class SaleInvoiceController extends BackendController
                     'orientation' => Pdf::ORIENT_PORTRAIT, 
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
-                    'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+                    'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
                     'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
@@ -268,7 +268,7 @@ class SaleInvoiceController extends BackendController
                         'orientation' => Pdf::ORIENT_PORTRAIT, 
                         'destination' => Pdf::DEST_DOWNLOAD, 
                         'content' => $content,  
-                        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+                        'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
                         'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                         'options' => ['title' => Yii::$app->name],
                         'methods' => [ 
@@ -351,7 +351,7 @@ class SaleInvoiceController extends BackendController
                     'orientation' => Pdf::ORIENT_PORTRAIT, 
                     'destination' => Pdf::DEST_DOWNLOAD, 
                     'content' => $content,  
-                    'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+                    'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
                     'cssInline' => file_get_contents(Yii::getAlias('@restotech/standard/backend/media/css/report.css')), 
                     'options' => ['title' => Yii::$app->name],
                     'methods' => [ 
