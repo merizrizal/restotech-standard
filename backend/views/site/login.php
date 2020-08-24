@@ -73,7 +73,7 @@ $settings_company_profile = Yii::$app->session->get('company_settings_profile');
          <?= Html::endForm() ?>
 
         <div style="margin-top: 25px; text-align: center">
-            Crafted by <a href="http://www.synctech.id">Synctech.ID</a> in Bandung.      
+            <a href="Restotech"> is crafted in Bandung.      
         </div>
 
     </div><!-- /.login-box-body -->
