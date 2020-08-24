@@ -59,9 +59,9 @@ AppAsset::register($this); ?>
 
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
-                    <b>Version</b> 2.0.0
+                    <b>Version</b> 3.0.0
                 </div>
-                <strong>Copyright &copy; 2017 <a href="http://synctech.co.id">Synctech.ID</a></strong>
+                <strong><a href="">Restotech</a></strong>
             </footer>
 
         <?php 

@@ -1,3 +1,3 @@
-Core of Restotech Full version
+Core of Restotech Standard version
 
-Encapsulated within yii2 extension
+Encapsulated within Yii2 extension
