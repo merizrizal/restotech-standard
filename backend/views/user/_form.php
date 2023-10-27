@@ -12,7 +12,7 @@ use restotech\standard\backend\components\NotificationDialog;
 /* @var $form yii\widgets\ActiveForm */
 
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+kartik\select2\ThemeKrajeeBs3Asset::register($this);
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
@@ -141,12 +141,12 @@ $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/i
 
 $jscript = '
     $("#user-kd_karyawan").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });
     $("#user-user_level_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });

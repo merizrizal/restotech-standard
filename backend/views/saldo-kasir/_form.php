@@ -15,7 +15,7 @@ use restotech\standard\backend\models\User;
 
 yii\widgets\MaskedInputAsset::register($this);
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+kartik\select2\ThemeKrajeeBs3Asset::register($this);
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
@@ -147,13 +147,13 @@ $jscript = '
     $("#saldokasir-date").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
 
     $("#saldokasir-shift_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });
     
     $("#saldokasir-user_active").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });

@@ -4,7 +4,7 @@ use yii\helpers\Inflector;
 use kartik\money\MaskMoney;
 
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+kartik\select2\ThemeKrajeeBs3Asset::register($this);
 
 $assetCommon = $this->assetBundles['restotech\standard\common\assets\AppAsset'];
 
@@ -90,7 +90,7 @@ $index = 0;
 
                                             $jscriptAdding .= '
                                                 $("#' . strtolower(Inflector::camelize($model->tableName())) . '-' . $i . '-' . $field . '").select2({
-                                                    theme: "krajee",
+                                                    theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
                                                     placeholder: "Pilih",
                                                     allowClear: true,
                                                 });
@@ -104,7 +104,7 @@ $index = 0;
                                                     var ' . Inflector::camelize($model->tableName() . '_' . $i . '_' . $affectField) . ' = function(remoteData) {
                                                         $("#' . strtolower(Inflector::camelize($model->tableName())) . '-' . $i . '-' . $affectField . '").val(null);
                                                         $("#' . strtolower(Inflector::camelize($model->tableName())) . '-' . $i . '-' . $affectField . '").select2({
-                                                            theme: "krajee",
+                                                            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
                                                             placeholder: "Pilih",
                                                             allowClear: true,
                                                             data: remoteData,
@@ -317,7 +317,7 @@ foreach ($formFields as $field => $option) {
 
         $jscript .= '
         tableTbody.find("#" + inputId' . $field . ').select2({
-            theme: "krajee",
+            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
             placeholder: "Pilih",
             allowClear: true
         });
@@ -335,7 +335,7 @@ foreach ($formFields as $field => $option) {
 
                 $("#" + inputIdAffect' . $affectField . ').val(null);
                 $("#" + inputIdAffect' . $affectField . ').select2({
-                    theme: "krajee",
+                    theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
                     placeholder: "Pilih",
                     allowClear: true,
                     data: remoteData,

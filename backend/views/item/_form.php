@@ -12,7 +12,7 @@ use restotech\standard\backend\components\NotificationDialog;
 /* @var $form yii\widgets\ActiveForm */
 
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+kartik\select2\ThemeKrajeeBs3Asset::register($this);
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
@@ -208,7 +208,7 @@ $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/i
 
 $jscript = '
     $("#item-parent_item_category_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true                
     });    
@@ -216,7 +216,7 @@ $jscript = '
     var itemCategory = function(remoteData) {
         $("#item-item_category_id").val(null);
         $("#item-item_category_id").select2({
-            theme: "krajee",
+            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
             placeholder: "Pilih",
             allowClear: true,
             data: remoteData,
@@ -244,14 +244,14 @@ $jscript = '
     });
     
     $("select.itemsku-storage_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });
     
     var storageRack = function(remoteData, component) {
         component.select2({
-            theme: "krajee",
+            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
             placeholder: "Pilih",
             allowClear: true,
             data: remoteData,

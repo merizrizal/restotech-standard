@@ -224,13 +224,13 @@ $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/i
 
 $jscript = '
     $("#menu-menu_category_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });
 
     $("#menu-menu_satuan_id").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Pilih",
         allowClear: true
     });

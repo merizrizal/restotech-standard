@@ -13,7 +13,7 @@ use restotech\standard\backend\components\ModalDialog;
 /* @var $model restotech\standard\backend\models\Customer */
 
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+kartik\select2\ThemeKrajeeBs3Asset::register($this);
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
@@ -279,7 +279,7 @@ $jscript = '
     });       
     
     $("#menucategoryprinter-printer").select2({
-        theme: "krajee",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
         placeholder: "Select Printer",
         allowClear: true,
     });
