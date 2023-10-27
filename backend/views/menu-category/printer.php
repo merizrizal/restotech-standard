@@ -13,7 +13,7 @@ use restotech\standard\backend\components\ModalDialog;
 /* @var $model restotech\standard\backend\models\Customer */
 
 kartik\select2\Select2Asset::register($this);
-kartik\select2\ThemeKrajeeAsset::register($this);
+
 
 $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
