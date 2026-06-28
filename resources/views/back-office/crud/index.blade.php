@@ -25,8 +25,18 @@
                             @php($value = data_get($item, $column['name']))
                             <td>{{ $column['name'] === 'is_active' ? ($value ? 'Yes' : 'No') : $value }}</td>
                         @endforeach
-                        <td>
+                        <td class="actions">
                             <a href="{{ route($resource->route('edit'), $item->getKey()) }}">Edit</a>
+                            <form
+                                method="POST"
+                                action="{{ route($resource->route('destroy'), $item->getKey()) }}"
+                                style="display:inline"
+                                onsubmit="return confirm('Delete this {{ $resource->singularLabel() }}?')"
+                            >
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @empty

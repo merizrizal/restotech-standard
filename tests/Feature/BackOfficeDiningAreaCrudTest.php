@@ -29,7 +29,13 @@ function backOfficeUser(): Authenticatable
 
 it('requires authentication for back office screens', function () {
     $this->get('/restotech/admin/dining-areas')
-        ->assertRedirect('/login');
+        ->assertRedirect(route('restotech.standard.back_office.login'));
+});
+
+it('shows the back office login screen', function () {
+    $this->get(route('restotech.standard.back_office.login'))
+        ->assertOk()
+        ->assertSee('Restotech Login');
 });
 
 it('lists, creates, and updates dining areas', function () {
@@ -88,5 +94,14 @@ it('lists, creates, and updates dining areas', function () {
         'sort_order' => 15,
         'is_active' => 0,
         'notes' => 'Updated notes',
+    ]);
+
+    $deleteToken = csrf_token();
+    $this->delete('/restotech/admin/dining-areas/' . $diningArea->id, [
+        '_token' => $deleteToken,
+    ])->assertRedirect(route('restotech.standard.back_office.dining-areas.index'));
+
+    $this->assertDatabaseMissing('restotech_dining_areas', [
+        'id' => $diningArea->id,
     ]);
 });

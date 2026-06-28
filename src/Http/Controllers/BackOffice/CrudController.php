@@ -82,6 +82,17 @@ abstract class CrudController extends Controller
             ->with('status', $resource->singularLabel() . ' updated.');
     }
 
+    public function destroy(string|int $id): RedirectResponse
+    {
+        $resource = $this->resource();
+        $model = $this->findModel($resource, $id);
+        $model->delete();
+
+        return redirect()
+            ->route($resource->route('index'))
+            ->with('status', $resource->singularLabel() . ' deleted.');
+    }
+
     protected function findModel(CrudResource $resource, string|int $id): Model
     {
         $class = $resource->modelClass();
