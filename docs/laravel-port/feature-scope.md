@@ -16,6 +16,7 @@ This document classifies features for the Laravel port of `restotech/standard`. 
 2. If Standard contains models or tables but no Standard UI/controller workflow, treat that as data readiness or dependency support, not Standard behavior.
 3. If Standard checkout/payment code directly uses a behavior, classify that behavior as Standard even if Full contains helper validation screens or richer CRUD.
 4. If classification is uncertain, mark it as `Needs mapping` until the relevant Yii source is inspected.
+5. For the Laravel port, Back Office CRUD ownership is defined by the minimum setup needed to operate Standard POS, not by exact Yii Standard controller parity. Laravel Standard may add basic CRUD where Yii Standard only provided init/support screens; richer workflows remain Full Edition or deferred unless explicitly classified as Standard.
 
 ## Standard Edition Scope
 
@@ -57,14 +58,16 @@ These features belong to `restotech/standard` Laravel unless later evidence cont
 - Checkout requires bill print/generation by default, configurable for quick-service mode.
 - Customer bill/receipt print and reprint through a printing abstraction.
 - Browser/manual print first; physical/network printer drivers later.
+- Simple POS table selection by dining area/table is Standard first-slice scope; rich visual layout and opened-table dashboards are deferred/Full-adjacent.
 
 ### Payments
 
 - Cash and ordinary payment methods.
+- Accounts Receivable payment is Standard: first-slice checkout may record a receivable payment method when configured, while receivable collection screens and reports are deferred Standard work.
 - Employee Credit payment, because Standard checkout handles `XLIMIT` behavior.
 - Voucher payment, because Standard checkout handles `XVCHR` behavior.
 - Minimal Voucher validation/redemption service for POS checkout, because Standard checkout marks vouchers as used.
-- Employee Credit validation and administration still require mapping because Full has related validation endpoints.
+- Employee Credit validation and minimal administration are Standard scope: Standard checkout decrements employee remaining credit, Standard Employee Back Office maintains credit limit/remaining balance, and Laravel Standard should own the POS validation service even though Yii Full supplied a validation endpoint.
 
 ### Sales, Inventory, and Stock
 
@@ -73,6 +76,7 @@ These features belong to `restotech/standard` Laravel unless later evidence cont
 - Stock is tracked by item SKU, storage location, and optional rack.
 - Negative stock is configurable; default is not allowed.
 - No stock reservation visibility in the first slice.
+- Direct Purchase is Standard scope as a simple stock-entry workflow, because Yii Standard implements create/update/delete/print and stock mutation; it is deferred out of the first POS checkout slice.
 
 ### Back Office Foundation
 
@@ -81,6 +85,8 @@ These features belong to `restotech/standard` Laravel unless later evidence cont
 - Theme adapter system with only `minimal` implemented initially.
 - Publishable/overridable Back Office views.
 - Back Office CRUD screens required for operating Standard POS are Standard scope.
+- First-slice Back Office CRUD/setup covers: Employee; Restotech user profile, roles, permissions, and role permissions; Transaction Day; Shift; Cashier Balance; Dining Area; Dining Table basic CRUD without rich layout design; Menu Category; Menu Unit; Menu Item; Menu Condiment; Menu Recipe Item; Inventory Category; Inventory Item; Inventory SKU; Storage Location; Storage Rack; Payment Method; tax/service/settings; and Number Sequence setup.
+- First-slice Back Office excludes: Voucher issuance/admin screens; Printer and Menu Category Printer screens; Direct Purchase; Supplier/procurement/payables; accounts receivable collection screens; manual stock movement/correction/transfer screens; and reports beyond test/dev verification.
 
 ### Operations and Settings
 
@@ -119,7 +125,7 @@ These are implemented or strongly evidenced in the Yii `restotech-full` module a
   - open table from booking.
 - Payment correction / invoice correction workflow.
 - Cash drawer action.
-- Opened table overview and richer room/table layout workflows, if beyond Standard table session flow.
+- Opened table overview and richer room/table layout workflows beyond basic Standard table selection, including drag/drop layout coordinates, table shapes/images, multi-session table selection, join/transfer/split flows, and booking-driven table opening.
 
 ### Back Office Full Features
 
@@ -144,10 +150,12 @@ These may still be Standard eventually, but are not first-slice work.
 
 - Public API parity.
 - Report export parity.
+- Printer and Menu Category Printer Back Office configuration screens as Standard-deferred configuration.
 - Physical printer drivers.
-- Kitchen/order printer automation.
-- Accounts receivable mapping and implementation.
-- Procurement/inventory areas pending Standard-vs-Full classification.
+- Kitchen/order printer automation, which may be supplied by a later Full/kitchen extension using the deferred printer configuration.
+- Accounts Receivable collection screens, receivable payment records, and receivable reports as deferred Standard work.
+- Direct Purchase Back Office workflow.
+- Rich procurement/payables remain Full Edition candidates: purchase orders, supplier delivery/receiving, supplier invoices, payable payments, purchase returns, and supplier administration.
 
 ## First Laravel Implementation Slice
 
@@ -157,17 +165,11 @@ The first implementation slice should prove the Standard POS checkout path:
 2. Core POS models and settings needed for table checkout.
 3. Transaction day and cashier session gates.
 4. Dining table session open/order/discount/bill/checkout flow.
-5. Multiple payment methods including Employee Credit and Voucher if the data model is ready.
+5. Multiple payment methods including Employee Credit, Voucher, and Accounts Receivable if the data model is ready/configured.
 6. Synchronous recipe-based stock mutation on checkout.
 7. Sales invoice and receipt generation.
 8. Pest/Testbench integration tests against MariaDB.
 
 ## Needs Mapping
 
-Before coding each area, inspect the Standard and Full Yii source and update this section:
-
-- Exact Standard Back Office CRUD list.
-- Employee Credit administration/validation ownership.
-- Accounts receivable ownership and first required flow.
-- Which stock/procurement screens, if any, are truly Standard behavior.
-- Which room/table layout capabilities are Standard versus Full.
+No first-slice scope ownership questions remain. Before coding later deferred areas, inspect the relevant Standard and Full Yii source and update this section.

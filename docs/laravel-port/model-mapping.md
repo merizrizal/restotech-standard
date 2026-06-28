@@ -8,8 +8,8 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 - Standard schema reference: `docs/restotech.sql`.
 - Standard domain notes: `docs/data-model.md` and `docs/domain-and-flows.md`.
 - Feature boundary: `docs/laravel-port/feature-scope.md`.
-- Full repo model references: `/home/meriz/Documents/Synctech.ID/PHP/restotech-full/docs/appendix-model-index.md`.
-- Full repo flows: `/home/meriz/Documents/Synctech.ID/PHP/restotech-full/docs/domain-and-flows.md`.
+- Full repo model references: `../restotech-full/docs/appendix-model-index.md`.
+- Full repo flows: `../restotech-full/docs/domain-and-flows.md`.
 
 ## Ownership Labels
 
@@ -36,7 +36,7 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 | Yii model | Yii table | Laravel model | Logical Laravel table | Ownership | Notes |
 |---|---|---|---|---|---|
 | `User` | `user` | Host `User` + `RestotechUserProfile` | host `users` + `restotech_user_profiles` | Host/Replaced | Host Laravel auth is authoritative. Package stores Restotech profile/linkage only. |
-| `Employee` | `employee` | `Employee` | `employees` | Standard | Keep employee profile and employee-credit fields; use host user link instead of Yii password login. |
+| `Employee` | `employee` | `Employee` | `employees` | Standard | Keep employee profile and employee-credit fields; use host user link instead of Yii password login. Employee Credit validation and minimal Back Office credit-limit/reset administration are Standard scope. |
 | `UserLevel` | `user_level` | `Role` | `roles` | Standard | Restotech authorization role, not host auth identity. |
 | `UserAppModule` | `user_app_module` | `Permission` or `AccessModule` | `permissions` / `access_modules` | Standard | Needs final permission vocabulary during authorization design. |
 | `UserAkses` | `user_akses` | `RolePermission` | `role_permissions` | Standard | Role-to-permission mapping. |
@@ -45,8 +45,8 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 
 | Yii model | Yii table | Laravel model | Logical Laravel table | Ownership | Notes |
 |---|---|---|---|---|---|
-| `MtableCategory` | `mtable_category` | `DiningArea` | `dining_areas` | Standard support | Old labels are room/category. Needed to organize dining tables. Full has richer layout/admin. |
-| `Mtable` | `mtable` | `DiningTable` | `dining_tables` | Standard | Include capacity, inactive flag, tax/service exemptions, image/layout fields if needed. |
+| `MtableCategory` | `mtable_category` | `DiningArea` | `dining_areas` | Standard | Old labels are room/category. First slice includes basic CRUD and POS grouping; rich visual layout remains deferred/Full-adjacent. |
+| `Mtable` | `mtable` | `DiningTable` | `dining_tables` | Standard | First slice includes basic CRUD with name, area, capacity, active flag, and tax/service exemptions; drag/drop coordinates, shapes, and images are deferred/Full-adjacent. |
 | `MtableSession` | `mtable_session` | `TableSession` | `table_sessions` | Standard | Core Standard POS session aggregate. Snapshot tax/service charge at open. |
 | `MtableOrder` | `mtable_order` | `OrderItem` | `order_items` | Standard | Belongs to a table session before invoice posting. Supports notes, discounts, void/free flags. |
 | `MtableOrderQueue` | `mtable_order_queue` | `KitchenQueueItem` | `kitchen_queue_items` | Full candidate | Yii Full implements queue actions and views. Standard should expose extension point only. |
@@ -63,9 +63,9 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 | `MenuSatuan` | `menu_satuan` | `MenuUnit` | `menu_units` | Standard | Unit of measure for menu items. |
 | `MenuRecipe` | `menu_recipe` | `MenuRecipeItem` | `menu_recipe_items` | Standard | Defines inventory consumption during checkout. |
 | `MenuCondiment` | `menu_condiment` | `MenuCondiment` | `menu_condiments` | Standard | Condiment/options relationship. |
-| `MenuHpp` | `menu_hpp` | `MenuCostHistory` | `menu_cost_histories` | Needs mapping | Used for historical cost/reporting; confirm Standard requirements before first slice. |
-| `MenuCategoryPrinter` | `menu_category_printer` | `MenuCategoryPrinter` | `menu_category_printers` | Deferred | Printer routing data; kitchen printer automation is deferred/Full-adjacent. |
-| `Printer` | `printer` | `Printer` | `printers` | Deferred | Customer receipt uses abstraction first; physical/network printer driver later. |
+| `MenuHpp` | `menu_hpp` | `MenuCostHistory` | `menu_cost_histories` | Deferred | Cost history/reporting support. First slice keeps current menu cost on `MenuItem`; historical cost reports come later. |
+| `MenuCategoryPrinter` | `menu_category_printer` | `MenuCategoryPrinter` | `menu_category_printers` | Deferred | Standard-deferred printer routing configuration. Excluded from first slice; kitchen printer automation is deferred/Full-adjacent. |
+| `Printer` | `printer` | `Printer` | `printers` | Deferred | Standard-deferred printer configuration. Customer receipt uses abstraction first; physical/network printer driver later. |
 
 ## Inventory Master and Stock
 
@@ -86,8 +86,8 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 |---|---|---|---|---|---|
 | `SaleInvoice` | `sale_invoice` | `SalesInvoice` | `sales_invoices` | Standard | Posted sale from table checkout. Store snapshot totals and rates. |
 | `SaleInvoiceTrx` | `sale_invoice_trx` | `SalesInvoiceItem` | `sales_invoice_items` | Standard | Posted invoice line item. |
-| `SaleInvoicePayment` | `sale_invoice_payment` | `SalesInvoicePayment` | `sales_invoice_payments` | Standard | Multiple payments per invoice. Supports employee credit/voucher context. |
-| `SaleInvoiceArPayment` | `sale_invoice_ar_payment` | `ReceivablePayment` | `receivable_payments` | Deferred | Accounts receivable is eventual parity; exact ownership needs mapping. |
+| `SaleInvoicePayment` | `sale_invoice_payment` | `SalesInvoicePayment` | `sales_invoice_payments` | Standard | Multiple payments per invoice. Supports Employee Credit, Voucher, and Accounts Receivable payment context. |
+| `SaleInvoiceArPayment` | `sale_invoice_ar_payment` | `ReceivablePayment` | `receivable_payments` | Deferred | Standard-deferred Accounts Receivable collection record. First slice may create the receivable invoice payment; collection screens and reports come later. |
 | `SaleInvoiceCorrection` | `sale_invoice_correction` | `SalesInvoiceCorrection` | `sales_invoice_corrections` | Full candidate | Yii Full implements payment/invoice correction. |
 | `SaleInvoiceTrxCorrection` | `sale_invoice_trx_correction` | `SalesInvoiceItemCorrection` | `sales_invoice_item_corrections` | Full candidate | Correction detail snapshot. |
 | `SaleInvoicePaymentCorrection` | `sale_invoice_payment_correction` | `SalesInvoicePaymentCorrection` | `sales_invoice_payment_corrections` | Full candidate | Correction payment snapshot. |
@@ -112,7 +112,7 @@ This document maps Yii/SQL model names from Restotech Standard and Restotech Ful
 |---|---|---|---|---|---|
 | `DirectPurchase` | `direct_purchase` | `DirectPurchase` | `direct_purchases` | Standard | Standard controller implements create/update/delete/print and stock mutation. |
 | `DirectPurchaseTrx` | `direct_purchase_trx` | `DirectPurchaseItem` | `direct_purchase_items` | Standard | Detail lines for direct purchase. |
-| `Supplier` | `supplier` | `Supplier` | `suppliers` | Full candidate | Yii Full implements supplier CRUD; Standard has model dependency. Reclassify if direct purchase requires supplier admin. |
+| `Supplier` | `supplier` | `Supplier` | `suppliers` | Full candidate | Yii Full implements supplier CRUD; Standard has model dependency; Direct Purchase does not make Supplier administration first-slice Standard scope. |
 | `PurchaseOrder` | `purchase_order` | `PurchaseOrder` | `purchase_orders` | Full candidate | Standard controller is shell; Yii Full implements PO workflow. |
 | `PurchaseOrderTrx` | `purchase_order_trx` | `PurchaseOrderItem` | `purchase_order_items` | Full candidate | PO detail rows. |
 | `SupplierDelivery` | `supplier_delivery` | `SupplierDelivery` | `supplier_deliveries` | Full candidate | Yii Full implements receiving and stock inflow. |
@@ -171,9 +171,19 @@ For the first Standard POS checkout slice, implement only the minimal model set 
 - `Shift`, `CashierBalance`, `TransactionDay`
 - `Setting`, `NumberSequence`
 
+## First-Slice Back Office CRUD Boundary
+
+For the first Standard POS checkout slice, expose only Back Office setup/admin screens needed to operate POS checkout:
+
+- Identity/access: `Employee`, `RestotechUserProfile`, `Role`, `Permission`, `RolePermission`.
+- POS operations: `TransactionDay`, `Shift`, `CashierBalance`.
+- Dining setup: `DiningArea`, `DiningTable` basic CRUD without rich layout design.
+- Menu/catalog: `MenuCategory`, `MenuUnit`, `MenuItem`, `MenuCondiment`, `MenuRecipeItem`.
+- Inventory setup: `InventoryCategory`, `InventoryItem`, `InventorySku`, `StorageLocation`, `StorageRack`.
+- Payment/settings: `PaymentMethod`, tax/service/settings, `NumberSequence`.
+
+Exclude from first-slice Back Office CRUD: Voucher issuance/admin screens, Printer/MenuCategoryPrinter screens, Direct Purchase, Supplier/procurement/payables, accounts receivable collection screens, manual stock movement/correction/transfer screens, and reports beyond test/dev verification.
+
 ## Open Questions
 
-1. Is Employee Credit validation/admin Standard or Full?
-2. Which Back Office CRUD screens are required for operating Standard POS versus provided only by Full?
-3. Does Direct Purchase remain Standard in Laravel, or should it become Full because richer procurement lives in Full?
-4. Should `MenuCategoryPrinter` and `Printer` remain Standard deferred features or move to a Full/kitchen-printing extension?
+No model-mapping ownership questions remain for the first POS checkout slice.

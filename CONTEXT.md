@@ -72,6 +72,10 @@ _Avoid_: Limit officer, XLIMIT
 A payment instrument identified by a code that can be applied to reduce or pay part of a sales invoice according to its value and validity rules.
 _Avoid_: XVCHR
 
+**Accounts Receivable**:
+An amount owed by a guest or customer after a sales invoice is posted with payment due later.
+_Avoid_: Piutang, Account-Receiveable
+
 **Purchase Return**:
 A return of purchased goods to a supplier.
 _Avoid_: Retur purchase

@@ -1,21 +1,36 @@
 {
-    "name": "synctech/restotech-standard",
-    "description": "Restotech, Property of synctech.id",
-    "type": "yii2-extension",
+    "name": "restotech/standard",
+    "description": "Restotech Standard Laravel package",
+    "type": "library",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
-	"synctech/yii2-synctbase": "dev-master",
-        "kartik-v/yii2-widget-datepicker": "@dev",
-        "kartik-v/yii2-widget-fileinput": "@dev",
-	"kartik-v/yii2-widget-timepicker": "*",
-        "kartik-v/yii2-widget-select2": "@dev",
-	"kartik-v/yii2-grid": "@dev",
-	"kartik-v/yii2-money": "dev-master",
-	"kartik-v/yii2-mpdf": "@dev",
-        "kartik-v/yii2-field-range": "*"
+        "php": "^8.3",
+        "illuminate/support": "^13.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.1",
+        "pestphp/pest": "^4.7",
+        "pestphp/pest-plugin-laravel": "^4.1",
+        "phpunit/phpunit": "^12.5.30"
     },
     "autoload": {
         "psr-4": {
-            "restotech\\standard\\": ""
+            "Restotech\\Standard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Database\\Factories\\": "database/factories/",
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Restotech\\Standard\\StandardServiceProvider"
+            ]
         }
     }
 }
