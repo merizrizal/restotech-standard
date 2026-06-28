@@ -1,0 +1,53 @@
+services:
+  mariadb:
+    image: mariadb:12.3.2
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      MARIADB_DATABASE: restotech_standard_demo
+      MARIADB_USER: restotech
+      MARIADB_PASSWORD: restotech
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - demo-mariadb-data:/var/lib/mysql
+
+  demo:
+    build:
+      context: .
+      dockerfile: docker/demo/Dockerfile
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      DB_CONNECTION: mysql
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      DB_DATABASE: restotech_standard_demo
+      DB_USERNAME: restotech
+      DB_PASSWORD: restotech
+      DEMO_APP_DIR: /workspace/laravel-demo
+      PACKAGE_PATH: /package
+      OVERLAY_PATH: /overlay
+      DEMO_PORT: 8000
+    ports:
+      - "8080:8000"
+    volumes:
+      - demo-app-data:/workspace/laravel-demo
+      - .:/package:ro
+      - ./demo/overlay:/overlay:ro
+    tty: true
+    stdin_open: true
+
+volumes:
+  demo-app-data:
+  demo-mariadb-data:
