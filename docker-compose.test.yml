@@ -16,3 +16,25 @@ services:
       interval: 5s
       timeout: 5s
       retries: 20
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile.test
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    command: ["sleep", "infinity"]
+    environment:
+      APP_ENV: testing
+      DB_CONNECTION: mysql
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      DB_DATABASE: restotech_standard_test
+      DB_USERNAME: restotech
+      DB_PASSWORD: restotech
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true

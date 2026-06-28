@@ -26,6 +26,9 @@ return [
         'tax_rate' => 0,
         'service_charge_rate' => 0,
     ],
+    'stock' => [
+        'allow_negative_stock' => false,
+    ],
     'views' => [
         'theme' => 'minimal',
     ],
