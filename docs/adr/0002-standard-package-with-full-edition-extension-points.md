@@ -1,0 +1,3 @@
+# Standard package with Full Edition extension points
+
+`restotech/standard` will implement the Standard Edition feature surface first and treat richer Full Edition capabilities as extension points. Features implemented by the Yii `restotech-full` module are Full Edition candidates by default unless the feature-scope document explicitly classifies them as Standard; this includes split bill/order, table joining, table/order transfers, kitchen queue, booking, payment correction, richer stock/procurement/payables/reporting flows, and other Full overrides. Full-only capabilities will be hidden by default in Standard and can be supplied later by a Full Edition package.

@@ -1,0 +1,3 @@
+# Laravel-native behavior-compatible port
+
+We will port Restotech Standard as a Laravel-native package that preserves the Standard Edition business behavior rather than cloning the Yii implementation or schema exactly. Because there is no existing production database to migrate, the Laravel package may use English Laravel-conventional table and column names with conservative schema cleanup while using the Yii module and `docs/restotech.sql` as behavior and domain references. Package-owned tables will use a `restotech_` physical prefix to avoid collisions with host application tables, while host-owned tables such as `users` remain unprefixed.
