@@ -18,7 +18,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -50,7 +50,7 @@ endif; ?>
                             . '<div class="col-lg-3">'
                                 . '{error}'
                             . '</div>'
-                        . '</div>', 
+                        . '</div>',
         ]
 ]); ?>
 
@@ -59,8 +59,8 @@ endif; ?>
     <div class="col-sm-8">
         <div class="box box-danger">
             <div class="box-body">
-                <div class="item-form">                    
-                    
+                <div class="item-form">
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
@@ -79,15 +79,15 @@ endif; ?>
                             ],
                         ])->textInput(['maxlength' => true, 'readonly' => 'readonly']);
                     } ?>
-                    
+
                     <?= $form->field($model, 'parent_item_category_id')->dropDownList(
                             ArrayHelper::map(
-                                ItemCategory::find()->where(['IS', 'parent_category_id', NULL])->orderBy('nama_category')->asArray()->all(), 
-                                'id', 
-                                function($data) { 
-                                    return $data['nama_category'] . ' (' . $data['id'] . ')';                                 
+                                ItemCategory::find()->where(['IS', 'parent_category_id', NULL])->orderBy('nama_category')->asArray()->all(),
+                                'id',
+                                function($data) {
+                                    return $data['nama_category'] . ' (' . $data['id'] . ')';
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                             ]) ?>
@@ -99,7 +99,7 @@ endif; ?>
                     <?= $form->field($model, 'keterangan')->textarea(['rows' => 2]) ?>
 
                     <?= $form->field($model, 'not_active')->checkbox(['value' => true], false) ?>
-                    
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-12" style="text-align: center">
@@ -111,7 +111,7 @@ endif; ?>
                             </div>
                         </div>
                     </div>
-                                                                              
+
                 </div>
             </div>
         </div>
@@ -124,7 +124,7 @@ endif; ?>
         <div class="box box-danger">
             <div class="box-body">
                 <div class="item-form">
-                    <div class="row">                                            
+                    <div class="row">
                         <?php
                         $template =[
                             'template' => '{label}<div style="{width}">{input}</div>{error}'
@@ -135,7 +135,7 @@ endif; ?>
                             $opt = ['style' => 'width:35%'];
                             if ($i == 1)
                                 $opt = ['style' => 'width:35%', 'value' => 1, 'readonly' => 'readonly'] ;
-                            
+
                             if (!empty($modelSkus[$i]->storage_rack_id)) {
                                 $storageRack[$i]['storageId'] = $modelSkus[$i]->storage_id;
                                 $storageRack[$i]['id'] = $modelSkus[$i]->storage_rack_id;
@@ -143,14 +143,14 @@ endif; ?>
                                 $storageRack[$i]['component'] = '$("input#itemsku-' . $i . '-storage_rack_id")';
                             } ?>
 
-                            <div class="col-lg-3">                                    
+                            <div class="col-lg-3">
 
                                 <?= $form->field($modelSkus[$i], '[' . $i . ']id', [
                                         'template' => $template['template'],
                                         'enableAjaxValidation' => true
-                                    ])->textInput(['maxlength' => 16, 'style' => 'width:50%']) ?>                                                                   
+                                    ])->textInput(['maxlength' => 16, 'style' => 'width:50%']) ?>
 
-                                <?= $form->field($modelSkus[$i], '[' . $i . ']nama_sku', $template)->textInput(['maxlength' => 32]) ?>                                                                
+                                <?= $form->field($modelSkus[$i], '[' . $i . ']nama_sku', $template)->textInput(['maxlength' => 32]) ?>
 
                                 <?= $form->field($modelSkus[$i], '[' . $i . ']stok_minimal', $template)->textInput(['style' => 'width:35%']) ?>
 
@@ -158,20 +158,20 @@ endif; ?>
 
                                 <?= $form->field($modelSkus[$i], '[' . $i . ']storage_id', $template)->dropDownList(
                                         ArrayHelper::map(
-                                            Storage::find()->orderBy('nama_storage')->asArray()->all(), 
-                                            'id', 
-                                            function($data) { 
-                                                return $data['nama_storage'] . ' (' . $data['id'] . ')';                                 
+                                            Storage::find()->orderBy('nama_storage')->asArray()->all(),
+                                            'id',
+                                            function($data) {
+                                                return $data['nama_storage'] . ' (' . $data['id'] . ')';
                                             }
-                                        ), 
+                                        ),
                                         [
                                             'prompt' => '',
                                             'class' => 'form-control itemsku-storage_id'
                                         ]
                                     ); ?>
 
-                                <?= $form->field($modelSkus[$i], '[' . $i . ']storage_rack_id', $template)->textInput(['maxlength' => 20, 'class' => 'form-control itemsku-storage_rack_id']); ?>           
-                                
+                                <?= $form->field($modelSkus[$i], '[' . $i . ']storage_rack_id', $template)->textInput(['maxlength' => 20, 'class' => 'form-control itemsku-storage_rack_id']); ?>
+
                                 <?= $form->field($modelSkus[$i], '[' . $i . ']no_urut', $template)->textInput(['maxlength' => 32, 'style' => 'width:50%', 'value' => $i, 'readonly' => 'readonly']) ?>
 
                             </div>
@@ -198,25 +198,25 @@ endif; ?>
     </div>
 </div><!-- /.row -->
 
-<?php                    
+<?php
 ActiveForm::end(); ?>
 
 <?php
 $this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
- 
+
 $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     $("#item-parent_item_category_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
-        allowClear: true                
-    });    
+        allowClear: true
+    });
 
     var itemCategory = function(remoteData) {
         $("#item-item_category_id").val(null);
         $("#item-item_category_id").select2({
-            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+            theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
             placeholder: "Pilih",
             allowClear: true,
             data: remoteData,
@@ -227,7 +227,7 @@ $jscript = '
 
     $("#item-parent_item_category_id").on("select2:select", function(e) {
         $("input#item-item_category_id").val(null).trigger("change");
-        
+
         $.ajax({
             dataType: "json",
             cache: false,
@@ -242,29 +242,29 @@ $jscript = '
         $("#item-item_category_id").val(null).trigger("change");
         itemCategory([]);
     });
-    
+
     $("select.itemsku-storage_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
-    
+
     var storageRack = function(remoteData, component) {
         component.select2({
-            theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+            theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
             placeholder: "Pilih",
             allowClear: true,
             data: remoteData,
         });
     };
-    
+
     storageRack([], $("input.itemsku-storage_rack_id"));
-    
+
     $("select.itemsku-storage_id").on("select2:select", function(e) {
         var component = $(this).parent().parent().parent().find("input.itemsku-storage_rack_id");
-        
-        component.val(null).trigger("change");        
-        
+
+        component.val(null).trigger("change");
+
         $.ajax({
             dataType: "json",
             cache: false,
@@ -274,7 +274,7 @@ $jscript = '
             }
         });
     });
-    
+
     $("select.itemsku-storage_id").on("select2:unselect", function(e) {
         var component = $(this).parent().parent().parent().find("input.itemsku-storage_rack_id");
         component.val(null).trigger("change");
@@ -283,19 +283,19 @@ $jscript = '
 ';
 
 if (!$model->isNewRecord || $status == 'danger') {
-    
+
     $jscript .= '
         $.ajax({
             dataType: "json",
             cache: false,
             url: "' . Yii::$app->urlManager->createUrl([Yii::$app->params['posModule']['standard'] . 'item-category/sub-item-category']) . '?id=" + $("#item-parent_item_category_id").select2("data")[0].id,
-            success: function(response) {                
+            success: function(response) {
                 itemCategory(response);
                 $("input#item-item_category_id").val("' . $model->item_category_id . '").trigger("change");
             }
         });
     ';
-    
+
     foreach ($storageRack as $key => $value) {
 
         $jscript .= '
@@ -309,7 +309,7 @@ if (!$model->isNewRecord || $status == 'danger') {
                 }
             });
         ';
-        
+
     }
 }
 

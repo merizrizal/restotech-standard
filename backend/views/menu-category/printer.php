@@ -19,7 +19,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -36,15 +36,15 @@ $this->params['breadcrumbs'][] = ['label' => 'Kategori Menu', 'url' => ['index']
 $this->params['breadcrumbs'][] = $this->title; ?>
 
 <div class="customer-view">
-    
+
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <div class="box box-danger">
                 <div class="box-header">
-                    
+
                 </div>
-                
+
                 <?= DetailView::widget([
                     'model' => $model,
                     'options' => [
@@ -55,13 +55,13 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                         'nama_category',
                     ],
                 ]) ?>
-                        
+
                 <br>
-                
+
                 <div style="padding: 10px">
                     <?php $form = ActiveForm::begin([
                                 'options' => [
-                                    
+
                                 ],
                                 'fieldConfig' => [
                                     'parts' => [
@@ -79,9 +79,9 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                                     . '<div class="col-lg-3">'
                                                         . '{error}'
                                                     . '</div>'
-                                                . '</div>', 
+                                                . '</div>',
                                 ]
-                        ]); ?>                 
+                        ]); ?>
 
                         <div class="form-group">
                             <div class="row">
@@ -99,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                         $collapsePrinter = '';
                         if (empty($pid)) {
                             $collapse = 'collapse';
-                            $collapsePrinter = 'collapsePrinter'; 
+                            $collapsePrinter = 'collapsePrinter';
                         } ?>
 
                         <div class="<?= $collapse ?>" id="<?= $collapsePrinter ?>">
@@ -112,12 +112,12 @@ $this->params['breadcrumbs'][] = $this->title; ?>
 
                             <?= $form->field($modelMenuCategoryPrinter, 'printer')->dropDownList(
                                 ArrayHelper::map(
-                                    Printer::find()->andWhere(['type' => 'kitchen'])->all(), 
-                                    'printer', 
-                                    function($data) { 
-                                        return $data->printer;                                 
+                                    Printer::find()->andWhere(['type' => 'kitchen'])->all(),
+                                    'printer',
+                                    function($data) {
+                                        return $data->printer;
                                     }
-                                ), 
+                                ),
                                 [
                                     'prompt' => '',
                                     'style' => 'width: 70%',
@@ -143,18 +143,18 @@ $this->params['breadcrumbs'][] = $this->title; ?>
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-12">
             <div class="box box-danger">
                 <div class="box-header">
                     <h3 class="box-title">
                         List Printer
-                    </h3>                    
+                    </h3>
                 </div>
                 <div class="box-body table-responsive no-padding">
-                    
-                    <?php 
+
+                    <?php
                     $modalDialog = new ModalDialog([
                         'clickedComponent' => 'a#delete',
                         'modelAttributeId' => 'model-id',
@@ -166,11 +166,11 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                             $("a#update").on("click", function(event) {
                                 $(location).attr("href", $(this).attr("href"));
                             });
-                            
+
                             $("button#btnPrinter").on("click", function(event) {
                                 $(location).attr("href", $(this).attr("data-href"));
                             });
-                            '                            
+                            '
                             . $modalDialog->getScript();
 
                     $this->registerJs($jscript);
@@ -185,7 +185,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                         'floatHeader' => true,
                         'panelHeadingTemplate' => '<div class="kv-panel-pager pull-right" style="text-align:right">'
                                                     . '{pager}{summary}'
-                                                . '</div>'                                
+                                                . '</div>'
                                                 . '<div class="clearfix"></div>'
                         ,
                         'panelFooterTemplate' => '<div class="kv-panel-pager pull-right" style="text-align:right">'
@@ -200,8 +200,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                         'toolbar' => [
                             [
                                 'content' => Html::a('<i class="fa fa-repeat"></i>', ['printer', 'id' => $model->id, 'pid' => $pid], [
-                                            'data-pjax'=>false, 
-                                            'class' => 'btn btn-success', 
+                                            'data-pjax'=>false,
+                                            'class' => 'btn btn-success',
                                             'data-placement' => 'top',
                                             'data-toggle' => 'tooltip',
                                             'title' => 'Refresh'
@@ -222,8 +222,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                             . '</div>',
                                 'buttons' => [
                                     'update' => function($url, $model, $key) {
-                                        return Html::a('<i class="fa fa-pencil"></i>', 
-                                            ['menu-category/printer', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
+                                        return Html::a('<i class="fa fa-pencil"></i>',
+                                            ['menu-category/printer', 'id' => $model->menuCategory->id, 'pid' => $model->id],
                                             [
                                                 'id' => 'update',
                                                 'class' => 'btn btn-success',
@@ -234,11 +234,11 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                             ]);
                                     },
                                     'delete' => function($url, $model, $key) {
-                                        return Html::a('<i class="fa fa-trash"></i>', 
-                                            ['menu-category/printer-delete', 'id' => $model->menuCategory->id, 'pid' => $model->id], 
+                                        return Html::a('<i class="fa fa-trash"></i>',
+                                            ['menu-category/printer-delete', 'id' => $model->menuCategory->id, 'pid' => $model->id],
                                             [
                                                 'id' => 'delete',
-                                                'class' => 'btn btn-danger',                            
+                                                'class' => 'btn btn-danger',
                                                 'data-toggle' => 'tooltip',
                                                 'data-placement' => 'top',
                                                 'title' => 'Delete',
@@ -256,7 +256,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                             'nextPageLabel' => '<i class="fa fa-angle-right"></i>',
                         ],
                     ]); ?>
-                    
+
                 </div>
             </div>
         </div>
@@ -264,22 +264,22 @@ $this->params['breadcrumbs'][] = $this->title; ?>
 
 </div>
 
-<?php   
+<?php
 
 echo $modalDialog->renderDialog();
-    
+
 $jscript = '
-    
+
     $("#btnCollapsePrinter").on("click", function(event) {
         event.preventDefault();
-        
-        $("#collapsePrinter").collapse("toggle");        
-        
+
+        $("#collapsePrinter").collapse("toggle");
+
         $("#collapsePrinter #menucategoryprinter-printer").val("");
-    });       
-    
+    });
+
     $("#menucategoryprinter-printer").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Select Printer",
         allowClear: true,
     });

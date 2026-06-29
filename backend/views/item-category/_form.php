@@ -17,7 +17,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -38,7 +38,7 @@ endif; ?>
 
                     <?php $form = ActiveForm::begin([
                             'options' => [
-                                
+
                             ],
                             'fieldConfig' => [
                                 'parts' => [
@@ -56,10 +56,10 @@ endif; ?>
                                                 . '<div class="col-lg-3">'
                                                     . '{error}'
                                                 . '</div>'
-                                            . '</div>', 
+                                            . '</div>',
                             ]
                     ]); ?>
-                    
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
@@ -80,15 +80,15 @@ endif; ?>
                     } ?>
 
                     <?= $form->field($model, 'nama_category')->textInput(['maxlength' => 32]) ?>
-                    
+
                     <?= $form->field($model, 'parent_category_id')->dropDownList(
                             ArrayHelper::map(
-                                ItemCategory::find()->where(['IS', 'parent_category_id', NULL])->orderBy('nama_category')->asArray()->all(), 
-                                'id', 
-                                function($data) { 
-                                    return $data['nama_category'] . ' (' . $data['id'] . ')';                                 
+                                ItemCategory::find()->where(['IS', 'parent_category_id', NULL])->orderBy('nama_category')->asArray()->all(),
+                                'id',
+                                function($data) {
+                                    return $data['nama_category'] . ' (' . $data['id'] . ')';
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                             ]) ?>
@@ -121,7 +121,7 @@ endif; ?>
 
 $jscript = '
     $("#itemcategory-parent_category_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });

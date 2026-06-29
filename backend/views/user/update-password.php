@@ -18,7 +18,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = 'Update User Password'; ?>
                                                     . '<div class="col-lg-3">'
                                                         . '{error}'
                                                     . '</div>'
-                                                . '</div>', 
+                                                . '</div>',
                                 ]
                         ]); ?>
 
@@ -89,30 +89,30 @@ $this->params['breadcrumbs'][] = 'Update User Password'; ?>
                             'enableAjaxValidation' => true
                         ])->dropDownList(
                             ArrayHelper::map(
-                                Employee::find()->orderBy('nama')->asArray()->andWhere(['not_active' => false])->all(), 
-                                'kd_karyawan', 
-                                function($data) { 
-                                    return $data['nama'] . ' (' . $data['kd_karyawan'] . ')';                                 
+                                Employee::find()->orderBy('nama')->asArray()->andWhere(['not_active' => false])->all(),
+                                'kd_karyawan',
+                                function($data) {
+                                    return $data['nama'] . ' (' . $data['kd_karyawan'] . ')';
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                             ]) ?>
 
                         <?= $form->field($model, 'user_level_id')->dropDownList(
                                 ArrayHelper::map(
-                                    UserLevel::find()->orderBy('nama_level')->asArray()->all(), 
-                                    'id', 
-                                    function($data) { 
-                                        return $data['nama_level'];                                 
+                                    UserLevel::find()->orderBy('nama_level')->asArray()->all(),
+                                    'id',
+                                    function($data) {
+                                        return $data['nama_level'];
                                     }
-                                ), 
+                                ),
                                 [
                                     'prompt' => '',
                                     'style' => 'width: 80%'
                                 ]) ?>
 
-                        <?= $form->field($model, 'password')->passwordInput(['maxlength' => 64, 'value' => '']) ?>                        
+                        <?= $form->field($model, 'password')->passwordInput(['maxlength' => 64, 'value' => '']) ?>
 
                         <?php
                         if ($model->isNewRecord)
@@ -144,24 +144,24 @@ $this->params['breadcrumbs'][] = 'Update User Password'; ?>
 
 <?php
 $this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
- 
+
 $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     $("#user-kd_karyawan").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
-    
+
     $("#user-kd_karyawan").prop("disabled", true);
 
     $("#user-user_level_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
-    
+
     $("#user-user_level_id").prop("disabled", true);
 ';
 

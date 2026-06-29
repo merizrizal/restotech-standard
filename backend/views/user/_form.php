@@ -18,7 +18,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -39,7 +39,7 @@ endif; ?>
 
                     <?php $form = ActiveForm::begin([
                             'options' => [
-                                
+
                             ],
                             'fieldConfig' => [
                                 'parts' => [
@@ -57,10 +57,10 @@ endif; ?>
                                                 . '<div class="col-lg-3">'
                                                     . '{error}'
                                                 . '</div>'
-                                            . '</div>', 
+                                            . '</div>',
                             ]
                     ]); ?>
-                    
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
@@ -82,24 +82,24 @@ endif; ?>
                         'enableAjaxValidation' => true
                     ])->dropDownList(
                         ArrayHelper::map(
-                            Employee::find()->orderBy('nama')->andWhere(['not_active' => 0, 'is_deleted' => 0])->asArray()->all(), 
-                            'kd_karyawan', 
-                            function($data) { 
-                                return $data['nama'] . ' (' . $data['kd_karyawan'] . ')';                                 
+                            Employee::find()->orderBy('nama')->andWhere(['not_active' => 0, 'is_deleted' => 0])->asArray()->all(),
+                            'kd_karyawan',
+                            function($data) {
+                                return $data['nama'] . ' (' . $data['kd_karyawan'] . ')';
                             }
-                        ), 
+                        ),
                         [
                             'prompt' => '',
                         ]) ?>
 
                     <?= $form->field($model, 'user_level_id')->dropDownList(
                             ArrayHelper::map(
-                                UserLevel::find()->orderBy('nama_level')->andWhere(['is_deleted' => 0])->asArray()->all(), 
-                                'id', 
-                                function($data) { 
-                                    return $data['nama_level'];                                 
+                                UserLevel::find()->orderBy('nama_level')->andWhere(['is_deleted' => 0])->asArray()->all(),
+                                'id',
+                                function($data) {
+                                    return $data['nama_level'];
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                                 'style' => 'width: 80%'
@@ -108,7 +108,7 @@ endif; ?>
                     <?php
                     if ($model->isNewRecord)
                         echo $form->field($model, 'password')->passwordInput(['maxlength' => 64]); ?>
-                    
+
                     <?= $form->field($model, 'not_active')->checkbox(['value' => true], false) ?>
 
                     <div class="form-group">
@@ -136,17 +136,17 @@ endif; ?>
 <?php
 
 $this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
- 
+
 $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
 $jscript = '
     $("#user-kd_karyawan").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
     $("#user-user_level_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });

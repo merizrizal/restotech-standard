@@ -21,7 +21,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -42,7 +42,7 @@ endif; ?>
 
                     <?php $form = ActiveForm::begin([
                             'options' => [
-                                
+
                             ],
                             'fieldConfig' => [
                                 'parts' => [
@@ -60,10 +60,10 @@ endif; ?>
                                                 . '<div class="col-lg-3">'
                                                     . '{error}'
                                                 . '</div>'
-                                            . '</div>', 
+                                            . '</div>',
                             ]
                     ]); ?>
-                    
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
@@ -73,20 +73,20 @@ endif; ?>
                             </div>
                         </div>
                     </div>
-                    
+
                     <?= $form->field($model, 'shift_id')->dropDownList(
                             ArrayHelper::map(
-                                Shift::find()->asArray()->all(), 
-                                'id', 
-                                function($data) { 
-                                    return Yii::$app->formatter->asTime($data['start_time']) . ' - ' . Yii::$app->formatter->asTime($data['end_time']);                                 
+                                Shift::find()->asArray()->all(),
+                                'id',
+                                function($data) {
+                                    return Yii::$app->formatter->asTime($data['start_time']) . ' - ' . Yii::$app->formatter->asTime($data['end_time']);
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                                 'style' => 'width: 90%'
                             ]) ?>
-                    
+
                     <?= $form->field($model, 'date', [
                             'parts' => [
                                 '{inputClass}' => 'col-lg-8'
@@ -94,15 +94,15 @@ endif; ?>
                         ])->widget(DatePicker::className(), [
                             'pluginOptions' => Yii::$app->params['datepickerOptions'],
                         ]) ?>
-                    
+
                     <?= $form->field($model, 'user_active')->dropDownList(
                             ArrayHelper::map(
-                                User::find()->joinWith(['kdKaryawan'])->orderBy('employee.nama')->asArray()->all(), 
-                                'id', 
-                                function($data) { 
-                                    return $data['kdKaryawan']['nama'] . ' (' . $data['id'] . ')';                                 
+                                User::find()->joinWith(['kdKaryawan'])->orderBy('employee.nama')->asArray()->all(),
+                                'id',
+                                function($data) {
+                                    return $data['kdKaryawan']['nama'] . ' (' . $data['id'] . ')';
                                 }
-                            ), 
+                            ),
                             [
                                 'prompt' => '',
                                 'style' => 'width: 90%'
@@ -147,13 +147,13 @@ $jscript = '
     $("#saldokasir-date").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
 
     $("#saldokasir-shift_id").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
-    
+
     $("#saldokasir-user_active").select2({
-        theme: "' . kartik\select2\Select2::THEME_KRAJEE . '",
+        theme: "' . kartik\select2\Select2::THEME_KRAJEE_BS3 . '",
         placeholder: "Pilih",
         allowClear: true
     });
