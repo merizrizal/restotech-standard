@@ -10,7 +10,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -32,8 +32,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
         <div class="col-sm-8">
             <div class="box box-danger">
                 <div class="box-body">
-                    <div class="sale-invoice-form">                       
-                        
+                    <div class="sale-invoice-form">
+
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-3">
@@ -44,11 +44,11 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                         'id' => 'tanggal',
                                         'name' => 'tanggal',
                                         'pluginOptions' => Yii::$app->params['datepickerOptions'],
-                                    ]); ?>                                 
+                                    ]); ?>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-3"></div>
@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -70,12 +70,7 @@ $this->params['breadcrumbs'][] = $this->title; ?>
 
 <?php
 $this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
- 
+
 $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
 
-
-$jscript = '
-    $("#tanggal").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
-';
-
-$this->registerJs($jscript . Yii::$app->params['checkbox-radio-script']()); ?>
+$this->registerJs(Yii::$app->params['checkbox-radio-script']()); ?>

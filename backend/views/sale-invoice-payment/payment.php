@@ -18,7 +18,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -74,7 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                     . '<div class="col-lg-3">'
                                                         . '{error}'
                                                     . '</div>'
-                                                . '</div>', 
+                                                . '</div>',
                                 ]
                         ]); ?>
 
@@ -123,7 +123,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-sm-2"></div>
     </div><!-- /.row -->
-    
+
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
@@ -133,10 +133,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         Detail Piutang
                     </h3>
                 </div>
-                
+
                 <?php
                 $jumlahBayar = 0;
-                
+
                 foreach ($modelSaleInvoicePayment->saleInvoiceArPayments as $saleInvoiceArPayment) {
                     $jumlahBayar += $saleInvoiceArPayment->jumlah_bayar;
                 } ?>
@@ -168,14 +168,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
     </div>
-    
+
     <?= $dynamicTableSaleInvoiceArPayment->tableData() ?>
 
 </div>
-
-<?php
-$jscript = '
-    $("#saleinvoicearpayment-date").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
-';
-
-$this->registerJs($jscript); ?>

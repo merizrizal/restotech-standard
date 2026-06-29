@@ -20,7 +20,7 @@ $status = Yii::$app->session->getFlash('status');
 $message1 = Yii::$app->session->getFlash('message1');
 $message2 = Yii::$app->session->getFlash('message2');
 
-if ($status !== null) : 
+if ($status !== null) :
     $notif = new NotificationDialog([
         'status' => $status,
         'message1' => $message1,
@@ -32,7 +32,7 @@ if ($status !== null) :
 
 endif; ?>
 
-<?php 
+<?php
 
 $form = ActiveForm::begin([
     'options' => [
@@ -54,9 +54,9 @@ $form = ActiveForm::begin([
                         . '<div class="col-lg-3">'
                             . '{error}'
                         . '</div>'
-                    . '</div>', 
+                    . '</div>',
     ]
-]); 
+]);
 
     $dynamicFormDPTrx = new DynamicFormField([
         'dataModel' => $modelDirectPurchaseTrx,
@@ -65,11 +65,11 @@ $form = ActiveForm::begin([
             'item_id' => [
                 'type' => 'dropdown',
                 'data' => ArrayHelper::map(
-                        
-                        Item::find()->orderBy('nama_item')->asArray()->all(), 
-                        'id', 
-                        function($data) { 
-                            return $data['nama_item'] . ' (' . $data['id'] . ')';                                 
+
+                        Item::find()->orderBy('nama_item')->asArray()->all(),
+                        'id',
+                        function($data) {
+                            return $data['nama_item'] . ' (' . $data['id'] . ')';
                         }
                 ),
                 'affect' => [
@@ -97,10 +97,10 @@ $form = ActiveForm::begin([
             'storage_id' => [
                 'type' => 'dropdown',
                 'data' => ArrayHelper::map(
-                        
-                        Storage::find()->orderBy('nama_storage')->asArray()->all(), 
-                        'id', 
-                        function($data) { 
+
+                        Storage::find()->orderBy('nama_storage')->asArray()->all(),
+                        'id',
+                        function($data) {
                             return  $data['nama_storage'] . ' (' . $data['id'] . ')';
                         }
                 ),
@@ -126,7 +126,7 @@ $form = ActiveForm::begin([
         <div class="col-sm-8">
             <div class="box box-danger">
                 <div class="box-body">
-                    <div class="direct-purchase-form">                    
+                    <div class="direct-purchase-form">
 
                         <div class="form-group">
                             <div class="row">
@@ -161,7 +161,7 @@ $form = ActiveForm::begin([
                                 'parts' => [
                                     '{inputClass}' => 'col-lg-7'
                                 ],
-                            ])->textInput(['readonly' => 'readonly']); 
+                            ])->textInput(['readonly' => 'readonly']);
                         } ?>
 
                         <?php
@@ -183,7 +183,7 @@ $form = ActiveForm::begin([
                                     $icon = '<i class="fa fa-floppy-o"></i>&nbsp;&nbsp;&nbsp;';
                                     echo Html::submitButton($model->isNewRecord ? $icon . 'Save' : $icon . 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']);
                                     echo '&nbsp;&nbsp;&nbsp;';
-                                    echo Html::a('<i class="fa fa-rotate-left"></i>&nbsp;&nbsp;&nbsp;Cancel', ['index'], ['class' => 'btn btn-default']); 
+                                    echo Html::a('<i class="fa fa-rotate-left"></i>&nbsp;&nbsp;&nbsp;Cancel', ['index'], ['class' => 'btn btn-default']);
 
                                     if (!$model->isNewRecord) {
                                       echo '&nbsp;&nbsp;&nbsp;';
@@ -199,9 +199,9 @@ $form = ActiveForm::begin([
         </div>
         <div class="col-sm-2"></div>
     </div><!-- /.row -->
-    
+
     <?= $dynamicFormDPTrx->component(); ?>
-    
+
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
@@ -211,7 +211,7 @@ $form = ActiveForm::begin([
                     $icon = '<i class="fa fa-floppy-o"></i>&nbsp;&nbsp;&nbsp;';
                     echo Html::submitButton($model->isNewRecord ? $icon . 'Save' : $icon . 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']);
                     echo '&nbsp;&nbsp;&nbsp;';
-                    echo Html::a('<i class="fa fa-rotate-left"></i>&nbsp;&nbsp;&nbsp;Cancel', ['index'], ['class' => 'btn btn-default']); 
+                    echo Html::a('<i class="fa fa-rotate-left"></i>&nbsp;&nbsp;&nbsp;Cancel', ['index'], ['class' => 'btn btn-default']);
 
                     if (!$model->isNewRecord) {
                       echo '&nbsp;&nbsp;&nbsp;';
@@ -226,11 +226,10 @@ $form = ActiveForm::begin([
 
 <?php
 $this->registerCssFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/all.css', ['depends' => 'yii\web\YiiAsset']);
- 
+
 $this->registerJsFile($this->params['assetCommon']->baseUrl . '/plugins/iCheck/icheck.min.js', ['depends' => 'yii\web\YiiAsset']);
-$jscript = '    
-    $("#directpurchase-date").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
-            
+
+$jscript = '
     $("#directpurchase-jumlah_harga-disp").off("keypress");
     $("#directpurchase-jumlah_harga-disp").off("keyup");
 ';
